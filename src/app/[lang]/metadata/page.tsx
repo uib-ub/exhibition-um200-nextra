@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function MetadataPage(params: { lang: string }) {
   const { lang } = await params;
   return (
-    <main className="container mx-auto p-4">
+    <main className="max-w-[1200px] mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">Metadata</h1>
       <MetadataList lang={lang} />
     </main>

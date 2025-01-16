@@ -1,4 +1,4 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Footer, Layout, LocaleSwitch, Navbar, ThemeSwitch } from 'nextra-theme-docs'
 import { getPageMap } from 'nextra/page-map'
 import './globals.css'
 import { customPageMap, localizePagemap } from '@/lib/customNextra'
@@ -18,13 +18,23 @@ export const metadata = {
   metadataBase: new URL('https://universitetibergen200.no'),
 }
 
-const navbar = (lang: string) => (
+const navbar = (
   <Navbar
     logo={<b>UM 200 år</b>}
-    logoLink={`/${lang}`}
-  />
+  >
+    <div className="flex items-center gap-2">
+      <LocaleSwitch />
+      <ThemeSwitch />
+    </div>
+  </Navbar>
 )
-const footer = <Footer>UiB {new Date().getFullYear()} © Nextra.</Footer>
+const footer = (
+  <Footer>
+    <LocaleSwitch />
+    <ThemeSwitch />
+    UiB {new Date().getFullYear()} © Nextra.
+  </Footer>
+)
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: string } }) {
   const { lang } = await params;
@@ -48,9 +58,9 @@ export default async function RootLayout({ children, params }: { children: React
       dir="ltr"
       suppressHydrationWarning
     >
-      <body>
+      <body className="grid grid-rows-[auto_1fr_auto] min-h-screen">
         <Layout
-          navbar={navbar(lang)}
+          navbar={navbar}
           pageMap={pageMap}
           editLink={null}
           feedback={{
@@ -59,7 +69,9 @@ export default async function RootLayout({ children, params }: { children: React
           footer={footer}
           i18n={[{ locale: 'no', name: 'Norsk' }, { locale: 'en', name: 'English' }]}
         >
-          {children}
+          <div className=" py-12">
+            {children}
+          </div>
         </Layout>
       </body>
     </html>
