@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.0-beta.9",
+    "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -35,7 +35,7 @@
     "lodash": "^4.17.21",
     "postcss": "^8",
     "slugify": "^1.6.6",
-    "tailwindcss": "^4.0.0-beta.9",
+    "tailwindcss": "^4.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
