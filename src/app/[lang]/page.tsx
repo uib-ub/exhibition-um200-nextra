@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default async function Home(params: { lang: string }) {
   const lang = await params.lang || 'no';
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="max-w-[1200px] mx-auto px-6">
       <h1 className="text-4xl font-bold mb-6">
         Velkommen til UiB 200 år
       </h1>

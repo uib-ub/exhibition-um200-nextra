@@ -12,10 +12,11 @@ export const metadata: Metadata = {
   description: "Works",
 };
 
-export default function WorksPage() {
+export default async function WorksPage({ params }: { params: { lang: string } }) {
+  const lang = (await params).lang;
   return (
     <div className="max-w-[1200px] mx-auto my-10 px-4">
-      <h1 className="text-2xl font-bold mb-4">Works</h1>
+      <h1 className="text-2xl font-bold mb-4">{lang === 'no' ? 'Verker' : 'Works'}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {COLLECTIONS[0].items.map((item) => (
           <div key={item.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">

@@ -1,7 +1,7 @@
-import { Footer, Layout, LocaleSwitch, Navbar, ThemeSwitch } from 'nextra-theme-docs'
+import { Footer, Layout, Link, LocaleSwitch, Navbar, ThemeSwitch } from 'nextra-theme-docs'
 import { getPageMap } from 'nextra/page-map'
 import './globals.css'
-import { customPageMap, localizePagemap } from '@/lib/customNextra'
+import { customPageMap } from '@/lib/customNextra'
 
 export const metadata = {
   description: 'Universitet i Bergen 200 år',
@@ -18,14 +18,19 @@ export const metadata = {
   metadataBase: new URL('https://universitetibergen200.no'),
 }
 
-const navbar = (
+const navbar = (lang: string) => (
   <Navbar
     logo={<b>UM 200 år</b>}
   >
-    <div className="flex items-center gap-2">
-      <LocaleSwitch />
-      <ThemeSwitch />
-    </div>
+    <>
+      {/* <div className="flex items-center gap-2">
+        <LocaleSwitch />
+        <ThemeSwitch />
+      </div> */}
+      <div className="flex items-center gap-2">
+        <Link href={`/${lang}/works`}>Om</Link>
+      </div>
+    </>
   </Navbar>
 )
 const footer = (
@@ -39,8 +44,7 @@ const footer = (
 export default async function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: string } }) {
   const { lang } = await params;
   const firstPassPageMap = await getPageMap(`/${lang}`)
-  const localizedPageMap = localizePagemap(firstPassPageMap, lang)
-  const pageMap = customPageMap(localizedPageMap, {
+  const pageMap = customPageMap(firstPassPageMap, {
     works: {
       type: "page",
       title: "Works"
@@ -60,7 +64,7 @@ export default async function RootLayout({ children, params }: { children: React
     >
       <body className="grid grid-rows-[auto_1fr_auto] min-h-screen">
         <Layout
-          navbar={navbar}
+          navbar={navbar(lang)}
           pageMap={pageMap}
           editLink={null}
           feedback={{
