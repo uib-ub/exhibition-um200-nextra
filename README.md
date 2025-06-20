@@ -24,3 +24,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - [ ] Port `Work` component from `exhibition-landsloven-nextra` to this project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
 - [ ] Add design from Haltenbanken
+- [ ] Explore [Canopy-IIIF](https://github.com/canopy-iiif/canopy-iiif), that can add automatic views on IIIF collections and manifests. The `canopy-experiment` branch is a starting point.
