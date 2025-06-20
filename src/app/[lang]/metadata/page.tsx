@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Metadata page",
 };
 
-export default async function MetadataPage(params: { lang: string }) {
+export default async function MetadataPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   return (
     <main className="max-w-[1200px] mx-auto p-4">

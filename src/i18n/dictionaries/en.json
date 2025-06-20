@@ -1,0 +1,25 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read more",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "back": "Back",
+    "metadata": "Metadata",
+    "related": "Related Items"
+  },
+  "metadata": {
+    "title": "University of Bergen 200 years",
+    "description": "Celebrating 200 years of the University of Bergen"
+  },
+  "homepage": {
+    "title": "Welcome to UiB 200 years",
+    "description": "We celebrate the University of Bergen's 200th anniversary in 2025. Explore the history and join the celebration."
+  }
+}

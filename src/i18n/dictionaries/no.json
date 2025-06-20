@@ -1,0 +1,25 @@
+{
+  "navigation": {
+    "home": "Hjem",
+    "about": "Om",
+    "works": "Verk",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "readMore": "Les mer",
+    "loading": "Laster...",
+    "error": "Det oppstod en feil",
+    "notFound": "Siden ble ikke funnet",
+    "back": "Tilbake",
+    "metadata": "Metadata",
+    "related": "Relaterte elementer"
+  },
+  "metadata": {
+    "title": "Universitetet i Bergen 200 år",
+    "description": "Feirer 200 år med Universitetet i Bergen"
+  },
+  "homepage": {
+    "title": "Velkommen til UiB 200 år",
+    "description": "Vi feirer Universitetet i Bergen sitt 200-årsjubileum i 2025. Utforsk historien og bli med på feiringen."
+  }
+}
