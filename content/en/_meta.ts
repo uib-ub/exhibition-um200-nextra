@@ -6,16 +6,12 @@ const meta = {
       layout: 'full',
     }
   },
-  'about': {
-    title: 'About the exhibition',
-    type: 'page',
-  },
   'contact': {
     title: 'Contact',
     type: 'page'
   },
-  'kapittel1': {
-    title: 'Kapittel 1',
+  'chapters': {
+    title: 'Chapters',
     type: 'page'
   },
   'works': {
@@ -25,7 +21,11 @@ const meta = {
   'metadata': {
     title: 'Metadata',
     href: '/metadata'
-  }
+  },
+  'about': {
+    title: 'About',
+    type: 'page',
+  },
 }
 
 export default meta;
