@@ -1,0 +1,13 @@
+# Universitetsmuseet i Bergen 200 år
+
+## Work
+
+`<Work />` er en IIIF-viser som kan brukes til å vise digitale IIIF-manifester. Den er bygd med [Clover-IIIF](https://github.com/samvera-labs/clover-iiif). Siste versjon av Nextjs og React fungerer ikke med Clover-IIIF, så vi må vente på at dette blir fikset.
+
+```tsx
+import Work from '@/components/work'
+
+<Work id="ubb-diplom-0034" marcus="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
+Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår. Sysselmann Ivar Andresson gir beskjed til kong Magnus VII Eriksson om at Arne Alfinnson drepte Einar Auga, og gir en detaljert beskrivelse av hendelsen.
+</Work>
+```

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head } from 'nextra/components'
+import { Footer, Layout,LastUpdated, Navbar } from 'nextra-theme-docs'
+import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Geist, Geist_Mono } from "next/font/google";
-import 'nextra-theme-docs/style.css'
 import "./globals.css";
 
 
@@ -49,18 +48,37 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <Head
-      // ... Your additional head options
       >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+        <meta name="description" content="Universitetsmuseet i Bergen 200 år" />
+        <meta name="keywords" content="Universitetsmuseet i Bergen, 200 år, nettutstilling" />
+        <meta name="author" content="Universitetet i Bergen" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google" content="notranslate" />
+        <meta name="google" content="notranslate" />
       </Head>
       <body>
         <Layout
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+          docsRepositoryBase="https://github.com/uib-ub/exhibition-um200-nextra"
+          toc={{
+            title: "Innhold",
+            backToTop: "Til toppen",
+          }}
           footer={footer}
-          // ... Your additional layout options
+          feedback={{
+            content: 'Spørsmål eller kommentarer? Send oss en e-post!',
+          }}
+          editLink="Rediger denne siden"
+          lastUpdated={<LastUpdated locale="nb">Sist oppdatert</LastUpdated>}
+          themeSwitch={{
+            dark: "Mørk",
+            light: "Lys",
+            system: "System",
+          }}
+          search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}          
         >
           {children}
         </Layout>
