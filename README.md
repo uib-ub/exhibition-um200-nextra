@@ -34,9 +34,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] Add `robots.txt` to the project.
 - [x] Init shadcn in the project.
 - [x] Add `Icon` component from `@tabler/icons-react` to the project.
+- [x] Port `Work` component from `exhibition-landsloven-nextra` to this project.
 - [ ] Add content to the project.
-- [ ] Port `Work` component from `exhibition-landsloven-nextra` to this project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
 - [ ] Add design from Haltenbanken
 - [ ] Add `sitemap.xml` to the project.
 - [ ] Explore [Canopy-IIIF](https://github.com/canopy-iiif/canopy-iiif), that can add automatic views on IIIF collections and manifests. The `canopy-experiment` branch is a starting point.
+
+NB! `clover-iiif` is pegged to `2.12.0` as later versions are not compatible with the latest version of `next.js`. it is also necessary  to override the version of `react` and `react-dom` to `19.0.0` in the `package.json` file. As well as `openseadragon` to `5.0.1`.
+
+```json
+"overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "openseadragon": "^5.0.1"
+  }
+```
