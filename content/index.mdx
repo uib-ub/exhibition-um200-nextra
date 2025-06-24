@@ -1,4 +1,27 @@
 import { Button } from '@/components/ui/button'
+import {
+  IconHome,
+  IconUsers,
+  IconUser,
+  IconArrowRight,
+  IconArrowLeft,
+  IconArrowUp,
+  IconArrowDown,
+  IconArrowUpRight,
+  IconArrowDownRight,
+  IconArrowUpLeft,
+  IconArrowDownLeft,
+  IconChevronRight,
+  IconChevronLeft,
+  IconChevronUp,
+  IconChevronDown,
+  IconChevronUpRight,
+  IconChevronDownRight,
+  IconChevronUpLeft,
+  IconChevronDownLeft,
+  IconAlphabetArabic,
+  IconAlphabetLatin,
+} from '@tabler/icons-react'
 
 # Universitetsmuseet i Bergen 200 år
 
@@ -14,7 +37,11 @@ Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vå
 </Work>
 ```
 
-## Button
+## UI komponenter
+
+Vi bruker [Shadcn UI](https://ui.shadcn.com) for å bygge våre komponenter. Bruk CSS variabler for å endre farger og størrelser. Større tilpassinger kan gjøres i selve komponenten, men oppdatering vil overskrive komponenten. Bruk git til å hente endringer fra tidligere versjoner av komponentene.
+
+### Button
 
 ```tsx
 import { Button } from '@/components/ui/button'
@@ -22,11 +49,58 @@ import { Button } from '@/components/ui/button'
 <Button>Click me</Button>
 ```
 
-Tilgjengelige varianter:
+#### Tilgjengelige varianter:
 
-<Button variant="default">Default</Button>
-<Button variant="destructive">Destructive</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="ghost">Ghost</Button>
+<div className="flex gap-2 flex-wrap my-3">
+  <Button variant="default">Default</Button>
+  <Button variant="destructive">Destructive</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="ghost">Ghost</Button>
 <Button variant="link">Link</Button>
+</div>
+
+### Tilgjengelige størrelser:
+
+<div className="flex gap-2 flex-wrap my-3 items-center">
+  <Button size="sm">Small</Button>
+  <Button size="default">Default</Button>
+  <Button size="lg">Large</Button>
+<Button size="icon"><IconUsers /></Button>
+</div>
+
+## Ikoner
+
+Vi bruker [Tabler Icons](https://tabler-icons.io/) for å bygge våre ikoner.
+
+```tsx
+import { IconUsers } from '@tabler/icons-react'
+
+<IconUsers />
+```
+
+### Eksempler:
+
+<div className="flex gap-2 flex-wrap my-3">
+  <IconHome />
+  <IconUsers />
+  <IconUser />
+  <IconArrowRight />
+  <IconArrowLeft />
+  <IconArrowUp />
+  <IconArrowDown />
+  <IconArrowUpRight />
+  <IconArrowDownRight />
+  <IconArrowUpLeft />
+  <IconArrowDownLeft />
+  <IconChevronRight />
+  <IconChevronLeft />
+  <IconChevronUp />
+  <IconChevronDown />
+  <IconChevronUpRight />
+  <IconChevronDownRight />
+  <IconChevronUpLeft />
+  <IconChevronDownLeft />
+  <IconAlphabetArabic />
+  <IconAlphabetLatin />
+</div>
