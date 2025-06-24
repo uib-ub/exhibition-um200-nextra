@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). Nextra is used for the documentation.
+# The University Museum of Bergen - 200 Years Jubilee
+
+This is a project for the exhibition "The University Museum of Bergen - 200 Years Jubilee" at the University Museum of Bergen.
+
+## Tech Stack
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). [Nextra](https://nextra.site) is used for markdown-based pages.
+
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [Shadcn UI](https://ui.shadcn.com)
+- [Nextra](https://nextra.site)
+- [Vercel](https://vercel.com)
 
 ## Getting Started
 
@@ -11,8 +24,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
@@ -21,6 +32,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ## TODO
 
 - [x] Add `robots.txt` to the project.
+- [ ] Init shadcn in the project.
 - [ ] Add content to the project.
 - [ ] Port `Work` component from `exhibition-landsloven-nextra` to this project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
