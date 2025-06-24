@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## TODO
 
 - [x] Add `robots.txt` to the project.
-- [ ] Init shadcn in the project.
+- [x] Init shadcn in the project.
 - [ ] Add content to the project.
 - [ ] Port `Work` component from `exhibition-landsloven-nextra` to this project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
