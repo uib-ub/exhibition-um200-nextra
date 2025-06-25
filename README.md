@@ -35,6 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] Init shadcn in the project.
 - [x] Add `Icon` component from `@tabler/icons-react` to the project.
 - [x] Port `Work` component from `exhibition-landsloven-nextra` to this project.
+- [ ] When `clover-iiif` is updated to a version that is compatible with the latest version of `next.js`, use the prefetch strategy for the `Work` component.
 - [ ] Add content to the project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
 - [ ] Add design from Haltenbanken

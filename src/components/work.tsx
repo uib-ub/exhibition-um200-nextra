@@ -1,36 +1,33 @@
-'use client'
 import React from 'react';
 import { CloverViewerProps } from '@samvera/clover-iiif';
-import dynamic from "next/dynamic";
-import type { ReactNode } from 'react';
+import type { ReactNode, ReactElement } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { ExternalLink } from 'lucide-react';
-
-const Viewer = dynamic(
-  () => import("@samvera/clover-iiif/viewer").then((Clover) => Clover.default),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-800">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-      </div>
-    ),
-  },
-);
+import { IIIFViewer } from './iiif-viewer';
 
 // Enhanced interface with better types and documentation
 interface WorkProps extends VariantProps<typeof workVariants> {
-  /** Content to display below the viewer */
-  children?: ReactNode;
-  /** IIIF manifest ID from UB API */
-  id?: string;
-  /** Direct IIIF manifest URL */
-  url?: string;
-  /** Marcus database URL for additional information */
-  marcus?: string;
+  /** IIIF manifest ID from UB API or direct URL */
+  manifest: string;
   /** Clover viewer configuration options */
   config?: CloverViewerProps;
+  /** Additional CSS classes */
+  className?: string;
+}
+
+interface WorkDescriptionProps {
+  /** Content to display in the description */
+  children: ReactNode;
+  /** Additional CSS classes */
+  className?: string;
+}
+
+interface WorkLinkProps {
+  /** URL to link to */
+  href: string;
+  /** Link text (optional, defaults to "Se mer...") */
+  children?: ReactNode;
   /** Additional CSS classes */
   className?: string;
 }
@@ -56,19 +53,6 @@ const workVariants = cva(
     },
   }
 );
-
-const viewerVariants = cva('w-full relative bg-background', {
-  variants: {
-    size: {
-      sm: 'h-[300px]',
-      default: 'h-[500px] md:h-[600px]',
-      lg: 'h-[700px]',
-    },
-  },
-  defaultVariants: {
-    size: 'default',
-  },
-});
 
 const contentVariants = cva(
   'px-4 md:px-6 pt-4 md:pt-6 pb-3 md:pb-4 border-t flex flex-col gap-3 md:gap-4',
@@ -102,7 +86,6 @@ const marcusButtonVariants = cva(
     variants: {
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
       },
     },
@@ -112,38 +95,80 @@ const marcusButtonVariants = cva(
   }
 );
 
+const descriptionVariants = cva(
+  'prose prose-sm dark:prose-invert max-w-none flex-1',
+  {
+    variants: {
+      density: {
+        default: '',
+        minimal: 'text-sm leading-relaxed',
+      },
+    },
+    defaultVariants: {
+      density: 'default',
+    },
+  }
+);
+
+// Helper function to normalize manifest input to URL
+function normalizeManifestToUrl(manifest: string): string | null {
+  // If it's already a URL, return as is
+  if (manifest.startsWith('http://') || manifest.startsWith('https://')) {
+    return manifest;
+  }
+  // If it's an ID, construct the UB API URL
+  return `https://api.ub.uib.no/items/${manifest}?as=iiif`;
+}
+
+// Main Work component
 export function Work({
-  children,
-  id,
-  url,
-  marcus,
+  manifest,
   config,
   className,
   size,
   variant,
+  children,
   ...props
-}: WorkProps) {
-  // Better URL construction with validation
-  const manifestId = React.useMemo(() => {
-    if (url) return url;
-    if (id) return `https://api.ub.uib.no/items/${id}?as=iiif`;
-    return null;
-  }, [id, url]);
+}: WorkProps & { children?: ReactNode }) {
+  // Normalize manifest input to URL
+  const manifestUrl = React.useMemo(() => {
+    return normalizeManifestToUrl(manifest);
+  }, [manifest]);
 
-  // Detect if content is minimal (single line or very short)
-  const isMinimalContent = React.useMemo(() => {
-    if (!children) return false;
-    const textContent = typeof children === 'string' ? children : '';
-    // Check if it's a single line or very short content
-    return textContent.length < 100 && !textContent.includes('\n');
+  // Find Work.Description and Work.Link components in children
+  const descriptionElement = React.useMemo(() => {
+    if (!children) return null;
+
+    const childrenArray = React.Children.toArray(children);
+    return childrenArray.find(child =>
+      React.isValidElement(child) && child.type === WorkDescription
+    ) as ReactElement<WorkDescriptionProps> | undefined;
   }, [children]);
 
+  const linkElement = React.useMemo(() => {
+    if (!children) return null;
+
+    const childrenArray = React.Children.toArray(children);
+    return childrenArray.find(child =>
+      React.isValidElement(child) && child.type === WorkLink
+    ) as ReactElement<WorkLinkProps> | undefined;
+  }, [children]);
+
+  // Detect if content is minimal
+  const isMinimalContent = React.useMemo(() => {
+    if (!descriptionElement) return false;
+    const textContent = React.Children.toArray(descriptionElement.props.children)
+      .filter(child => typeof child === 'string')
+      .join(' ');
+    return textContent.length < 100 && !textContent.includes('\n');
+  }, [descriptionElement]);
+
   // Error handling for missing manifest
-  if (!manifestId) {
+  if (!manifestUrl) {
     return (
       <div className={cn(workVariants({ size, variant }), className)}>
         <div className="flex items-center justify-center h-64 text-muted-foreground">
-          <p>No IIIF manifest provided</p>
+          <p>Invalid IIIF manifest provided</p>
         </div>
       </div>
     );
@@ -152,41 +177,42 @@ export function Work({
   return (
     <div className={cn(workVariants({ size, variant }), className)} {...props}>
       {/* Viewer Section */}
-      <div className={viewerVariants({ size })}>
-        <Viewer
-          iiifContent={manifestId}
-          options={{
-            canvasHeight: '100%',
-            informationPanel: { open: false },
-            ...config,
-          }}
-        />
-      </div>
+      <IIIFViewer
+        manifestUrl={manifestUrl}
+        config={config}
+        size={size}
+      />
 
-      {/* Content Section - Always render if marcus URL exists */}
-      {(children || marcus) && (
+      {/* Content Section - Always render if description or link exists */}
+      {(descriptionElement || linkElement) && (
         <div className={contentVariants({
-          layout: children && marcus ? 'compact' : 'default',
-          hasContent: !!children,
+          layout: descriptionElement && linkElement ? 'compact' : 'default',
+          hasContent: !!descriptionElement,
           contentDensity: isMinimalContent ? 'minimal' : 'default'
         })}>
-          {children && (
-            <div className="prose prose-sm dark:prose-invert max-w-none flex-1">
-              {children}
+          {descriptionElement && (
+            <div className={cn(
+              descriptionVariants({
+                density: isMinimalContent ? 'minimal' : 'default'
+              }),
+              descriptionElement.props.className
+            )}>
+              {descriptionElement.props.children}
             </div>
           )}
 
-          {marcus && (
+          {linkElement && (
             <a
-              href={marcus}
+              href={linkElement.props.href}
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
                 marcusButtonVariants({ variant: 'default' }),
-                'self-end w-fit shrink-0'
+                'self-end w-fit shrink-0',
+                linkElement.props.className
               )}
             >
-              Se mer i Marcus
+              {linkElement.props.children || 'Se mer...'}
               <ExternalLink className="h-4 w-4" />
             </a>
           )}
@@ -195,3 +221,19 @@ export function Work({
     </div>
   );
 }
+
+// Work.Description component
+function WorkDescription({ children }: WorkDescriptionProps) {
+  // This component is just a marker - the actual rendering is handled in the parent Work component
+  return <>{children}</>;
+}
+
+// Work.Link component
+function WorkLink({ children }: WorkLinkProps) {
+  // This component is just a marker - the actual rendering is handled in the parent Work component
+  return <>{children}</>;
+}
+
+// Attach compound components to Work
+Work.Description = WorkDescription;
+Work.Link = WorkLink;

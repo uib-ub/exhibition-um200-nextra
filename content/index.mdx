@@ -26,86 +26,27 @@ import {
 
 # Universitetsmuseet i Bergen 200 år
 
-## Work
+Velkommen til nettutstillingen for Universitetsmuseet i Bergen 200 år jubileum!
 
-`<Work />` er en IIIF-viser som kan brukes til å vise digitale IIIF-manifester. Den er bygd med [Clover-IIIF](https://github.com/samvera-labs/clover-iiif). Siste versjon av Nextjs og React fungerer ikke med Clover-IIIF, så vi må bruke v2.12.0.
+## Om utstillingen
 
-```tsx
-import Work from '@/components/work'
+Denne nettutstillingen feirer 200 år med forskning, bevaring og formidling av kulturarv ved Universitetsmuseet i Bergen. Gjennom digitale IIIF-manifester kan du utforske våre samlinger og lære mer om museets historie og betydning.
 
-<Work id="ubb-diplom-0034" marcus="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår. Sysselmann Ivar Andresson gir beskjed til kong Magnus VII Eriksson om at Arne Alfinnson drepte Einar Auga, og gir en detaljert beskrivelse av hendelsen.
+<Button size="lg" className="my-4">
+  <a href="/dokumentasjon">
+    Lær mer om hvordan du lager en nettutstilling
+  </a>
+</Button>
+
+## Eksempel på digitalt objekt
+
+<Work manifest="ubb-diplom-0034">
+  <Work.Description>
+    Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår. 
+    Sysselmann Ivar Andresson gir beskjed til kong Magnus VII Eriksson om at Arne Alfinnson 
+    drepte Einar Auga, og gir en detaljert beskrivelse av hendelsen.
+  </Work.Description>
+  <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
+    Se mer i Marcus
+  </Work.Link>
 </Work>
-```
-
-<Work id="ubb-diplom-0034" marcus="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår. 
-</Work>
-
-## UI komponenter
-
-Vi bruker [Shadcn UI](https://ui.shadcn.com) for å bygge våre komponenter. Bruk CSS variabler for å endre farger og størrelser. Større tilpassinger kan gjøres i selve komponenten, men oppdatering vil overskrive komponenten. Bruk git til å hente endringer fra tidligere versjoner av komponentene.
-
-### Button
-
-```tsx
-import { Button } from '@/components/ui/button'
-
-<Button>Click me</Button>
-```
-
-#### Tilgjengelige varianter:
-
-<div className="flex gap-2 flex-wrap my-3">
-  <Button variant="default">Default</Button>
-  <Button variant="destructive">Destructive</Button>
-  <Button variant="outline">Outline</Button>
-  <Button variant="secondary">Secondary</Button>
-  <Button variant="ghost">Ghost</Button>
-  <Button variant="link">Link</Button>
-</div>
-
-### Tilgjengelige størrelser:
-
-<div className="flex gap-2 flex-wrap my-3 items-center">
-  <Button size="sm">Small</Button>
-  <Button size="default">Default</Button>
-  <Button size="lg">Large</Button>
-  <Button size="icon"><IconUsers /></Button>
-</div>
-
-## Ikoner
-
-Vi bruker [Tabler Icons](https://tabler-icons.io/) for ikoner.
-
-```tsx
-import { IconUsers } from '@tabler/icons-react'
-
-<IconUsers />
-```
-
-### Eksempler:
-
-<div className="flex gap-2 flex-wrap my-3">
-  <IconHome />
-  <IconUsers />
-  <IconUser />
-  <IconArrowRight />
-  <IconArrowLeft />
-  <IconArrowUp />
-  <IconArrowDown />
-  <IconArrowUpRight />
-  <IconArrowDownRight />
-  <IconArrowUpLeft />
-  <IconArrowDownLeft />
-  <IconChevronRight />
-  <IconChevronLeft />
-  <IconChevronUp />
-  <IconChevronDown />
-  <IconChevronUpRight />
-  <IconChevronDownRight />
-  <IconChevronUpLeft />
-  <IconChevronDownLeft />
-  <IconAlphabetArabic />
-  <IconAlphabetLatin />
-</div>
