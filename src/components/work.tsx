@@ -111,7 +111,7 @@ const descriptionVariants = cva(
 );
 
 // Helper function to normalize manifest input to URL
-function normalizeManifestToUrl(manifest: string): string | null {
+function normalizeManifestToUrl(manifest: string): string {
   // If it's already a URL, return as is
   if (manifest.startsWith('http://') || manifest.startsWith('https://')) {
     return manifest;
@@ -131,12 +131,12 @@ export function Work({
   ...props
 }: WorkProps & { children?: ReactNode }) {
   // Normalize manifest input to URL
-  const manifestUrl = React.useMemo(() => {
+  const manifestUrl: string = React.useMemo(() => {
     return normalizeManifestToUrl(manifest);
   }, [manifest]);
 
   // Find Work.Description and Work.Link components in children
-  const descriptionElement = React.useMemo(() => {
+  const descriptionElement: ReactElement<WorkDescriptionProps> | null | undefined = React.useMemo(() => {
     if (!children) return null;
 
     const childrenArray = React.Children.toArray(children);
@@ -145,7 +145,7 @@ export function Work({
     ) as ReactElement<WorkDescriptionProps> | undefined;
   }, [children]);
 
-  const linkElement = React.useMemo(() => {
+  const linkElement: ReactElement<WorkLinkProps> | null | undefined = React.useMemo(() => {
     if (!children) return null;
 
     const childrenArray = React.Children.toArray(children);
@@ -155,7 +155,7 @@ export function Work({
   }, [children]);
 
   // Detect if content is minimal
-  const isMinimalContent = React.useMemo(() => {
+  const isMinimalContent: boolean = React.useMemo(() => {
     if (!descriptionElement) return false;
     const textContent = React.Children.toArray(descriptionElement.props.children)
       .filter(child => typeof child === 'string')
