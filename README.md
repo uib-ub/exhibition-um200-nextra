@@ -39,8 +39,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [ ] Add content to the project.
 - [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
 - [ ] Add design from Haltenbanken
-- [ ] Add `sitemap.xml` to the project.
+- [x] Add `sitemap.xml` to the project.
 - [ ] Explore [Canopy-IIIF](https://github.com/canopy-iiif/canopy-iiif), that can add automatic views on IIIF collections and manifests. The `canopy-experiment` branch is a starting point.
+
+## Clover-IIIF workaround
 
 NB! `clover-iiif` is pegged to `2.12.0` as later versions are not compatible with the latest version of `next.js`. it is also necessary  to override the version of `react` and `react-dom` to `19.0.0` in the `package.json` file. As well as `openseadragon` to `5.0.1`. See [this issue](https://github.com/samvera-labs/clover-iiif/issues/291) for more information.
 
@@ -50,4 +52,15 @@ NB! `clover-iiif` is pegged to `2.12.0` as later versions are not compatible wit
     "react-dom": "^19.0.0",
     "openseadragon": "^5.0.1"
   }
+```
+
+## Sitemap
+
+The sitemap is generated using the `sitemap.ts` file and serves a `/sitemap.xml` route. It does not work in dev useing Turbopack. In production it works, `npm run build && npm run start`, and using `npm run dev:webpack` works. See [this issue](https://github.com/shuding/nextra/issues/4274) for Nextra implementation details.
+
+Checking the sitemaps in the browser:
+
+```bash
+npm run dev:webpack
+curl -s http://localhost:3000/sitemap.xml | xmllint --format -
 ```
