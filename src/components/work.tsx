@@ -96,7 +96,7 @@ const descriptionVariants = cva(
 );
 
 // Helper function to normalize manifest input to URL
-function normalizeManifestToUrl(manifest: string): string | null {
+function normalizeManifestToUrl(manifest: string): string {
   // If it's already a URL, return as is
   if (manifest.startsWith('http://') || manifest.startsWith('https://')) {
     return manifest;
@@ -116,7 +116,7 @@ export function Work({
   ...props
 }: WorkProps) {
   // Normalize manifest input to URL
-  const manifestUrl = React.useMemo(() => {
+  const manifestUrl: string = React.useMemo(() => {
     return normalizeManifestToUrl(manifest);
   }, [manifest]);
 
