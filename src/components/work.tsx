@@ -102,6 +102,7 @@ function normalizeManifestToUrl(manifest: string): string {
     return manifest;
   }
   // If it's an ID, construct the UB API URL
+  // Maybe add a validity check for UB IDs? return null if not valid?
   return `https://api.ub.uib.no/items/${manifest}?as=iiif`;
 }
 
@@ -121,7 +122,7 @@ export function Work({
   }, [manifest]);
 
   // Error handling for missing manifest
-  if (!manifestUrl) {
+  if (!manifest) { // check 'manifest' rather 'manifestUrl' because normalizeManifestToUrl() never returns '' or null; cf. ln. 105
     return (
       <div className={cn(workVariants({ size, variant }), className)}>
         <div className="flex items-center justify-center h-64 text-muted-foreground">
