@@ -40,7 +40,7 @@ export default async function RootLayout({
   return (
     <html
       // Not required, but good for SEO
-      lang="en"
+      lang="no"
       // Required to be set
       dir="ltr"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
