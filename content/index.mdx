@@ -1,54 +1,17 @@
 import { Button } from '@/components/ui/button'
 import { Work } from '@/components/work'
-import {
-  IconHome,
-  IconUsers,
-  IconUser,
-  IconArrowRight,
-  IconArrowLeft,
-  IconArrowUp,
-  IconArrowDown,
-  IconArrowUpRight,
-  IconArrowDownRight,
-  IconArrowUpLeft,
-  IconArrowDownLeft,
-  IconChevronRight,
-  IconChevronLeft,
-  IconChevronUp,
-  IconChevronDown,
-  IconChevronUpRight,
-  IconChevronDownRight,
-  IconChevronUpLeft,
-  IconChevronDownLeft,
-  IconAlphabetArabic,
-  IconAlphabetLatin,
-} from '@tabler/icons-react'
+import { MainHero } from '@/components/main-hero'
+import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { NavCards } from '@/components/nav-cards'
 
-# Universitetsmuseet i Bergen 200 år
+<MainHero />
 
-Velkommen til nettutstillingen for Universitetsmuseet i Bergen 200 år jubileum!
+<ContentGrid>
 
-## Om utstillingen
+<span className="text-2xl font-bold text-center">En digital jubileumsutstilling</span>
 
 Denne nettutstillingen feirer 200 år med forskning, bevaring og formidling av kulturarv ved Universitetsmuseet i Bergen. Gjennom digitale IIIF-manifester kan du utforske våre samlinger og lære mer om museets historie og betydning.
 
-<Button size="lg" className="my-4">
-  <a href="/documentation">
-    Lær mer om hvordan du lager en nettutstilling
-  </a>
-</Button>
+<NavCards title="Tematiske fortellinger" />
 
-## Eksempel på digitalt objekt
-
-<Work manifest="ubb-diplom-0034">
-  <Work.Content>
-    <Work.Description>
-      Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår. 
-      Sysselmann Ivar Andresson gir beskjed til kong Magnus VII Eriksson om at Arne Alfinnson 
-      drepte Einar Auga, og gir en detaljert beskrivelse av hendelsen.
-    </Work.Description>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-      Se mer i Marcus
-    </Work.Link>
-  </Work.Content>
-</Work>
+</ContentGrid>

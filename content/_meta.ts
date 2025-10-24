@@ -1,10 +1,10 @@
 const meta = {
   'index': {
-    title: 'Universitet i Bergen 200 år',
+    title: '200 år med vidunderlig vitenskap',
     type: 'page',
     display: 'hidden',
     theme: {
-      layout: 'default',
+      layout: 'full',
       toc: false
     }
   },

@@ -1,37 +1,32 @@
 import type { Metadata } from "next";
-import { Footer, Layout,LastUpdated, Navbar } from 'nextra-theme-docs'
+import { Footer, Layout, LastUpdated, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
-import { Geist, Geist_Mono } from "next/font/google";
+import { Crimson_Pro } from "next/font/google";
 import "./globals.css";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const crimsonPro = Crimson_Pro({
+  variable: "--font-crimson-pro",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Universitetsmuseet i Bergen 200 år",
+  title: "200 år med vidunderlig vitenskap",
   description: "Kommer snart",
 };
- 
- 
+
+
 const banner = <Banner storageKey="some-key">Lansering snart 🎉</Banner>
 
 const navbar = (
   <Navbar
-    logo={<b>Universitetsmuseet i Bergen 200 år</b>}
-    // ... Your additional navbar options
+    logo={<b>200 år med vidunderlig vitenskap</b>}
+  // ... Your additional navbar options
   />
 )
 const footer = <Footer>MIT {new Date().getFullYear()} © Universitetet i Bergen.</Footer>
- 
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -43,14 +38,14 @@ export default async function RootLayout({
       lang="no"
       // Required to be set
       dir="ltr"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${crimsonPro.variable} antialiased`}
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
     >
       <Head
       >
-        <meta name="description" content="Universitetsmuseet i Bergen 200 år" />
-        <meta name="keywords" content="Universitetsmuseet i Bergen, 200 år, nettutstilling" />
+        <meta name="description" content="200 år med vidunderlig vitenskap" />
+        <meta name="keywords" content="Universitetsmuseet i Bergen, 200 år, nettutstilling, vitenskap" />
         <meta name="author" content="Universitetet i Bergen" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
@@ -78,7 +73,7 @@ export default async function RootLayout({
             light: "Lys",
             system: "System",
           }}
-          search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}          
+          search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
         >
           {children}
         </Layout>
