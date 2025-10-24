@@ -3,6 +3,8 @@ import { Work } from '@/components/work'
 import { MainHero } from '@/components/main-hero'
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 import { NavCards } from '@/components/nav-cards'
+import { Carousel } from '@/components/carousel'
+import data from './1825-1875.json'
 
 <MainHero />
 
@@ -13,5 +15,7 @@ import { NavCards } from '@/components/nav-cards'
 Denne nettutstillingen feirer 200 år med forskning, bevaring og formidling av kulturarv ved Universitetsmuseet i Bergen. Gjennom digitale IIIF-manifester kan du utforske våre samlinger og lære mer om museets historie og betydning.
 
 <NavCards title="Tematiske fortellinger" />
+
+<Carousel title="En institusjon blir til" period="1825-1875" data={data} />
 
 </ContentGrid>

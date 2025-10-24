@@ -42,7 +42,7 @@ export function NavCard({ title, imageSrc, imageAlt, variant, className }: NavCa
         "px-2 py-1 text-center transition-all duration-300",
         variants[variant]
       )}>
-        <h3 className="font-serif text-sm font-medium uppercase tracking-wider text-foreground ">{title}</h3>
+        <h3 className="font-serif text-sm font-medium uppercase tracking-wider text-foreground">{title}</h3>
       </div>
     </div>
   )

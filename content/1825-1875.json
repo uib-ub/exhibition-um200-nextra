@@ -1,0 +1,37 @@
+[
+  {
+    "year": "1882",
+    "title": "Museets og UiBs historie",
+    "description": "Museets og UiBs historie",
+    "image": "/historic-university-building-black-and-white.jpg",
+    "imageAlt": "Historic university building"
+  },
+  {
+    "year": "1882",
+    "title": "W.F.K Christie",
+    "description": "W.F.K Christie",
+    "image": "/portrait-of-19th-century-gentleman.jpg",
+    "imageAlt": "Portrait of W.F.K Christie"
+  },
+  {
+    "year": "1882",
+    "title": "Bygg",
+    "description": "Bygg",
+    "image": "/yellow-historic-building-with-green-lawn.jpg",
+    "imageAlt": "Historic building exterior"
+  },
+  {
+    "year": "1882",
+    "title": "Samlinger",
+    "description": "Samlinger",
+    "image": "/collection-of-vintage-scientific-icons-and-symbols.jpg",
+    "imageAlt": "Collection of historical artifacts"
+  },
+  {
+    "year": "1882",
+    "title": "Ekspedisjon",
+    "description": "Ekspedisjon",
+    "image": "/portrait-of-19th-century-gentleman.jpg",
+    "imageAlt": "Portrait of W.F.K Christie"
+  }
+]
