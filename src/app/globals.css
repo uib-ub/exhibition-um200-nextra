@@ -9,7 +9,33 @@
 
 @variant dark (&:where(.dark *));
 
-@theme inline {
+@theme static {
+  --color-um-dyr-solid: #a6ffb3;
+  --color-um-dyr-tint: #dcf2e0;
+  --color-um-arkeologi-solid: #ff9595;
+  --color-um-arkeologi-tint: #fdf0f0;
+  --color-um-fisk-solid: #9595ff;
+  --color-um-fisk-tint: #f0f0ff;
+  --color-um-hverdag-solid: #5acaae;
+  --color-um-hverdag-tint: #e4f2ee;
+  --color-um-tegn-solid: #f5f8c3;
+  --color-um-tegn-tint: #feffea;
+  --color-um-vaer-solid: #97cbff;
+  --color-um-vaer-tint: #e3f1ff;
+  --color-um-kirkekunst-solid: #dbb3a4;
+  --color-um-kirkekunst-tint: #f3e4de;
+  --color-um-helse-solid: #dfe2f8;
+  --color-um-helse-tint: #f4f5ff;
+  --color-um-utland-solid: #ebc39b;
+  --color-um-utland-tint: #f9ebde;
+  --color-um-glass-solid: #9ce0ff;
+  --color-um-glass-tint: #e3f6ff;
+  --color-um-vekster-solid: #c3f5e2;
+  --color-um-vekster-tint: #e8faf3;
+  --color-um-tidrom-solid: #f5d2dc;
+  --color-um-tidrom-tint: #fff6f9;
+  --color-um-stein-solid: #cee6ee;
+  --color-um-stein-tint: #f1fbff;  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-crimson-pro);
@@ -50,32 +76,6 @@
 }
 
 :root {
-  --color-dyr-solid: #a6ffb3;
-  --color-dyr-tint: #dcf2e0;
-  --color-arkeologi-solid: #ff9595;
-  --color-arkeologi-tint: #fdf0f0;
-  --color-fisk-solid: #9595ff;
-  --color-fisk-tint: #f0f0ff;
-  --color-hverdag-solid: #5acaae;
-  --color-hverdag-tint: #e4f2ee;
-  --color-tegn-solid: #f5f8c3;
-  --color-tegn-tint: #feffea;
-  --color-vaer-solid: #97cbff;
-  --color-vaer-tint: #e3f1ff;
-  --color-kirkekunst-solid: #dbb3a4;
-  --color-kirkekunst-tint: #f3e4de;
-  --color-helse-solid: #dfe2f8;
-  --color-helse-tint: #f4f5ff;
-  --color-utland-solid: #ebc39b;
-  --color-utland-tint: #f9ebde;
-  --color-glass-solid: #9ce0ff;
-  --color-glass-tint: #e3f6ff;
-  --color-vekster-solid: #c3f5e2;
-  --color-vekster-tint: #e8faf3;
-  --color-tidrom-solid: #f5d2dc;
-  --color-tidrom-tint: #fff6f9;
-  --color-stein-solid: #cee6ee;
-  --color-stein-tint: #f1fbff;  
   --nextra-content-width: 100% !important;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -154,72 +154,5 @@
   }
   article {
    padding: 0 !important;
-  }
-}
-
-@layer utilities {
-  .arkeologi {
-    background-color: var(--color-arkeologi-solid);
-    border-color: var(--color-arkeologi-solid);
-  }
-  .fisk {
-    background-color: var(--color-fisk-solid);
-    border-color: var(--color-fisk-solid);
-  }
-  .hverdag {
-    background-color: var(--color-hverdag-solid);
-    border-color: var(--color-hverdag-solid);
-  }
-  .tegn {
-    background-color: var(--color-tegn-solid);
-    border-color: var(--color-tegn-solid);
-  }
-  .vaer {
-    background-color: var(--color-vaer-solid);
-    border-color: var(--color-vaer-solid);
-  }
-  .utland {
-    background-color: var(--color-utland-solid);
-    border-color: var(--color-utland-solid);
-  }
-  .kirkekunst {
-    background-color: var(--color-kirkekunst-solid);
-    border-color: var(--color-kirkekunst-solid);
-  }
-  .helse {
-    background-color: var(--color-helse-solid);
-    border-color: var(--color-helse-solid);
-  }
-  .det-store-utland {
-    background-color: var(--color-utland-solid);
-    border-color: var(--color-utland-solid);
-  }
-  .glass {
-    background-color: var(--color-glass-solid);
-    border-color: var(--color-glass-solid);
-  }
-  .vekster {
-    background-color: var(--color-vekster-solid);
-    border-color: var(--color-vekster-solid);
-  }
-  .dyr {
-    background-color: var(--color-dyr-solid);
-    border-color: var(--color-dyr-solid);
-  }
-  .stein {
-    background-color: var(--color-stein-solid);
-    border-color: var(--color-stein-solid);
-  }
-  .tid-rom {
-    background-color: var(--color-tidrom-solid);
-    border-color: var(--color-tidrom-solid);
-  }
-  .bokstaver-og-tegn {
-    background-color: var(--color-tegn-solid);
-    border-color: var(--color-tegn-solid);
-  }
-  .vann-vaer-vind {
-    background-color: var(--color-vaer-solid);
-    border-color: var(--color-vaer-solid);
   }
 }
