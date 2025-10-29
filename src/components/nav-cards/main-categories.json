@@ -1,78 +1,91 @@
 [
   {
     "title": "Arkeologi",
+    "href": "/tema/arkeologi",
     "imageSrc": "/nav-card-images/ancient-archaeological-artifact-statue.jpg",
     "imageAlt": "Archaeological artifact",
     "variant": "arkeologi"
   },
   {
     "title": "Fisk",
+    "href": "/tema/fisk",
     "imageSrc": "/nav-card-images/vintage-fish-illustration.jpg",
     "imageAlt": "Fish illustration",
     "variant": "fisk"
   },
   {
     "title": "Vann, vær & vind",
+    "href": "/tema/vaer",
     "imageSrc": "/nav-card-images/vintage-cave-glacier-photograph.jpg",
     "imageAlt": "Water, weather and wind",
     "variant": "vaer"
   },
   {
     "title": "Hverdag",
+    "href": "/tema/hverdag",
     "imageSrc": "/nav-card-images/vintage-newspaper-document.jpg",
     "imageAlt": "Everyday life",
     "variant": "hverdag"
   },
   {
     "title": "Det store utland",
+    "href": "/tema/utland",
     "imageSrc": "/nav-card-images/asian-pagoda-tower.jpg",
     "imageAlt": "The great abroad",
     "variant": "utland"
   },
   {
     "title": "Dyr",
+    "href": "/tema/dyr",
     "imageSrc": "/nav-card-images/black-silhouette-fish-pair.jpg",
     "imageAlt": "Animals",
     "variant": "dyr"
   },
   {
     "title": "Glass",
+    "href": "/tema/glass",
     "imageSrc": "/nav-card-images/ornate-glass-doors-vintage.jpg",
     "imageAlt": "Glass",
     "variant": "glass"
   },
   {
     "title": "Arkeologi",
+    "href": "/tema/arkeologi",
     "imageSrc": "/nav-card-images/ancient-archaeological-artifact-statue.jpg",
     "imageAlt": "Archaeological artifact",
     "variant": "arkeologi"
   },
   {
     "title": "Kirkekunst",
+    "href": "/tema/kirkekunst",
     "imageSrc": "/nav-card-images/medieval-church-art-religious-painting.jpg",
     "imageAlt": "Church art",
     "variant": "kirkekunst"
   },
   {
     "title": "Stein",
+    "href": "/tema/stein",
     "imageSrc": "/nav-card-images/vintage-map-cartography.jpg",
     "imageAlt": "Stone",
     "variant": "stein"
   },
   {
     "title": "Bokstaver & tegn",
+    "href": "/tema/tegn",
     "imageSrc": "/nav-card-images/illuminated-manuscript-medieval-text.jpg",
     "imageAlt": "Letters and signs",
     "variant": "tegn"
   },
   {
     "title": "Tid & rom",
+    "href": "/tema/tidrom",
     "imageSrc": "/nav-card-images/antique-brass-door-handles.jpg",
     "imageAlt": "Time and space",
     "variant": "tidrom"
   },
   {
     "title": "Helse",
+    "href": "/tema/helse",
     "imageSrc": "/nav-card-images/vintage-pharmacy-apothecary-illustration.jpg",
     "imageAlt": "Health",
     "variant": "helse"

@@ -6,11 +6,13 @@ import {
   CarouselScrollbar,
 } from '@/components/vibes/soul/primitives/carousel';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 interface CarouselData {
   title: string;
   description: string;
   year: string;
+  href: string;
   image: string;
   imageAlt: string;
 }
@@ -18,7 +20,7 @@ interface CarouselData {
 export function Carousel({ title, period, data }: { title: string, period: string, data: CarouselData[] }) {
   return (
     <div className="feature">
-      <h2 className="text-2xl font-bold pb-10">{period} | {title}</h2>
+      <h2 className="text-2xl font-bold">{period} | {title}</h2>
       <CarouselComponent>
         <CarouselContent className="mb-10">
 
@@ -28,7 +30,9 @@ export function Carousel({ title, period, data }: { title: string, period: strin
               <div className="flex flex-col gap-2 pt-3 justify-start">
                 <div className="text-sm text-gray-500">{item.year}</div>
                 <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
-                <Button variant="outline" className="border-black w-min">Les mer</Button>
+                <Button variant="outline" className="w-min border-black" asChild>
+                  <Link href={item.href}>Les mer</Link>
+                </Button>
               </div>
             </CarouselItem>
           ))}

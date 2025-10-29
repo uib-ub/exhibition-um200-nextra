@@ -1,16 +1,18 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import mainCategories from "./main-categories.json"
+import Link from 'next/link'
 
 interface NavCardProps {
   title: string
+  href: string
   imageSrc: string
   imageAlt: string
   variant: string
   className?: string
 }
 
-export function NavCard({ title, imageSrc, imageAlt, variant, className }: NavCardProps) {
+export function NavCard({ title, href, imageSrc, imageAlt, variant, className }: NavCardProps) {
   const variants: Record<string, string> = {
     dyr: "border-um-dyr-solid group-hover:bg-um-dyr-solid",
     arkeologi: "border-um-arkeologi-solid group-hover:bg-um-arkeologi-solid",
@@ -28,7 +30,7 @@ export function NavCard({ title, imageSrc, imageAlt, variant, className }: NavCa
   }
 
   return (
-    <div className={cn("group cursor-pointer", className)}>
+    <Link href={href} className={cn("group cursor-pointer", className)}>
       <div
         className={cn(
           "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300", variants[variant]
@@ -44,7 +46,7 @@ export function NavCard({ title, imageSrc, imageAlt, variant, className }: NavCa
       )}>
         <h3 className="font-serif text-sm font-medium uppercase tracking-wider text-foreground">{title}</h3>
       </div>
-    </div>
+    </Link>
   )
 }
 
