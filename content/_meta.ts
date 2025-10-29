@@ -12,14 +12,10 @@ const meta = {
     title: 'Tema',
     type: 'menu',
     items: {
-      'tema-1': {
-        title: 'Tema 1',
-        href: '/tema/tema-1'
+      'fisk': {
+        title: 'Fisk',
+        href: '/tema/fisk'
       },
-      'tema-2': {
-        title: 'Tema 2',
-        href: '/tema/tema-2'
-      }
     }
   },
   'om': {
