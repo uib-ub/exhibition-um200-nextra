@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Footer, Layout, LastUpdated, Navbar } from 'nextra-theme-docs'
+import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 
 const crimsonPro = Crimson_Pro({
@@ -16,16 +17,14 @@ export const metadata: Metadata = {
   description: "Kommer snart",
 };
 
-
 const banner = <Banner storageKey="some-key">Lansering snart 🎉</Banner>
 
 const navbar = (
   <Navbar
-    logo={<b className='text-md md:text-2xl uppercase'>200 år med vidunderlig vitenskap</b>}
+    logo={<b className='text-md md:text-xl uppercase'>200 år med vidunderlig vitenskap</b>}
   // ... Your additional navbar options
   />
 )
-const footer = <Footer>MIT {new Date().getFullYear()} © Universitetet i Bergen.</Footer>
 
 export default async function RootLayout({
   children,
@@ -62,12 +61,12 @@ export default async function RootLayout({
             title: "Innhold",
             backToTop: "Til toppen",
           }}
-          footer={footer}
           feedback={{
-            content: 'Spørsmål eller kommentarer? Send oss en e-post!',
+            content: null,
           }}
-          editLink="Rediger denne siden"
+          editLink={null}
           lastUpdated={<LastUpdated locale="nb">Sist oppdatert</LastUpdated>}
+          darkMode={false}
           themeSwitch={{
             dark: "Mørk",
             light: "Lys",
@@ -76,6 +75,7 @@ export default async function RootLayout({
           search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
         >
           {children}
+          <Footer />
         </Layout>
       </body>
     </html>
