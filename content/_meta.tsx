@@ -136,10 +136,16 @@ const meta = {
   'om': {
     title: 'Om',
     type: 'page',
+    theme: {
+      toc: false
+    }
   },
   'kontakt': {
     title: 'Kontakt',
     type: 'page',
+    theme: {
+      toc: false
+    }
   },
 }
 

@@ -6,6 +6,15 @@ const meta = {
       toc: false
     }
   },
+  'miranda-boedtker': {
+    type: 'doc',
+  },
+  'knut-faegri': {
+    type: 'doc',
+  },
+  'bokflora': {
+    type: 'doc',
+  },
 }
 
 export default meta;
