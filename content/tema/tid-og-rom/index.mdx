@@ -1,0 +1,28 @@
+---
+title: Tid og rom
+description: Dette er en beskrivelse av temaet tid og rom.
+---
+
+import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Card, Cards } from '@/components/card'
+
+<ContentGrid>
+
+<Hero variant="tid-og-rom">
+  <HeroImage src="/tid-og-rom-hero-ill.png" alt="Tid og rom" className="border-um-tidrom-solid" />
+  <HeroContent className="bg-um-tidrom-solid">
+    <HeroTitle>
+      Tid og rom
+    </HeroTitle>
+    <HeroDescription>
+      Her er en liste over temaene
+    </HeroDescription>
+  </HeroContent>
+</Hero>
+
+{/* <Cards title="Historier om fisk">
+  <Card title="Christie og de «mærkelige Fiske»" description="" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
+</Cards> */}
+
+</ContentGrid>

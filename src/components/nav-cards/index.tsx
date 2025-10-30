@@ -14,18 +14,18 @@ interface NavCardProps {
 
 export function NavCard({ title, href, imageSrc, imageAlt, variant, className }: NavCardProps) {
   const variants: Record<string, string> = {
-    dyr: "border-um-dyr-solid group-hover:bg-um-dyr-solid",
     arkeologi: "border-um-arkeologi-solid group-hover:bg-um-arkeologi-solid",
+    "bokstaver-og-tegn": "border-um-tegn-solid group-hover:bg-um-tegn-solid",
+    dyr: "border-um-dyr-solid group-hover:bg-um-dyr-solid",
     fisk: "border-um-fisk-solid group-hover:bg-um-fisk-solid",
-    vaer: "border-um-vaer-solid group-hover:bg-um-vaer-solid",
-    hverdag: "border-um-hverdag-solid group-hover:bg-um-hverdag-solid",
-    utland: "border-um-utland-solid group-hover:bg-um-utland-solid",
+    glass: "border-um-glass-solid group-hover:bg-um-glass-solid",
+    helse: "border-um-helse-solid group-hover:bg-um-helse-solid",
+    "hverdag": "border-um-hverdag-solid group-hover:bg-um-hverdag-solid",
+    "det-store-utland": "border-um-utland-solid group-hover:bg-um-utland-solid",
     kirkekunst: "border-um-kirkekunst-solid group-hover:bg-um-kirkekunst-solid",
     stein: "border-um-stein-solid group-hover:bg-um-stein-solid",
-    tegn: "border-um-tegn-solid group-hover:bg-um-tegn-solid",
-    tidrom: "border-um-tidrom-solid group-hover:bg-um-tidrom-solid",
-    helse: "border-um-helse-solid group-hover:bg-um-helse-solid",
-    glass: "border-um-glass-solid group-hover:bg-um-glass-solid",
+    "tid-og-rom": "border-um-tidrom-solid group-hover:bg-um-tidrom-solid",
+    "vann-vaer-og-vind": "border-um-vaer-solid group-hover:bg-um-vaer-solid",
     vekster: "border-um-vekster-solid group-hover:bg-um-vekster-solid",
   }
 
@@ -36,7 +36,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
           "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300", variants[variant]
         )}
       >
-        <div className={`relative aspect-[3/4]`}>
+        <div className={`relative aspect-3/4`}>
           <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-cover" />
         </div>
       </div>

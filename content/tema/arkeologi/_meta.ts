@@ -1,5 +1,5 @@
 const meta = {
-  'fisk': {
+  'index': {
     type: 'page',
     theme: {
       layout: 'full',

@@ -7,32 +7,18 @@
     "variant": "arkeologi"
   },
   {
-    "title": "Fisk",
-    "href": "/tema/fisk",
-    "imageSrc": "/nav-card-images/vintage-fish-illustration.jpg",
-    "imageAlt": "Fish illustration",
-    "variant": "fisk"
-  },
-  {
-    "title": "Vann, vær & vind",
-    "href": "/tema/vaer",
-    "imageSrc": "/nav-card-images/vintage-cave-glacier-photograph.jpg",
-    "imageAlt": "Water, weather and wind",
-    "variant": "vaer"
-  },
-  {
-    "title": "Hverdag",
-    "href": "/tema/hverdag",
-    "imageSrc": "/nav-card-images/vintage-newspaper-document.jpg",
-    "imageAlt": "Everyday life",
-    "variant": "hverdag"
+    "title": "Bokstaver og tegn",
+    "href": "/tema/bokstaver-og-tegn",
+    "imageSrc": "/nav-card-images/illuminated-manuscript-medieval-text.jpg",
+    "imageAlt": "Letters and signs",
+    "variant": "bokstaver-og-tegn"
   },
   {
     "title": "Det store utland",
-    "href": "/tema/utland",
+    "href": "/tema/det-store-utland",
     "imageSrc": "/nav-card-images/asian-pagoda-tower.jpg",
     "imageAlt": "The great abroad",
-    "variant": "utland"
+    "variant": "det-store-utland"
   },
   {
     "title": "Dyr",
@@ -42,6 +28,13 @@
     "variant": "dyr"
   },
   {
+    "title": "Fisk",
+    "href": "/tema/fisk",
+    "imageSrc": "/nav-card-images/vintage-fish-illustration.jpg",
+    "imageAlt": "Fish illustration",
+    "variant": "fisk"
+  },
+  {
     "title": "Glass",
     "href": "/tema/glass",
     "imageSrc": "/nav-card-images/ornate-glass-doors-vintage.jpg",
@@ -49,11 +42,18 @@
     "variant": "glass"
   },
   {
-    "title": "Arkeologi",
-    "href": "/tema/arkeologi",
-    "imageSrc": "/nav-card-images/ancient-archaeological-artifact-statue.jpg",
-    "imageAlt": "Archaeological artifact",
-    "variant": "arkeologi"
+    "title": "Helse",
+    "href": "/tema/helse",
+    "imageSrc": "/nav-card-images/vintage-pharmacy-apothecary-illustration.jpg",
+    "imageAlt": "Health",
+    "variant": "helse"
+  },
+  {
+    "title": "Hverdag",
+    "href": "/tema/hverdag",
+    "imageSrc": "/nav-card-images/vintage-newspaper-document.jpg",
+    "imageAlt": "Everyday life",
+    "variant": "hverdag"
   },
   {
     "title": "Kirkekunst",
@@ -70,24 +70,24 @@
     "variant": "stein"
   },
   {
-    "title": "Bokstaver & tegn",
-    "href": "/tema/tegn",
-    "imageSrc": "/nav-card-images/illuminated-manuscript-medieval-text.jpg",
-    "imageAlt": "Letters and signs",
-    "variant": "tegn"
-  },
-  {
-    "title": "Tid & rom",
-    "href": "/tema/tidrom",
+    "title": "Tid og rom",
+    "href": "/tema/tid-og-rom",
     "imageSrc": "/nav-card-images/antique-brass-door-handles.jpg",
     "imageAlt": "Time and space",
-    "variant": "tidrom"
+    "variant": "tid-og-rom"
   },
   {
-    "title": "Helse",
-    "href": "/tema/helse",
-    "imageSrc": "/nav-card-images/vintage-pharmacy-apothecary-illustration.jpg",
-    "imageAlt": "Health",
-    "variant": "helse"
+    "title": "Vann, vær og vind",
+    "href": "/tema/vann-vaer-og-vind",
+    "imageSrc": "/nav-card-images/vintage-cave-glacier-photograph.jpg",
+    "imageAlt": "Water, weather and wind",
+    "variant": "vann-vaer-og-vind"
+  },
+  {
+    "title": "Vekster",
+    "href": "/tema/vekster",
+    "imageSrc": "/nav-card-images/vintage-botanical-illustration.jpg",
+    "imageAlt": "Plants",
+    "variant": "vekster"
   }
 ]

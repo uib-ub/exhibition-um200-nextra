@@ -6,13 +6,6 @@ const meta = {
       toc: false
     }
   },
-  'christie-og-de-maerkelige-fiske': {
-    type: 'doc',
-    theme: {
-      layout: 'full',
-      toc: true
-    }
-  },
 }
 
 export default meta;

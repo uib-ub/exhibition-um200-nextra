@@ -1,0 +1,28 @@
+---
+title: Hverdag
+description: Dette er en beskrivelse av temaet hverdag.
+---
+
+import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Card, Cards } from '@/components/card'
+
+<ContentGrid>
+
+<Hero variant="hverdag">
+  <HeroImage src="/hverdag-hero-ill.png" alt="Hverdag" className="border-um-hverdag-solid" />
+  <HeroContent className="bg-um-hverdag-solid">
+    <HeroTitle>
+      Hverdag
+    </HeroTitle>
+    <HeroDescription>
+      Her er en liste over temaene
+    </HeroDescription>
+  </HeroContent>
+</Hero>
+
+{/* <Cards title="Historier om fisk">
+  <Card title="Christie og de «mærkelige Fiske»" description="" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
+</Cards> */}
+
+</ContentGrid>
