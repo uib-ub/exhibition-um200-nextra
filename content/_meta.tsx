@@ -16,7 +16,7 @@ const meta = {
     items: {
       'arkeologi': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-arkeologi-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-arkeologi-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconAlien className="w-5 h-5 inline-block" />
             <div>Arkeologi</div>
           </div>
@@ -25,7 +25,7 @@ const meta = {
       },
       'bokstaver-og-tegn': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-tegn-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-tegn-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconLetterA className="w-5 h-5 inline-block" />
             <div>Bokstaver og tegn</div>
           </div>
@@ -34,7 +34,7 @@ const meta = {
       },
       'det-store-utland': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconWorld className="w-5 h-5 inline-block" />
             <div>Det store utland</div>
           </div>
@@ -43,7 +43,7 @@ const meta = {
       },
       'dyr': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-dyr-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-dyr-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconHorse className="w-5 h-5 inline-block" />
             <div>Dyr</div>
           </div>
@@ -52,7 +52,7 @@ const meta = {
       },
       'fisk': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-fisk-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-fisk-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconFish className="w-5 h-5 inline-block" />
             <div>Fisk</div>
           </div>
@@ -61,7 +61,7 @@ const meta = {
       },
       'glass': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-glass-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-glass-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconGlass className="w-5 h-5 inline-block" />
             <div>Glass</div>
           </div>
@@ -70,7 +70,7 @@ const meta = {
       },
       'helse': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-helse-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-helse-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconHeart className="w-5 h-5 inline-block" />
             <div>Helse</div>
           </div>
@@ -79,7 +79,7 @@ const meta = {
       },
       'hverdag': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-hverdag-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-hverdag-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconCalendar className="w-5 h-5 inline-block" />
             <div>Hverdag</div>
           </div>
@@ -88,7 +88,7 @@ const meta = {
       },
       'kirkekunst': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-kirkekunst-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-kirkekunst-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconBuildingChurch className="w-5 h-5 inline-block" />
             <div>Kirkekunst</div>
           </div>
@@ -97,7 +97,7 @@ const meta = {
       },
       'stein': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-stein-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-stein-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconHandRock className="w-5 h-5 inline-block" />
             <div>Stein</div>
           </div>
@@ -106,7 +106,7 @@ const meta = {
       },
       'tid-og-rom': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-tidrom-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-tidrom-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconClock className="w-5 h-5 inline-block" />
             <div>Tid og rom</div>
           </div>
@@ -115,7 +115,7 @@ const meta = {
       },
       'vann-vaer-og-vind': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-vaer-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-vaer-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconCloudRain className="w-5 h-5 inline-block" />
             <div>Vann, vær & vind</div>
           </div>
@@ -124,7 +124,7 @@ const meta = {
       },
       'vekster': {
         title: (
-          <div className="flex flex-row items-center gap-1 bg-um-vekster-tint px-2 py-1 rounded-md justify-self-stretch text-lg">
+          <div className="flex flex-row items-center gap-1 bg-um-vekster-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconPlant className="w-5 h-5 inline-block" />
             <div>Vekster</div>
           </div>

@@ -21,7 +21,7 @@ const banner = <Banner storageKey="some-key">Lansering snart 🎉</Banner>
 
 const navbar = (
   <Navbar
-    logo={<b className='text-md md:text-xl uppercase'>200 år med vidunderlig vitenskap</b>}
+    logo={<div className='text-md lg:text-xl uppercase'>200 år med vidunderlig vitenskap</div>}
   // ... Your additional navbar options
   />
 )
