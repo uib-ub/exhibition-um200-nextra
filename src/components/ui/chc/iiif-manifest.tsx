@@ -65,7 +65,7 @@ const options = {
 
 export const IIIFManifest = ({ iiifContent }: { iiifContent: string }) => {
   return (
-    <div className='relative h-[50vh] w-full z-0'>
+    <div className='relative min-h-96 h-[50vh] w-full z-0'>
       <Viewer
         iiifContent={iiifContent}
         customTheme={customTheme}
