@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
+import { Footer } from "@/components/footer";
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/components/footer";
-
 
 const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
@@ -67,6 +66,10 @@ export default async function RootLayout({
           editLink={null}
           lastUpdated={<LastUpdated locale="nb">Sist oppdatert</LastUpdated>}
           darkMode={false}
+          nextThemes={{
+            defaultTheme: "light",
+            attribute: "data-theme",
+          }}
           themeSwitch={{
             dark: "Mørk",
             light: "Lys",
