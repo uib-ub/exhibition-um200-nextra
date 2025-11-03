@@ -14,9 +14,7 @@ import { Quote } from '@/components/quote'
 ### Basic usage
 
 ```tsx copy
-import { Work } from '@/components/work'
-
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       This is an example of how you can display a digital object in your exhibition. 
@@ -31,7 +29,7 @@ import { Work } from '@/components/work'
 
 ### Example
 
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       This is an example of how you can display a digital object in your exhibition. 
@@ -46,7 +44,7 @@ import { Work } from '@/components/work'
 ### Without description
 
 ```tsx copy
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html" />
   </Work.Content>
@@ -56,7 +54,7 @@ import { Work } from '@/components/work'
 ### With description (without link)
 
 ```tsx copy
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       This is an example of how you can display a digital object in your exhibition. 
@@ -69,7 +67,7 @@ import { Work } from '@/components/work'
 ### Custom link text
 
 ```tsx copy
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       This is an example of how you can display a digital object in your exhibition. 
@@ -85,7 +83,7 @@ import { Work } from '@/components/work'
 ### Standard link text (without children)
 
 ```tsx copy
-<Work manifest="ubb-diplom-0034">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       This is an example of how you can display a digital object in your exhibition. 
@@ -99,7 +97,7 @@ import { Work } from '@/components/work'
 ### Direct IIIF URL
 
 ```tsx copy
-<Work manifest="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
+<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
   <Work.Content>
     <Work.Description>
       Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår.
@@ -108,12 +106,12 @@ import { Work } from '@/components/work'
 </Work>
 ```
 
-### Manifest prop
+### iiifContent prop
 
-`manifest` prop can be:
+`iiifContent` prop can be:
 
-- **String ID**: `"ubb-diplom-0034"` - automatically converted to UB API URL
 - **Direct URL**: `"https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif"`
+- **Content state**: `JTdCJTIyJTQwY29udGV4dCUyMiUzQSUyMmh0dHAlM0ElMkYlMkZpaWlmLmlvJTJGYXBpJTJGcHJlc2VudGF0aW9uJTJGMyUyRmNvbnRleHQuanNvbiUyMiUyQyUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTJGc3RhdGUlMkYtNzA5NjI5MDUlMjIlMkMlMjJ0eXBlJTIyJTNBJTIyQW5ub3RhdGlvbiUyMiUyQyUyMm1vdGl2YXRpb24lMjIlM0ElNUIlMjJjb250ZW50U3RhdGUlMjIlNUQlMkMlMjJ0YXJnZXQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyU3BlY2lmaWNSZXNvdXJjZSUyMiUyQyUyMnNvdXJjZSUyMiUzQSU3QiUyMmlkJTIyJTNBJTIyaHR0cCUzQSUyRiUyRmxvY2FsaG9zdCUyRml0ZW1zJTJGdWJiLW1zLTIwNzItYi0wMDMtYSUyRmNhbnZhcyUyRjUyJTIyJTJDJTIydHlwZSUyMiUzQSUyMkNhbnZhcyUyMiUyQyUyMnBhcnRPZiUyMiUzQSU1QiU3QiUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTIyJTJDJTIydHlwZSUyMiUzQSUyMk1hbmlmZXN0JTIyJTdEJTVEJTdEJTJDJTIyc2VsZWN0b3IlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyRnJhZ21lbnRTZWxlY3RvciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyeHl3aCUzRDAlMkMtMzk0JTJDMjA0OCUyQzE1OTMlMjIlN0QlN0QlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMlRleHR1YWxCb2R5JTIyJTJDJTIydmFsdWUlMjIlM0ElMjJrJTIyJTJDJTIyZm9ybWF0JTIyJTNBJTIydGV4dCUyRnBsYWluJTIyJTdEJTVEJTdE`
 
 ## Quote
 
