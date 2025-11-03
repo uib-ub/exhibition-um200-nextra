@@ -67,13 +67,7 @@ export default async function RootLayout({
           lastUpdated={<LastUpdated locale="nb">Sist oppdatert</LastUpdated>}
           darkMode={false}
           nextThemes={{
-            defaultTheme: "light",
-            attribute: "data-theme",
-          }}
-          themeSwitch={{
-            dark: "Mørk",
-            light: "Lys",
-            system: "System",
+            forcedTheme: "light",
           }}
           search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
         >
