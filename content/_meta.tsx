@@ -1,6 +1,11 @@
 import { IconFish, IconAlien, IconBuildingChurch, IconGlass, IconHeart, IconHorse, IconLetterA, IconCalendar, IconWorld, IconHandRock, IconClock, IconCloudRain, IconPlant } from '@tabler/icons-react';
 
 const meta = {
+  '*': {
+    theme: {
+      timestamp: false,
+    }
+  },
   'index': {
     title: '200 år med vidunderlig vitenskap',
     type: 'page',
