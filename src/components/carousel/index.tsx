@@ -24,9 +24,9 @@ export function Carousel({ title, period, data }: { title: string, period: strin
       <CarouselComponent>
         <CarouselContent className="mb-10">
 
-          {data.map((item) => (
-            <CarouselItem key={item.title}>
-              <div className="basis-full @sm:basis-1/2 @md:basis-1/3 @4xl:basis-1/4 w-80 aspect-video bg-neutral-300"></div>
+          {data.map((item, index) => (
+            <CarouselItem key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4">
+              <div className="aspect-video bg-neutral-300"></div>
               <div className="flex flex-col gap-2 pt-3 justify-start">
                 <div className="text-sm text-gray-500">{item.year}</div>
                 <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
