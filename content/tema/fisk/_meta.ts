@@ -8,10 +8,6 @@ const meta = {
   },
   'christie-og-de-maerkelige-fiske': {
     type: 'doc',
-    theme: {
-      layout: 'full',
-      toc: true
-    }
   },
 }
 
