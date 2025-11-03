@@ -8,8 +8,8 @@ import { IIIFViewer } from './iiif-viewer';
 
 // Enhanced interface with better types and documentation
 interface WorkProps extends VariantProps<typeof workVariants> {
-  /** IIIF manifest ID from UB API or direct URL */
-  manifest: string;
+  /** IIIF manifest content */
+  iiifContent: string;
   /** Clover viewer configuration options */
   config?: CloverViewerProps;
   /** Additional CSS classes */
@@ -95,19 +95,9 @@ const descriptionVariants = cva(
   }
 );
 
-// Helper function to normalize manifest input to URL
-function normalizeManifestToUrl(manifest: string): string | null {
-  // If it's already a URL, return as is
-  if (manifest.startsWith('http://') || manifest.startsWith('https://')) {
-    return manifest;
-  }
-  // If it's an ID, construct the UB API URL
-  return `https://api.ub.uib.no/items/${manifest}?as=iiif`;
-}
-
 // Main Work component
 export function Work({
-  manifest,
+  iiifContent,
   config,
   className,
   size,
@@ -115,13 +105,9 @@ export function Work({
   children,
   ...props
 }: WorkProps) {
-  // Normalize manifest input to URL
-  const manifestUrl = React.useMemo(() => {
-    return normalizeManifestToUrl(manifest);
-  }, [manifest]);
 
   // Error handling for missing manifest
-  if (!manifestUrl) {
+  if (!iiifContent) {
     return (
       <div className={cn(workVariants({ size, variant }), className)}>
         <div className="flex items-center justify-center h-64 text-muted-foreground">
@@ -135,7 +121,7 @@ export function Work({
     <div className={cn(workVariants({ size, variant }), className)} {...props}>
       {/* Viewer Section */}
       <IIIFViewer
-        manifestUrl={manifestUrl}
+        iiifContent={iiifContent}
         config={config}
         size={size}
       />
@@ -158,6 +144,10 @@ function WorkContent({
   children: ReactNode;
   className?: string;
 } & VariantProps<typeof contentVariants>) {
+  if (!children) {
+    return null;
+  }
+
   return (
     <div
       className={cn(contentVariants({ layout, hasContent, contentDensity }), className)}
@@ -178,6 +168,11 @@ function WorkDescription({
   children: ReactNode;
   className?: string;
 } & VariantProps<typeof descriptionVariants>) {
+  if (!children) {
+    console.warn('Work.Description: children is missing');
+    return null;
+  }
+
   return (
     <div
       className={cn(descriptionVariants({ density }), className)}
@@ -200,6 +195,11 @@ function WorkLink({
   children?: ReactNode;
   className?: string;
 } & VariantProps<typeof linkVariants>) {
+  if (!href || !children) {
+    console.warn('Work.Link: href or children is missing');
+    return null;
+  }
+
   return (
     <a
       href={href}

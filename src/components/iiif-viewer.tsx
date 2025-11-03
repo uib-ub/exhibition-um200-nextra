@@ -19,7 +19,7 @@ const Viewer = dynamic(
 
 interface IIIFViewerProps extends VariantProps<typeof viewerVariants> {
   /** IIIF manifest URL */
-  manifestUrl: string;
+  iiifContent: string;
   /** Clover viewer configuration options */
   config?: CloverViewerProps;
   /** Additional CSS classes */
@@ -40,7 +40,7 @@ const viewerVariants = cva('w-full relative bg-background', {
 });
 
 export function IIIFViewer({
-  manifestUrl,
+  iiifContent,
   config,
   className,
   size,
@@ -49,7 +49,7 @@ export function IIIFViewer({
   return (
     <div className={cn(viewerVariants({ size }), className)} {...props}>
       <Viewer
-        iiifContent={manifestUrl}
+        iiifContent={iiifContent}
         options={{
           canvasHeight: '100%',
           informationPanel: { open: false },
