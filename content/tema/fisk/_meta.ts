@@ -1,10 +1,7 @@
 const meta = {
-  'index': {
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false
-    }
+  'root_link': {
+    title: 'Fisk',
+    href: '/tema/fisk',
   },
   'christie-og-de-maerkelige-fiske': {
     type: 'doc',

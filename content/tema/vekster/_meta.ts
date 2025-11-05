@@ -1,10 +1,7 @@
 const meta = {
-  'index': {
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false
-    }
+  'root_link': {
+    title: 'Vekster',
+    href: '/tema/vekster',
   },
   'miranda-boedtker': {
     type: 'doc',

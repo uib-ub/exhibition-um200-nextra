@@ -1,11 +1,7 @@
 const meta = {
-  'index': {
+  'root_link': {
     title: 'Vann, vær og vind',
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false
-    }
+    href: '/tema/vann-vaer-og-vind',
   },
 }
 

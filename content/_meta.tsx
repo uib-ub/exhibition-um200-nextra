@@ -4,6 +4,7 @@ const meta = {
   '*': {
     theme: {
       timestamp: false,
+      breadcrumb: false,
     }
   },
   'index': {
@@ -152,6 +153,13 @@ const meta = {
       toc: false
     }
   },
+  'documentation': {
+    title: 'Doc [To be deleted]',
+    type: 'page',
+    theme: {
+      toc: false
+    }
+  }
 }
 
 export default meta;

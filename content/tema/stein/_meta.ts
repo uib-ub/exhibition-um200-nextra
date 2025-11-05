@@ -1,10 +1,7 @@
 const meta = {
-  'index': {
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false
-    }
+  'root_link': {
+    title: 'Stein',
+    href: '/tema/stein',
   },
   'astrid-monsen-en-kvinnelig-pioner-ved-bergens-museum': {
     type: 'doc',

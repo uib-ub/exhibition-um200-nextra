@@ -1,11 +1,15 @@
 const meta = {
-  /*  'index': {
-     type: 'page',
-     theme: {
-       layout: 'full',
-       toc: false
-     }
-   }, */
+  /* 'index': {
+    type: 'page',
+    theme: {
+      layout: 'full',
+      toc: false
+    }
+  }, */
+  'root_link': {
+    title: 'Dyr',
+    href: '/tema/dyr',
+  },
   'bucher-og-blaakvalen': {
     type: 'doc',
   },

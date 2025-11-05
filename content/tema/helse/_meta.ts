@@ -1,10 +1,7 @@
 const meta = {
-  'index': {
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false
-    }
+  'root_link': {
+    title: 'Helse',
+    href: '/tema/helse',
   },
 }
 
