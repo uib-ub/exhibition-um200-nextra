@@ -12,6 +12,53 @@ interface NavCardProps {
   className?: string
 }
 
+function AnimatedOverlay() {
+  return (
+    <>
+      <div className="pointer-events-none absolute -top-6 left-1/3 -translate-x-1/2 rotate-25 transform z-20">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-10 w-10 text-white drop-shadow-md opacity-0 scale-90 transition-all duration-600 group-hover:animate-pulse group-hover:opacity-100 group-hover:scale-100"
+          fill="cyan"
+        >
+          <path d="M12 2l2.923 5.92 6.54.951-4.731 4.612 1.116 6.507L12 17.77l-5.848 3.22 1.116-6.507L2.537 8.87l6.54-.951L12 2z" />
+        </svg>
+      </div>
+      <div className="pointer-events-none absolute top-6 left-2/3 -translate-x-1/2 rotate-45 transform z-20">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-10 w-10 text-white drop-shadow-md opacity-0 scale-90 transition-all duration-1100 group-hover:animate-ping group-hover:opacity-100 group-hover:scale-100"
+          fill="yellow"
+        >
+          <path d="M12 2l2.923 5.92 6.54.951-4.731 4.612 1.116 6.507L12 17.77l-5.848 3.22 1.116-6.507L2.537 8.87l6.54-.951L12 2z" />
+        </svg>
+      </div>
+      <div className="pointer-events-none absolute top-6 left-2/3 -translate-x-1/2 rotate-45 transform z-20">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-10 w-10 text-white drop-shadow-md opacity-0 scale-90 transition-all duration-1100 group-hover:opacity-100 group-hover:scale-100"
+          fill="yellow"
+        >
+          <path d="M12 2l2.923 5.92 6.54.951-4.731 4.612 1.116 6.507L12 17.77l-5.848 3.22 1.116-6.507L2.537 8.87l6.54-.951L12 2z" />
+        </svg>
+      </div>
+      <div className="pointer-events-none absolute bottom-24 left-2/5 -translate-x-1/2 rotate-65 transform z-20">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-10 w-10 text-white drop-shadow-md opacity-0 scale-90 transition-all duration-600 group-hover:opacity-100 group-hover:scale-100"
+          fill="red"
+        >
+          <path d="M12 2l2.923 5.92 6.54.951-4.731 4.612 1.116 6.507L12 17.77l-5.848 3.22 1.116-6.507L2.537 8.87l6.54-.951L12 2z" />
+        </svg>
+      </div>
+    </>
+  )
+}
+
 export function NavCard({ title, href, imageSrc, imageAlt, variant, className }: NavCardProps) {
   const variants: Record<string, string> = {
     arkeologi: "border-um-arkeologi-solid group-hover:bg-um-arkeologi-solid",
@@ -30,14 +77,16 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
   }
 
   return (
-    <Link href={href} className={cn("group cursor-pointer", className)}>
+    <Link href={href} className={cn("group cursor-pointer relative", className)}>
+      <AnimatedOverlay />
       <div
         className={cn(
-          "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300", variants[variant]
+          "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300 relative", variants[variant]
         )}
       >
-        <div className={`relative aspect-3/4`}>
-          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-cover" />
+        <div className={`z-1 relative aspect-3/4`}>
+          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-cover transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-black/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
       </div>
       <div className={cn(
@@ -55,7 +104,7 @@ export function NavCards({ title }: { title: string }) {
     <div className="feature py-10">
       <h2 className="text-2xl font-bold pb-10">{title}</h2>
 
-      <div className="feature grid grid-rows-3 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-6">
+      <div className="feature grid grid-rows-3 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-5">
         {mainCategories.map((category, index) => (
           <NavCard
             key={`${category.title}-${index}`}
