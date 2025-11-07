@@ -3,7 +3,11 @@ title: Creating content
 ---
 
 import Image from 'next/image'
+import { Steps } from 'nextra/components'
 import cs_introduction from './cs_introduction.jpeg'
+import gh_introduction from './gh_introduction.jpeg'
+import gh_start_codespace from './gh_start_codespace.jpg'
+import gh_create_branch from './gh_create_branch.jpg'
 
 # Creating content with Github Codespaces
  
@@ -15,16 +19,45 @@ To access the Codespaces, you need to have a Github account and be a member of t
 
 Once you have access, you can use the powerful, online code editor to create and edit content for the exhibition website.
 
-## Introduction to Github Codespaces
 
-<Image className="my-5" src={cs_introduction} alt="Introduction to Github Codespaces" />
+<Steps>
+### Click "Code" button"
+<figure>
+  <Image className="my-5" src={gh_introduction} alt="Screenshot of the Github repository" />
+  <figcaption>Create a new Codespace by clicking the "Code" button and then "Open with Codespaces"</figcaption>
+</figure>
 
-## Creating a new file
+### Creating or restarting a Codespace
+<figure>
+  <Image className="my-5" src={gh_start_codespace} alt="Screenshot of the create a new Codespace button" />
+  <figcaption>Click the "+" button to start a new Codespace, or restart an existing randomly named Codespace</figcaption>
+</figure>
 
-To create a new file, you need to click the "+" button in the left sidebar.
+### Your Codespace is ready
+<figure>
+  <Image className="my-5" src={cs_introduction} alt="Screenshot of the Codespace ready" />
+  <figcaption>Your Codespace is ready and you can start editing your content</figcaption>
+</figure>
+</Steps>
 
-{/* <Image className="my-5" src={cs_new_file} alt="Creating a new file" /> */}
+## Creating content
 
-## Editing a file
+Before starting to create content, you need to create a new branch. This branch will "collect" your changes until you are ready to commit and push your changes to the main branch. 
 
-To edit a file, you need to click the file in the left sidebar.
+The branch can be used only by you or you can share it with other users.
+
+<Steps>
+### Creating a new branch
+<figure>
+  <Image className="my-5" src={gh_create_branch} alt="Screenshot of the create a new branch button" />
+  <figcaption>Click the "Create a new branch" button to create a new branch</figcaption>
+</figure>
+### Naming the branch
+
+You can name the branch whatever you want. But it is a good idea to name it something that describes the changes you are making.
+
+### Start creating your content
+</Steps>
+
+## Committing and pushing your changes
+
