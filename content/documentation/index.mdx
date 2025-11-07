@@ -1,144 +1,30 @@
 ---
-title: Components
+title: Creating content
 ---
 
-import { Work } from '@/components/work'
-import { Quote } from '@/components/quote'
+import Image from 'next/image'
+import cs_introduction from './cs_introduction.jpeg'
 
-# Documentation
+# Creating content with Github Codespaces
+ 
+This a guide for how to create content for the exhibition website on Githubs Codespaces. See the [UI components](#ui-components) section for a list of components that can be used to create content.
 
-## Work
+## Accessing the Codespaces
 
-`<Work />` is an IIIF viewer that can be used to display digital IIIF manifests. It is built with [Clover-IIIF](https://github.com/samvera-labs/clover-iiif).
+To access the Codespaces, you need to have a Github account and be a member of the [uib-ub](https://github.com/orgs/uib-ub) organization.
 
-### Basic usage
+Once you have access, you can use the powerful, online code editor to create and edit content for the exhibition website.
 
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      This is an example of how you can display a digital object in your exhibition. 
-      Replace this text with your own description of the object you want to show.
-    </Work.Description>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-      See more in Marcus
-    </Work.Link>
-  </Work.Content>
-</Work>
-```
+## Introduction to Github Codespaces
 
-### Example
+<Image className="my-5" src={cs_introduction} alt="Introduction to Github Codespaces" />
 
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      This is an example of how you can display a digital object in your exhibition. 
-      Replace this text with your own description of the object you want to show.
-    </Work.Description>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-      See more in Marcus
-    </Work.Link>
-  </Work.Content>
-</Work>
+## Creating a new file
 
-### Without description
+To create a new file, you need to click the "+" button in the left sidebar.
 
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html" />
-  </Work.Content>
-</Work>
-```
+{/* <Image className="my-5" src={cs_new_file} alt="Creating a new file" /> */}
 
-### With description (without link)
+## Editing a file
 
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      This is an example of how you can display a digital object in your exhibition. 
-      Replace this text with your own description of the object you want to show.
-    </Work.Description>
-  </Work.Content>
-</Work>
-```
-
-### Custom link text
-
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      This is an example of how you can display a digital object in your exhibition. 
-      Replace this text with your own description of the object you want to show.
-    </Work.Description>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-      See more in Marcus
-    </Work.Link>
-  </Work.Content>
-</Work>
-```
-
-### Standard link text (without children)
-
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      This is an example of how you can display a digital object in your exhibition. 
-      Replace this text with your own description of the object you want to show.
-    </Work.Description>
-    <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html" />
-  </Work.Content>
-</Work>
-```
-
-### Direct IIIF URL
-
-```tsx copy
-<Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-  <Work.Content>
-    <Work.Description>
-      Dette diplomet er datert 7. august 1348 og handler om et drap i Bergen samme vår.
-    </Work.Description>
-  </Work.Content>
-</Work>
-```
-
-### iiifContent prop
-
-`iiifContent` prop can be:
-
-- **Direct URL**: `"https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif"`
-- **Content state**: `JTdCJTIyJTQwY29udGV4dCUyMiUzQSUyMmh0dHAlM0ElMkYlMkZpaWlmLmlvJTJGYXBpJTJGcHJlc2VudGF0aW9uJTJGMyUyRmNvbnRleHQuanNvbiUyMiUyQyUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTJGc3RhdGUlMkYtNzA5NjI5MDUlMjIlMkMlMjJ0eXBlJTIyJTNBJTIyQW5ub3RhdGlvbiUyMiUyQyUyMm1vdGl2YXRpb24lMjIlM0ElNUIlMjJjb250ZW50U3RhdGUlMjIlNUQlMkMlMjJ0YXJnZXQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyU3BlY2lmaWNSZXNvdXJjZSUyMiUyQyUyMnNvdXJjZSUyMiUzQSU3QiUyMmlkJTIyJTNBJTIyaHR0cCUzQSUyRiUyRmxvY2FsaG9zdCUyRml0ZW1zJTJGdWJiLW1zLTIwNzItYi0wMDMtYSUyRmNhbnZhcyUyRjUyJTIyJTJDJTIydHlwZSUyMiUzQSUyMkNhbnZhcyUyMiUyQyUyMnBhcnRPZiUyMiUzQSU1QiU3QiUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTIyJTJDJTIydHlwZSUyMiUzQSUyMk1hbmlmZXN0JTIyJTdEJTVEJTdEJTJDJTIyc2VsZWN0b3IlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyRnJhZ21lbnRTZWxlY3RvciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyeHl3aCUzRDAlMkMtMzk0JTJDMjA0OCUyQzE1OTMlMjIlN0QlN0QlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMlRleHR1YWxCb2R5JTIyJTJDJTIydmFsdWUlMjIlM0ElMjJrJTIyJTJDJTIyZm9ybWF0JTIyJTNBJTIydGV4dCUyRnBsYWluJTIyJTdEJTVEJTdE`
-
-## Quote
-
-```tsx copy
-<Quote>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius vituperata ei nec. Et mazim recteque nam. Scripta periculis ei eam, te pro movet reformidans. Scripta periculis ei eam, te pro movet reformidans. Sed no sumo stet, est ei quodsi feugait liberavisse, in pro quot facete definitiones. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Ad doctus gubergren duo, mel te postea suavitate. Offendit eleifend moderatius ex vix, quem odio mazim et qui, ei denique consequuntur vix. Harum repudiandae sea at. Scripta periculis ei eam, te pro movet reformidans.
-</Quote>
-```
-
-<Quote>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius vituperata ei nec. Et mazim recteque nam. Scripta periculis ei eam, te pro movet reformidans. Scripta periculis ei eam, te pro movet reformidans. Sed no sumo stet, est ei quodsi feugait liberavisse, in pro quot facete definitiones. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Ad doctus gubergren duo, mel te postea suavitate. Offendit eleifend moderatius ex vix, quem odio mazim et qui, ei denique consequuntur vix. Harum repudiandae sea at. Scripta periculis ei eam, te pro movet reformidans.
-</Quote>
-
-### With source
-
-```tsx copy
-<Quote>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  <Quote.Source>
-    — Shouted by <cite>[John Doe](https://example.com)</cite>
-  </Quote.Source>
-</Quote>
-```
-
-<Quote>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  <Quote.Source>
-    — Shouted by <cite>[John Doe](https://example.com)</cite>
-  </Quote.Source>
-</Quote>
+To edit a file, you need to click the file in the left sidebar.

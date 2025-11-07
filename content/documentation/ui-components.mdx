@@ -1,84 +1,228 @@
+import { Steps, Tabs } from 'nextra/components'
+
 # UI components
 
-import { Button } from '@/components/ui/button'
-import { IconUsers, IconHome, IconUser, IconArrowRight, IconArrowLeft, IconArrowUp, IconArrowDown, IconArrowUpRight, IconArrowDownRight, IconArrowUpLeft, IconArrowDownLeft, IconChevronRight, IconChevronLeft, IconChevronUp, IconChevronDown, IconChevronUpRight, IconChevronDownRight, IconChevronUpLeft, IconChevronDownLeft, IconAlphabetArabic, IconAlphabetLatin } from '@tabler/icons-react'
+This is a guide for the UI components that can be used to create content for the exhibition website. Each component has a basic usage example and a more complex example.
 
-We use [Shadcn UI](https://ui.shadcn.com) to build our components. Use CSS variables to change colors and sizes. Larger customizations can be made in the component itself, but updating will overwrite the component. Use git to fetch changes from previous versions of the components.
+## Components and Markdown
 
-## Button
+You can use the following components and Markdown to create content for the exhibition website. Be aware that you can use _markdown_ inside the components. We can even use HTML tags inside the components, like `<u>underline</u>` and `<cite>cite</cite>`. Most likly you are fine by just using _markdown_.
 
-```tsx copy
-import { Button } from '@/components/ui/button'
+<Steps>
+### Content
 
-<Button>Click me</Button>
+```tsx
+Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](https://example.com), 
+usu quod malorum te. Pri posse graeco definitiones cu, id eam populo quaestio 
+adipiscing, usu quod malorum te.
+
+<Quote>
+  Lorem ipsum dolor sit amet, consectetur <u>adipiscing</u> elit, sed do eiusmod tempor incididunt ut labore et dolore **magna aliqua**.
+  <Quote.Source>
+    — Shouted by <cite>[John Doe](https://example.com)</cite>
+  </Quote.Source>
+</Quote>
 ```
 
-### Available variants
+### Result
 
-<div className="flex gap-2 flex-wrap my-3">
-  <Button variant="default">Default</Button>
-  <Button variant="destructive">Destructive</Button>
-  <Button variant="outline">Outline</Button>
-  <Button variant="secondary">Secondary</Button>
-  <Button variant="ghost">Ghost</Button>
-  <Button variant="link">Link</Button>
-</div>
+Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](https://example.com), usu quod malorum te. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te.
 
-### Available sizes
+<Quote>
+  Lorem ipsum dolor sit amet, consectetur <u>adipiscing</u> elit, sed do eiusmod tempor incididunt ut labore et dolore **magna aliqua**.
+  <Quote.Source>
+    — Shouted by <cite>[John Doe](https://example.com)</cite>
+  </Quote.Source>
+</Quote>
+</Steps>
 
-<div className="flex gap-2 flex-wrap my-3 items-center">
-  <Button size="sm">Small</Button>
-  <Button size="default">Default</Button>
-  <Button size="lg">Large</Button>
-  <Button size="icon"><IconUsers /></Button>
-</div>
+## Work
 
-## Icons
+`<Work />` is an IIIF viewer that can be used to display digital IIIF manifests. It is built with [Clover-IIIF](https://github.com/samvera-labs/clover-iiif).
 
-We use [Tabler Icons](https://tabler-icons.io/) for icons.
+### Basic usage
 
-```tsx copy
-import { IconUsers } from '@tabler/icons-react'
+`Work` Can be use in several ways. The simplest way is to just pass the IIIF manifest URL to the `iiifContent` prop and have the `Work` component be "self closing". This is useful if you want to display a single IIIF manifest without any additional content. `<Work iiifContent="some url" />`
 
-<IconUsers />
-```
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif" />
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif" />
+  </Tabs.Tab>
+</Tabs>
 
-### Examples
+### With description
 
-<div className="flex gap-2 flex-wrap my-3">
-  <IconHome />
-  <IconUsers />
-  <IconUser />
-  <IconArrowRight />
-  <IconArrowLeft />
-  <IconArrowUp />
-  <IconArrowDown />
-  <IconArrowUpRight />
-  <IconArrowDownRight />
-  <IconArrowUpLeft />
-  <IconArrowDownLeft />
-  <IconChevronRight />
-  <IconChevronLeft />
-  <IconChevronUp />
-  <IconChevronDown />
-  <IconChevronUpRight />
-  <IconChevronDownRight />
-  <IconChevronUpLeft />
-  <IconChevronDownLeft />
-  <IconAlphabetArabic />
-  <IconAlphabetLatin />
-</div> 
+`Work` can also be used with a description. The description is displayed in a card below the IIIF viewer. Now the ´Work´ component needs to be closed with a `</Work>` tag as we want to add content inside the `Work` component.
 
-### Sizes
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
+      <Work.Content>
+        <Work.Description>
+          This is an example of how you can display a digital object in your exhibition. 
+          Replace this text with your own description of the object you want to show.
+        </Work.Description>
+      </Work.Content>
+    </Work>
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-bros-00464?as=iiif">
+      <Work.Content>
+        <Work.Description>
+          This is an example of how you can display a digital object in your exhibition. 
+          Replace this text with your own description of the object you want to show.
+        </Work.Description>
+      </Work.Content>
+    </Work>
+  </Tabs.Tab>
+</Tabs>
 
-<div className="flex gap-2 flex-wrap my-3 items-center">
-  <IconUsers size={16} />
-  <IconHome size={20} />
-  <IconUser size={24} />
-  <IconArrowRight size={28} />
-  <IconArrowLeft size={32} />
-  <IconArrowUp size={36} />
-  <IconArrowDown size={40} />
-  <IconChevronRight size={48} />
-  <IconChevronLeft size={56} />
-</div>
+### With link
+
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
+      <Work.Content>
+        <Work.Description>
+          This is an example of how you can display a digital object in your exhibition. 
+          Replace this text with your own description of the object you want to show.
+        </Work.Description>
+        <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
+          See more in Marcus
+        </Work.Link>
+      </Work.Content>
+    </Work>
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-kk-1318-0325?as=iiif">
+      <Work.Content>
+        <Work.Description>
+          This is an example of how you can display a digital object in your exhibition. 
+          Replace this text with your own description of the object you want to show.
+        </Work.Description>
+        <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
+          See more in Marcus
+        </Work.Link>
+      </Work.Content>
+    </Work>
+  </Tabs.Tab>
+</Tabs>
+
+### Content state
+
+To link directly to a page or _canvas_ in IIIF speak, we need to create a _content state_. A content state is a way of sharing a "view" of a IIIF manifest.
+
+The easiest way to create a content state is to use the [Clover IIIF Viewer website](https://github.com/samvera-labs/clover-iiif) and paste in the URL of the IIIF manifest you want to start with, for example https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif. Navigate to the page you want to share and scroll down to the three boxes below the IIIF viewer. The first box is where you add your own text about the _content state_, e.g. your _annotation_ about the page. Your an even zoom in and the annotation will be about that region of the page! Cool, indeed.
+
+When you are happy, copy the Base64 text from the second box and use that in the `Work` components `iiifContent` prop. 
+
+The third boxs shows you the actual content of the Base64 text, it is a JSON object! Pretty dope.
+
+### Properties
+
+`iiifContent` prop can be:
+
+- **Direct URL**: `"https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif"`
+- **Content state**: `JTdCJTIyJTQwY29udGV4dCUyMiUzQSUyMmh0dHAlM0ElMkYlMkZpaWlmLmlvJTJGYXBpJTJGcHJlc2VudGF0aW9uJTJGMyUyRmNvbnRleHQuanNvbiUyMiUyQyUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTJGc3RhdGUlMkYtNzA5NjI5MDUlMjIlMkMlMjJ0eXBlJTIyJTNBJTIyQW5ub3RhdGlvbiUyMiUyQyUyMm1vdGl2YXRpb24lMjIlM0ElNUIlMjJjb250ZW50U3RhdGUlMjIlNUQlMkMlMjJ0YXJnZXQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyU3BlY2lmaWNSZXNvdXJjZSUyMiUyQyUyMnNvdXJjZSUyMiUzQSU3QiUyMmlkJTIyJTNBJTIyaHR0cCUzQSUyRiUyRmxvY2FsaG9zdCUyRml0ZW1zJTJGdWJiLW1zLTIwNzItYi0wMDMtYSUyRmNhbnZhcyUyRjUyJTIyJTJDJTIydHlwZSUyMiUzQSUyMkNhbnZhcyUyMiUyQyUyMnBhcnRPZiUyMiUzQSU1QiU3QiUyMmlkJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZhcGkudWIudWliLm5vJTJGaXRlbXMlMkZ1YmItbXMtMjA3Mi1iLTAwMy1hJTNGYXMlM0RpaWlmJTIyJTJDJTIydHlwZSUyMiUzQSUyMk1hbmlmZXN0JTIyJTdEJTVEJTdEJTJDJTIyc2VsZWN0b3IlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyRnJhZ21lbnRTZWxlY3RvciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyeHl3aCUzRDAlMkMtMzk0JTJDMjA0OCUyQzE1OTMlMjIlN0QlN0QlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMlRleHR1YWxCb2R5JTIyJTJDJTIydmFsdWUlMjIlM0ElMjJrJTIyJTJDJTIyZm9ybWF0JTIyJTNBJTIydGV4dCUyRnBsYWluJTIyJTdEJTVEJTdE`
+
+
+## Figure
+
+`<Figure />` is a component that can be used to display an image with a description and a link. **NB!** You _must_ add a `alt` text that describes the image. Describe the image in a way that is accessible to everyone, including people who use screen readers. "Man smoking a pipe wearing a striking jacket" is a good alt text. "Ole Olsen, director of the National Archives during the 1930s, was a very important person" is not. Thats a caption, not an `alt` text!
+
+### Basic usage
+
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000} />
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000} />
+  </Tabs.Tab>
+</Tabs>
+
+### With description and link
+
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
+      <Figure.Content>
+        <Figure.Description>
+          Fra Digitalarkivet
+        </Figure.Description>
+        <Figure.Link href="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg">
+          Se mer i Digitalarkivet
+        </Figure.Link>
+      </Figure.Content>
+    </Figure>
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
+      <Figure.Content>
+        <Figure.Description>
+          Fra Digitalarkivet
+        </Figure.Description>
+        <Figure.Link href="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg">
+          Se mer i Digitalarkivet
+        </Figure.Link>
+      </Figure.Content>
+    </Figure>
+  </Tabs.Tab>
+</Tabs>
+
+## Quote
+
+### Basic usage
+
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Quote>
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>  
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Quote>
+  </Tabs.Tab>
+</Tabs>
+
+### With source
+
+<Tabs items={['Code', 'Example']}>
+  <Tabs.Tab>
+    ```tsx copy
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <Quote.Source>
+        — Shouted by <cite>[John Doe](https://example.com)</cite>
+      </Quote.Source>
+    </Quote>
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <Quote.Source>
+        — Shouted by <cite>[John Doe](https://example.com)</cite>
+      </Quote.Source>
+    </Quote>
+  </Tabs.Tab>
+</Tabs>

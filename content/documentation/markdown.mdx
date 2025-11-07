@@ -1,0 +1,195 @@
+---
+title: Markdown
+---
+
+import { Callout } from 'nextra/components'
+
+# Markdown
+
+This is a guide for the Markdown syntax that can be used to create content for the exhibition website.
+
+Markdown is a lightweight markup language used to format text using a simple syntax. It's widely used for documentation, README files, and content creation. Here’s a beginner-friendly guide to the most common features with examples.
+
+## Paragraphs
+
+Use a blank line to separate paragraphs. Make sure to use a blank line between paragraphs, otherwise the paragraphs will be merged together!
+
+```markdown
+This is a paragraph.
+
+This is another paragraph.
+```
+
+## Headings
+
+Use the `#` symbol followed by a space. The number of `#` symbols indicates the heading level.
+
+```markdown
+# Heading 1 (Use only once per page!)
+## Heading 2
+### Heading 3
+#### Heading 4 (Do you really need this?)
+```
+
+Renders as:
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+
+
+## Emphasis
+
+Use `*` or `_` for _italic_, and `**` or `__` for **bold**.
+
+```markdown
+*italic* or _italic_
+
+**bold** or __bold__
+
+***bold and italic***
+```
+
+Renders as:
+
+*italic* or _italic_
+
+**bold** or __bold__
+
+***bold and italic***
+
+
+## Lists
+
+### Unordered list
+
+Use `-`, `*`, or `+` followed by a space.
+
+```markdown
+- Item 1
+- Item 2
+  - Subitem 2a
+  - Subitem 2b
+* Another Item
+```
+
+Renders as:
+
+- Item 1
+- Item 2
+  - Subitem 2a
+  - Subitem 2b
+* Another Item
+
+### Ordered list
+
+Use numbers followed by a period.
+
+```markdown
+1. First item
+2. Second item
+   1. Subitem 2a
+   2. Subitem 2b
+```
+
+Renders as:
+
+1. First item
+2. Second item
+   1. Subitem 2a
+   2. Subitem 2b
+
+
+## Links
+
+Basic links use `[text](url)`.
+
+```markdown
+[Visit example.com](https://example.com)
+```
+
+Renders as:
+
+[Visit example.com](https://example.com)
+
+
+## Images
+
+Similar to links, but start with `!`.
+
+<Callout type="warning">
+  Prefer the `<Figure />` component instead of the image tag. [Documentation for the Figure component](/documentation/ui-components#figure)
+</Callout>
+
+```markdown
+![Alt text](/images/arkeologi/B2978_Myklebustmannen.jpg)
+```
+
+Renders as:
+
+![Alt text](/images/arkeologi/B2978_Myklebustmannen.jpg)
+
+
+## Tables
+
+Separate columns with pipes `|`, and use hyphens `-` for the header row.
+
+```markdown
+| Name  | Age |
+|-------|-----|
+| Alice |  24 |
+| Bob   |  22 |
+```
+
+Renders as:
+
+| Name  | Age |
+|-------|-----|
+| Alice |  24 |
+| Bob   |  22 |
+
+
+## Task Lists
+
+Use `- [ ]` for an empty checkbox, `- [x]` for checked.
+
+```markdown
+- [ ] Task 1
+- [x] Task 2 completed
+```
+
+Renders as:
+
+- [ ] Task 1
+- [x] Task 2 completed
+
+
+## Escaping Characters
+
+Use a backslash `\` to escape Markdown symbols.
+
+```markdown
+\*This is not italic\*
+```
+
+Renders as:
+
+\*This is not italic\*
+
+## HTML in Markdown
+
+You can use basic HTML (like `<u>` or `<br>`) if Markdown doesn't have the feature you want:
+
+```markdown
+<u>underlined text</u><br />
+Line break without blank line
+```
+
+Renders as:
+
+<u>underlined text</u><br />
+Line break without blank line
+
+For more advanced content, you can also combine Markdown with custom components if your site supports them!
+
