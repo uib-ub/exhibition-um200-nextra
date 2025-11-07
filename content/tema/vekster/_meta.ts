@@ -12,6 +12,10 @@ const meta = {
   'bokflora': {
     type: 'doc',
   },
+  '200-lenke': {
+    title: 'Ekstern utstilling',
+    href: 'https://tohundrefortellinger.w.uib.no/2016/09/15/1999-miranda-bodtkers-akvareller/'
+  }
 }
 
 export default meta;
