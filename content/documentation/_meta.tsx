@@ -2,6 +2,7 @@ const meta = {
   '*': {
     theme: {
       timestamp: false,
+      toc: true
     }
   },
 }
