@@ -9,7 +9,7 @@ This is a guide for the UI components that can be used to create content for the
 You can use the following components and Markdown to create content for the exhibition website. Be aware that you can use _markdown_ inside the components. We can even use HTML tags inside the components, like `<u>underline</u>` and `<cite>cite</cite>`. Most likly you are fine by just using _markdown_.
 
 <Steps>
-### Content
+### Code
 
 ```tsx
 Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](https://example.com), 
@@ -24,7 +24,7 @@ adipiscing, usu quod malorum te.
 </Quote>
 ```
 
-### Result
+### Preview
 
 Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](https://example.com), usu quod malorum te. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te.
 
@@ -44,14 +44,14 @@ Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](http
 
 `Work` Can be use in several ways. The simplest way is to just pass the IIIF manifest URL to the `iiifContent` prop and have the `Work` component be "self closing". This is useful if you want to display a single IIIF manifest without any additional content. `<Work iiifContent="some url" />`
 
-<Tabs items={['Code', 'Example']}>
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif" />
+  </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
     <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif" />
     ```
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif" />
   </Tabs.Tab>
 </Tabs>
 
@@ -59,19 +59,7 @@ Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](http
 
 `Work` can also be used with a description. The description is displayed in a card below the IIIF viewer. Now the ´Work´ component needs to be closed with a `</Work>` tag as we want to add content inside the `Work` component.
 
-<Tabs items={['Code', 'Example']}>
-  <Tabs.Tab>
-    ```tsx copy
-    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
-      <Work.Content>
-        <Work.Description>
-          This is an example of how you can display a digital object in your exhibition. 
-          Replace this text with your own description of the object you want to show.
-        </Work.Description>
-      </Work.Content>
-    </Work>
-    ```
-  </Tabs.Tab>
+<Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
     <Work iiifContent="https://api.ub.uib.no/items/ubb-bros-00464?as=iiif">
       <Work.Content>
@@ -82,11 +70,6 @@ Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](http
       </Work.Content>
     </Work>
   </Tabs.Tab>
-</Tabs>
-
-### With link
-
-<Tabs items={['Code', 'Example']}>
   <Tabs.Tab>
     ```tsx copy
     <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
@@ -95,14 +78,15 @@ Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](http
           This is an example of how you can display a digital object in your exhibition. 
           Replace this text with your own description of the object you want to show.
         </Work.Description>
-        <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
-          See more in Marcus
-        </Work.Link>
       </Work.Content>
     </Work>
     ```
   </Tabs.Tab>
+</Tabs>
 
+### With link
+
+<Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
     <Work iiifContent="https://api.ub.uib.no/items/ubb-kk-1318-0325?as=iiif">
       <Work.Content>
@@ -115,6 +99,21 @@ Pri posse _graeco_ **definitiones** cu, id eam populo quaestio [adipiscing](http
         </Work.Link>
       </Work.Content>
     </Work>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ```tsx copy
+    <Work iiifContent="https://api.ub.uib.no/items/ubb-diplom-0034?as=iiif">
+      <Work.Content>
+        <Work.Description>
+          This is an example of how you can display a digital object in your exhibition. 
+          Replace this text with your own description of the object you want to show.
+        </Work.Description>
+        <Work.Link href="https://marcus.uib.no/instance/charter/ubb-diplom-0034.html">
+          See more in Marcus
+        </Work.Link>
+      </Work.Content>
+    </Work>
+    ```
   </Tabs.Tab>
 </Tabs>
 
@@ -144,20 +143,32 @@ The third boxs shows you the actual content of the Base64 text, it is a JSON obj
 
 Using an image from the `public/images` folder, but you can link to an image. But tell the developer as some changes needs to be done for it to show.
 
-<Tabs items={['Code', 'Example']}>
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000} />
+  </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
     <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000} />
     ```
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000} />
   </Tabs.Tab>
 </Tabs>
 
 ### With description and link
 
-<Tabs items={['Code', 'Example']}>
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
+      <Figure.Content>
+        <Figure.Description>
+          Fra Digitalarkivet
+        </Figure.Description>
+        <Figure.Link href="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg">
+          Se mer i Digitalarkivet
+        </Figure.Link>
+      </Figure.Content>
+    </Figure>
+  </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
     <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
@@ -171,18 +182,6 @@ Using an image from the `public/images` folder, but you can link to an image. Bu
       </Figure.Content>
     </Figure>
     ```
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
-      <Figure.Content>
-        <Figure.Description>
-          Fra Digitalarkivet
-        </Figure.Description>
-        <Figure.Link href="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg">
-          Se mer i Digitalarkivet
-        </Figure.Link>
-      </Figure.Content>
-    </Figure>
   </Tabs.Tab>
 </Tabs>
 
@@ -190,24 +189,32 @@ Using an image from the `public/images` folder, but you can link to an image. Bu
 
 ### Basic usage
 
-<Tabs items={['Code', 'Example']}>
-  <Tabs.Tab>
-    ```tsx copy
-    <Quote>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Quote>
-    ```
-  </Tabs.Tab>
+<Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>  
     <Quote>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </Quote>
   </Tabs.Tab>
+  <Tabs.Tab>
+    ```tsx copy
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Quote>
+    ```
+  </Tabs.Tab>
 </Tabs>
 
 ### With source
 
-<Tabs items={['Code', 'Example']}>
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+    <Quote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <Quote.Source>
+        — Shouted by <cite>[John Doe](https://example.com)</cite>
+      </Quote.Source>
+    </Quote>
+  </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
     <Quote>
@@ -217,14 +224,5 @@ Using an image from the `public/images` folder, but you can link to an image. Bu
       </Quote.Source>
     </Quote>
     ```
-  </Tabs.Tab>
-
-  <Tabs.Tab>
-    <Quote>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      <Quote.Source>
-        — Shouted by <cite>[John Doe](https://example.com)</cite>
-      </Quote.Source>
-    </Quote>
   </Tabs.Tab>
 </Tabs>
