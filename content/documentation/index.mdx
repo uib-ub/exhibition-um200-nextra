@@ -16,6 +16,10 @@ import gh_add_to_staged from './gh_add_to_staged.jpg'
 import gh_add_commit_message from './gh_add_commit_message.jpg'
 import gh_publish_branch from './gh_publish_branch.jpg'
 import gh_create_pr from './gh_create_pr.jpg'
+import gh_vercel_preview from './gh_vercel_preview.jpg'
+import gh_preview_ready from './gh_preview_ready.jpg'
+import gh_merge_commit from './gh_merge_commit.jpg'
+import gh_delete_branches_after_merge from './gh_delete_branch_after_merge.jpg'
 
 # Creating content with Github Codespaces
  
@@ -154,4 +158,34 @@ Click the "Create a pull request" button to create a pull request to the main br
 </figure>
 
 Creating a pull request (PR) is the way we trigger a preview of the website on Vercel (our plattform for hosting the website).
+
+### Wait for the preview
+
+Wait for the preview to be ready. _Deployment_ will be **building** until it is ready. You will see **ready** when the preview is ready.
+
+<figure>
+  <Image className="my-5" src={gh_vercel_preview} alt="Screenshot of the commit and push your changes" />
+  <figcaption>The preview is building and you will see the status "building" until it is ready.</figcaption>
+</figure>
+
+<figure>
+  <Image className="my-5" src={gh_preview_ready} alt="Screenshot of the commit and push your changes" />
+  <figcaption>The preview is ready and you can see the changes you have made by clicking the "Preview" link.</figcaption>
+</figure>
+
+<div className="flex flex-row gap-4">
+  <figure>
+    <Image className="my-5" src={gh_merge_commit} alt="Screenshot of the commit and push your changes" />
+    <figcaption>Click the "Merge pull request" button to merge the changes into the main branch.</figcaption>
+  </figure>
+  <figure>
+    <Image className="my-5" src={gh_delete_branches_after_merge} alt="Screenshot of the commit and push your changes" />
+    <figcaption>Delete the branch after the changes have been merged into the main branch. In</figcaption>
+  </figure>
+</div>
+
+### Done!
+
+You are done! You have created your first content and your changes are live on the website in a minute or two.
+
 </Steps>
