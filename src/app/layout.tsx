@@ -12,7 +12,11 @@ const crimsonPro = Crimson_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "200 år med vidunderlig vitenskap",
+  title: {
+    default: "200 år med vidunderlig vitenskap",
+    template: "%s | 200 år med vidunderlig vitenskap",
+  },
+  keywords: ["Universitetsmuseet i Bergen", "200 år", "nettutstilling", "vitenskap"],
   description: "Kommer snart",
 };
 
@@ -40,11 +44,7 @@ export default async function RootLayout({
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
     >
-      <Head
-      >
-        <meta name="description" content="200 år med vidunderlig vitenskap" />
-        <meta name="keywords" content="Universitetsmuseet i Bergen, 200 år, nettutstilling, vitenskap" />
-        <meta name="author" content="Universitetet i Bergen" />
+      <Head>
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
