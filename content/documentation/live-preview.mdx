@@ -1,0 +1,33 @@
+---
+title: Live Preview
+---
+
+import Image from 'next/image'
+import { Steps } from 'nextra/components'
+import gh_npm_run_dev from './gh_npm_run_dev.png'
+import gh_open_port from './gh_open_port.png'
+
+# Live Preview
+
+You can preview the changes you make to the content of the website in real time!
+
+<Steps>
+### Run the development server
+
+Run the development server by writing "npm run dev" in the terminal and pressing Enter.
+
+<figure>
+  <Image className="my-5" src={gh_npm_run_dev} alt="Screenshot of the npm run dev button" />
+  <figcaption>Write "npm run dev" in the terminal and press Enter to run the development server.</figcaption>
+</figure>
+
+### Preview the changes
+
+When the development server is running, you can preview the changes you make to the content of the website in real time. Click the "Open in browser" button to open the preview in a new tab. If that dialog does not appear, you can open the preview by going to the _Ports_ tab and clicking the the link in the _Forwarded ports_ column.
+
+<figure>
+  <Image className="my-5" src={gh_open_port} alt="Screenshot of the live preview" />
+  <figcaption>The changes you make to the content of the website are previewed in real time.</figcaption>
+</figure>
+
+</Steps>
