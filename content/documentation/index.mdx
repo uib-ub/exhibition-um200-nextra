@@ -4,22 +4,22 @@ title: Creating content
 
 import Image from 'next/image'
 import { FileTree, Steps } from 'nextra/components'
-import cs_introduction from './cs_introduction.jpeg'
-import gh_introduction from './gh_introduction.jpeg'
-import gh_start_codespace from './gh_start_codespace.jpg'
-import gh_create_branch from './gh_create_branch.jpg'
-import gh_create_content from './gh_create_content.jpeg'
-import gh_make_changes_1 from './gh_make_changes_1.jpeg'
-import gh_make_changes_2 from './gh_make_changes_2.jpeg'
-import gh_delete_package_lock from './gh_delete_package_lock.jpg'
-import gh_add_to_staged from './gh_add_to_staged.jpg'
-import gh_add_commit_message from './gh_add_commit_message.jpg'
-import gh_publish_branch from './gh_publish_branch.jpg'
-import gh_create_pr from './gh_create_pr.jpg'
-import gh_vercel_preview from './gh_vercel_preview.jpg'
-import gh_preview_ready from './gh_preview_ready.jpg'
-import gh_merge_commit from './gh_merge_commit.jpg'
-import gh_delete_branches_after_merge from './gh_delete_branch_after_merge.jpg'
+import cs_introduction from './_images/cs_introduction.jpeg'
+import gh_introduction from './_images/gh_introduction.jpeg'
+import gh_start_codespace from './_images/gh_start_codespace.jpg'
+import gh_create_branch from './_images/gh_create_branch.jpg'
+import gh_create_content from './_images/gh_create_content.jpeg'
+import gh_make_changes_1 from './_images/gh_make_changes_1.jpeg'
+import gh_make_changes_2 from './_images/gh_make_changes_2.jpeg'
+import gh_delete_package_lock from './_images/gh_delete_package_lock.jpg'
+import gh_add_to_staged from './_images/gh_add_to_staged.jpg'
+import gh_add_commit_message from './_images/gh_add_commit_message.jpg'
+import gh_publish_branch from './_images/gh_publish_branch.jpg'
+import gh_create_pr from './_images/gh_create_pr.jpg'
+import gh_vercel_preview from './_images/gh_vercel_preview.jpg'
+import gh_preview_ready from './_images/gh_preview_ready.jpg'
+import gh_merge_commit from './_images/gh_merge_commit.jpg'
+import gh_delete_branches_after_merge from './_images/gh_delete_branch_after_merge.jpg'
 
 # Creating content with Github Codespaces
  
@@ -27,19 +27,18 @@ This a guide for how to create content for the exhibition website on Githubs Cod
 
 ## Accessing the Codespaces
 
-To access the Codespaces, you need to have a Github account and be a member of the [uib-ub](https://github.com/orgs/uib-ub) organization.
+To access the Codespaces, you need to have a Github account and have acess to a code repository.
 
 Once you have access, you can use the powerful, online code editor to create and edit content for the exhibition website.
 
-
 <Steps>
-### Click "Code" button"
+### Click the _Code_ button
 <figure>
   <Image className="my-5" src={gh_introduction} alt="Screenshot of the Github repository" />
   <figcaption>Create a new Codespace by clicking the "Code" button and then "Open with Codespaces"</figcaption>
 </figure>
 
-### Creating or restarting a Codespace
+### Create or restart a Codespace
 <figure>
   <Image className="my-5" src={gh_start_codespace} alt="Screenshot of the create a new Codespace button" />
   <figcaption>Click the "+" button to start a new Codespace, or restart an existing randomly named Codespace</figcaption>
@@ -59,21 +58,21 @@ Before starting to create content, you need to create a new branch. This branch 
 The branch can be used only by you or you can share it with other users.
 
 <Steps>
-### Creating a new branch
+### Create a new branch
 
 <figure>
   <Image className="my-5" src={gh_create_branch} alt="Screenshot of the create a new branch button" />
   <figcaption>Click the "Create a new branch" button to create a new branch</figcaption>
 </figure>
 
-### Naming the branch
+### Name the branch
 
 You can name the branch whatever you want. But it is a good idea to name it something that describes the changes you are making.
 
 ### Start creating your content
 <figure>
   <Image className="my-5" src={gh_create_content} alt="Screenshot of the create a new branch button" />
-  <figcaption>Start creating your content in the "content" folder</figcaption>
+  <figcaption>Start creating your content in the "content" folder. See the [Folder structure and page paths](#folder-structure-and-page-paths) section for more information.</figcaption>
 </figure>
 </Steps>
 
@@ -85,8 +84,9 @@ The content is stored in the "content" folder. The folder structure is as follow
 <FileTree>
   <FileTree.Folder name="content" defaultOpen>
     <FileTree.File name="_meta.ts" />
-    <FileTree.File name="om.mdx" />
     <FileTree.File name="index.mdx" />
+    <FileTree.File name="om.mdx" />
+    <FileTree.File name="vanvittig-vitenskap.mdx" />
     <FileTree.Folder name="tema" defaultOpen>
       <FileTree.File name="_meta.ts" />
       <FileTree.File name="index.mdx" />
@@ -98,6 +98,18 @@ The content is stored in the "content" folder. The folder structure is as follow
     </FileTree.Folder>
   </FileTree.Folder>
 </FileTree>
+
+* `content` is where all the content lives, and is not part of the website paths.
+* `_meta.ts` is a file that controls the side menu and the page title.
+* `index.mdx` is the index page for the folder.
+  * The first or _root_ `index.mdx` is the homepage.
+* `tema` is a folder and it and subfolder will be part of the website paths, e.g. `/tema/arkeologi/oseberg`.
+
+### Naming convention
+
+When creating new pages it is preferable to use a name that follows the page title. For example, if the page title is "vanvittig-vitenskap", the file name should be `vanvittig-vitenskap.mdx`.
+
+Replace norwegian _æøå_ with _ae_, _oe_, and _aa_. Replace spaces with `-`.
 
 ## Committing and pushing your changes
 
