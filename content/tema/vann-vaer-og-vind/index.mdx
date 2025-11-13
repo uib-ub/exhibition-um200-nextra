@@ -14,11 +14,10 @@ import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
 
-<ContentGrid>
 
-<Hero variant="vann-vaer-og-vind">
+<Hero variant="vann-vaer-og-vind" className="bg-um-vaer-tint/60">
   <HeroImage src="/vann-vaer-og-vind-hero-ill.png" alt="Vann, vær og vind" className="border-um-vaer-solid" />
-  <HeroContent className="bg-um-vaer-solid">
+  <HeroContent>
     <HeroTitle>
       Vann, vær og vind
     </HeroTitle>
@@ -27,6 +26,8 @@ import { Card, Cards } from '@/components/card'
     </HeroDescription>
   </HeroContent>
 </Hero>
+
+<ContentGrid>
 
 {/* <Cards title="Historier om fisk">
   <Card title="Christie og de «mærkelige Fiske»" description="" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />

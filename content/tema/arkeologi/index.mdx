@@ -10,19 +10,20 @@ asIndexPage: true
 import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
 
-<ContentGrid>
-
-<Hero variant="arkeologi">
+<Hero variant="arkeologi" className="bg-um-arkeologi-tint">
   <HeroImage src="/arkeologi-hero-ill.png" alt="Arkeologi" className="border-um-arkeologi-solid" />
-  <HeroContent className="bg-um-arkeologi-solid">
-    <HeroTitle>
-      Arkeologi
-    </HeroTitle>
+  <HeroContent>
     <HeroDescription>
       Her er en liste over temaene
     </HeroDescription>
+    <HeroTitle>
+      Arkeologi
+    </HeroTitle>
   </HeroContent>
 </Hero>
+
+<ContentGrid>
+
 
 <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000}>
   <Figure.Content>
