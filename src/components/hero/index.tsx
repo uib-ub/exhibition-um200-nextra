@@ -1,17 +1,19 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
-export function Hero({ children }: { children: React.ReactNode }) {
+export function Hero({ className, children }: { className: string, children: React.ReactNode }) {
   return (
-    <div className={cn("full grid grid-cols-subgrid py-10")}>
-      {children}
+    <div className={cn("w-screen relative left-1/2 -translate-x-1/2 grid grid-cols-subgrid p-10 -mt-4", className)}>
+      <div className="w-full max-w-6xl mx-auto">
+        {children}
+      </div>
     </div>
   )
 }
 
 export function HeroImage({ src, alt, className }: { src: string, alt: string, className: string }) {
   return (
-    <div className={cn("feature border-4 rounded-t-[60px] sm:rounded-t-[100px] md:rounded-t-[120px]", className)}>
+    <div className={cn("border-4 rounded-t-[60px] sm:rounded-t-[100px] md:rounded-t-[120px]", className)}>
       <div className="relative aspect-video">
         <Image src={src} alt={alt} fill sizes="100%" className="object-contain p-10" />
       </div>
@@ -21,7 +23,7 @@ export function HeroImage({ src, alt, className }: { src: string, alt: string, c
 
 export function HeroContent({ children, className }: { children: React.ReactNode, className: string }) {
   return (
-    <div className={cn("feature text-center py-3", className)}>
+    <div className={cn("flex flex-col gap-3 items-center justify-center py-3", className)}>
       {children}
     </div>
   )
@@ -29,12 +31,12 @@ export function HeroContent({ children, className }: { children: React.ReactNode
 
 export function HeroTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="text-4xl font-bold">{children}</h1>
+    <h1 className="text-3xl md:text-5xl">{children}</h1>
   )
 }
 
 export function HeroDescription({ children }: { children: React.ReactNode }) {
   return (
-    <div className="text-lg">{children}</div>
+    <div className="text-xl">{children}</div>
   )
 }

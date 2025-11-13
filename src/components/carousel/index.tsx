@@ -20,20 +20,18 @@ interface CarouselData {
 export function Carousel({ title, period, data }: { title: string, period: string, data: CarouselData[] }) {
   return (
     <div className="feature">
-      <h2 className="text-2xl font-bold">{period} | {title}</h2>
+      <h2 className="text-xl md:text-2xl">{period} | {title}</h2>
       <CarouselComponent>
         <CarouselContent className="mb-10">
 
           {data.map((item, index) => (
-            <CarouselItem key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4">
+            <CarouselItem key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4 grid grid-rows-subgrid [grid-roes:span_4/span_4]">
               <div className="aspect-video bg-neutral-300"></div>
-              <div className="flex flex-col gap-2 pt-3 justify-start">
-                <div className="text-sm text-gray-500">{item.year}</div>
-                <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
-                <Button variant="outline" className="w-min border-black" asChild>
-                  <Link href={item.href}>Les mer</Link>
-                </Button>
-              </div>
+              <div className="text-sm text-gray-500 my-3">{item.year}</div>
+              <h3>{item.title}</h3>
+              <Button variant="outline" className="w-min border-black mt-5" asChild>
+                <Link href={item.href}>Les mer</Link>
+              </Button>
             </CarouselItem>
           ))}
 
