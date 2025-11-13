@@ -101,8 +101,8 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
 
 export function NavCards({ title }: { title: string }) {
   return (
-    <div className="feature py-10">
-      <h2 className="text-2xl pb-10">{title}</h2>
+    <div className="feature py-16">
+      <h2 className="text-xl pb-10">{title}</h2>
 
       <div className="feature grid grid-rows-3 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-5">
         {mainCategories.map((category, index) => (
