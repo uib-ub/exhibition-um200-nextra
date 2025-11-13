@@ -5,8 +5,8 @@ import SvgUibCenteredNo from "../icons/uib-centered-no"
 
 export function Footer() {
   return (
-    <footer className="bg-accent pt-16">
-      <div className="container grid grid-cols-4 gap-14 mx-auto">
+    <footer className="bg-accent pt-16 px-5 md:px-16">
+      <div className="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-14 mx-auto">
         <div className="col-span-1">
           <h3 className="text-lg">200 år med vidunderlig vitenskap</h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -15,9 +15,9 @@ export function Footer() {
           <h3 className="text-lg">Hvem, hva og hvor?</h3>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
-        <div className="col-span-2">
+        <div className="col-span-1 md:col-span-2">
           <h3 className="text-lg">Tema</h3>
-          <ul className="columns-2">
+          <ul className="md:columns-2">
             <li> <Link href="/tema/arkeologi">Arkeologi</Link> </li>
             <li> <Link href="/tema/bokstaver-og-tegn">Bokstaver og tegn</Link> </li>
             <li> <Link href="/tema/det-store-utland">Det store utland</Link> </li>
@@ -40,10 +40,6 @@ export function Footer() {
 
         {/* <SvgUibUbCenteredNo className="" />
         <SvgUibUmCenteredNo className="" /> */}
-
-        <p className="text-center text-sm text-muted-foreground">
-          ...
-        </p>
       </div>
     </footer>
   )
