@@ -7,8 +7,7 @@ const SvgUibUmCenteredNo = (
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={689.907}
-    height={373.733}
+    viewBox='0 0 689.907 373.733'
     {...props}
     ref={ref}
   >

@@ -93,7 +93,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
         "px-2 py-1 text-center transition-all duration-300",
         variants[variant]
       )}>
-        <h3 className="font-serif text-sm font-medium uppercase tracking-wider text-foreground">{title}</h3>
+        <h3 className="font-serif font-medium uppercase tracking-wider text-foreground">{title}</h3>
       </div>
     </Link>
   )
@@ -102,7 +102,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
 export function NavCards({ title }: { title: string }) {
   return (
     <div className="feature py-10">
-      <h2 className="text-2xl font-bold pb-10">{title}</h2>
+      <h2 className="text-2xl pb-10">{title}</h2>
 
       <div className="feature grid grid-rows-3 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-5">
         {mainCategories.map((category, index) => (

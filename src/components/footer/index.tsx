@@ -5,8 +5,10 @@ import SvgUibCenteredNo from "../icons/uib-centered-no"
 export function Footer() {
   return (
     <footer className="bg-accent">
-      <div className="container flex flex-col items-center justify-center mx-auto px-4 py-8">
-        <SvgUibCenteredNo className="" />
+      <div className="container flex flex-col items-center justify-center px-4 py-8">
+
+        <SvgUibCenteredNo className="size-96" />
+
         {/* <SvgUibUbCenteredNo className="" />
         <SvgUibUmCenteredNo className="" /> */}
 
