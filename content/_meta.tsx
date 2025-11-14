@@ -1,4 +1,4 @@
-import { IconFish, IconAlien, IconBuildingChurch, IconGlass, IconHeart, IconHorse, IconLetterA, IconCalendar, IconWorld, IconHandRock, IconClock, IconCloudRain, IconPlant } from '@tabler/icons-react';
+import { IconFish, IconTower, IconBuildingChurch, IconGlass, IconHeart, IconHorse, IconCalendar, IconWorld, IconClock, IconCloudRain, IconPlant, IconMountain, IconPencil } from '@tabler/icons-react';
 
 const meta = {
   '*': {
@@ -23,7 +23,7 @@ const meta = {
       'arkeologi': {
         title: (
           <div className="flex flex-row items-center gap-1 bg-um-arkeologi-tint px-2 py-1 rounded-md justify-self-stretch">
-            <IconAlien className="w-5 h-5 inline-block" />
+            <IconTower className="w-5 h-5 inline-block" />
             <div>Arkeologi</div>
           </div>
         ),
@@ -32,7 +32,7 @@ const meta = {
       'bokstaver-og-tegn': {
         title: (
           <div className="flex flex-row items-center gap-1 bg-um-tegn-tint px-2 py-1 rounded-md justify-self-stretch">
-            <IconLetterA className="w-5 h-5 inline-block" />
+            <IconPencil className="w-5 h-5 inline-block" />
             <div>Bokstaver og tegn</div>
           </div>
         ),
@@ -104,7 +104,7 @@ const meta = {
       'stein': {
         title: (
           <div className="flex flex-row items-center gap-1 bg-um-stein-tint px-2 py-1 rounded-md justify-self-stretch">
-            <IconHandRock className="w-5 h-5 inline-block" />
+            <IconMountain className="w-5 h-5 inline-block" />
             <div>Stein</div>
           </div>
         ),
