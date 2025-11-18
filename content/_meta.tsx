@@ -139,15 +139,8 @@ const meta = {
       },
     }
   },
-  'om': {
-    title: 'Om',
-    type: 'page',
-    theme: {
-      toc: false
-    }
-  },
-  'kontakt': {
-    title: 'Kontakt',
+  'ressurser': {
+    title: 'Ressurser',
     type: 'page',
     theme: {
       toc: false
