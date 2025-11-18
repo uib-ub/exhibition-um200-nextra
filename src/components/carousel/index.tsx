@@ -30,7 +30,7 @@ export function Carousel({ title, period, data }: { title: string, period: strin
         <CarouselContent className="my-8">
 
           {data.map((item, index) => (
-            <CarouselItem key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4 grid grid-rows-subgrid [grid-roes:span_4/span_4]">
+            <CarouselItem key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4 grid grid-rows-subgrid [grid-rows:span_4/span_4]">
               <div className="aspect-video bg-neutral-300"></div>
               <div className="text-sm text-gray-500 my-3">{item.year}</div>
               <h3 className="text-lg">{item.title}</h3>
@@ -46,7 +46,7 @@ export function Carousel({ title, period, data }: { title: string, period: strin
           <CarouselScrollbar />
           <CarouselButtons nextLabel="Neste" previousLabel="Forrige" />
         </div>
-      </CarouselComponent >
-    </div >
+      </CarouselComponent>
+    </div>
   )
 }
