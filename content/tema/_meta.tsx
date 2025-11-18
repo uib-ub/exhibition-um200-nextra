@@ -2,7 +2,9 @@ const meta = {
   'arkeologi': {
     title: 'Arkeologi',
     type: 'page',
-
+    theme: {
+      toc: false
+    }
   },
   'bokstaver-og-tegn': {
     title: 'Bokstaver og tegn',
