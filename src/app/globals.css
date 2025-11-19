@@ -78,6 +78,7 @@
 }
 
 :root {
+  --font-digitalarkivet: 'Times New Roman', Times, serif;
   --nextra-content-width: 100% !important;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
