@@ -142,8 +142,14 @@ const meta = {
   'ressurser': {
     title: 'Ressurser',
     type: 'page',
+  },
+  'menneskene': {
+    title: 'Menneskene',
+    type: 'page',
+    display: 'hidden',
     theme: {
-      toc: false
+      layout: 'full',
+      toc: false,
     }
   },
   'documentation': {
