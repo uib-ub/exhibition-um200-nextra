@@ -142,8 +142,23 @@ const meta = {
   'ressurser': {
     title: 'Ressurser',
     type: 'page',
+  },
+  'menneskene': {
+    title: 'Menneskene',
+    type: 'page',
+    display: 'hidden',
     theme: {
-      toc: false
+      layout: 'full',
+      toc: false,
+    }
+  },
+  'samlingene-og-tilvekst': {
+    title: 'Samlingene og tilvekst',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      layout: 'full',
+      toc: false,
     }
   },
   'documentation': {

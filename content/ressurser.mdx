@@ -1,0 +1,74 @@
+---
+title: Ressurser
+---
+
+import Image from 'next/image'
+import { ResourceGrid } from '@/components/resource-grid'
+
+<ContentGrid>
+
+<div className="text-xl text-center pb-10 md:pb-20">
+  <h1 className="text-5xl text-center">— Ressurser —</h1>
+  Her er en liste over ressursene som er tilgjengelige for å bruke i utstillingen.
+</div>
+
+<ResourceGrid>
+  <ResourceGrid.Item
+    title="Marcus"
+    description="Marcus er Spesialsamlingene til Universitetsbiblioteket i Bergen sin portal til digitaliserte manuskript, fotografi, diplomer og mye mer. Oppkalt etter Marcus Selmer, Bergens første fotograf."
+    image={
+      <div className="font-marcus uppercase text-5xl flex text-center items-center justify-center h-full not-sr-only">
+        Marcus
+      </div>
+    }
+    links={[
+      { href: 'https://marcus.uib.no', label: 'Manuskripter' },
+      { href: 'https://marcus.uib.no', label: 'Fotografi' },
+      { href: 'https://marcus.uib.no', label: 'Diplomer' },
+      { href: 'https://marcus.uib.no', label: 'Mye mer' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="Unimus"
+    description="Unimus er Universtetets arkivportal for digitale ressurser."
+    image={
+      <Image
+        src="/resources/unimus-logo.png"
+        alt="Unimus"
+        width={300}
+        height={100}
+        className="mx-auto object-contain content-center items-center h-full"
+      />
+    }
+    links={[
+      { href: 'https://unimus.no', label: 'Digitaliserte arkivmaterialer' },
+      { href: 'https://unimus.no', label: 'Digitaliserte fotografier' },
+      { href: 'https://unimus.no', label: 'Digitaliserte dokumenter' },
+      { href: 'https://unimus.no', label: 'Digitaliserte kart' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="Digitalarkivet"
+    description="Digitaltarkivet er en resurs som er tilgjengelig for å bruke i utstillingen."
+    image={
+      <div className="flex flex-row items-center justify-center gap-2">
+        <Image
+          src="/resources/digitalarkivet-logo.png"
+          alt="Digitalarkivet"
+          width={50}
+          height={50}
+          className="object-contain"
+        />
+        <div className="text-3xl font-digitalarkivet uppercase">Digitalarkivet</div>
+      </div>
+    }
+    links={[
+      { href: 'https://digitalarkivet.no', label: 'Digitaliserte arkivmaterialer' },
+      { href: 'https://digitalarkivet.no', label: 'Digitaliserte fotografier' },
+      { href: 'https://digitalarkivet.no', label: 'Digitaliserte dokumenter' },
+      { href: 'https://digitalarkivet.no', label: 'Digitaliserte kart' },
+    ]}
+  />
+</ResourceGrid>
+
+</ContentGrid>

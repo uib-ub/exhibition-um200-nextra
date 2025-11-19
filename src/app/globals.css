@@ -13,6 +13,7 @@
   --font-sans: var(--font-crimson-pro);
   --font-serif: var(--font-crimson-pro);
   --font-mono: var(--font-crimson-pro);
+  --font-marcus: var(--font-marcus)
   --color-um-dyr-solid: #a6ffb3;
   --color-um-dyr-tint: #dcf2e0;
   --color-um-arkeologi-solid: #ff9595;
@@ -77,6 +78,7 @@
 }
 
 :root {
+  --font-digitalarkivet: 'Times New Roman', Times, serif;
   --nextra-content-width: 100% !important;
   --radius: 0.625rem;
   --background: oklch(1 0 0);

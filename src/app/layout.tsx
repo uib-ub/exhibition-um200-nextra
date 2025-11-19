@@ -3,12 +3,18 @@ import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { Footer } from "@/components/footer";
 import { getPageMap } from 'nextra/page-map'
-import { Crimson_Pro } from "next/font/google";
+import { Crimson_Pro, IM_Fell_Great_Primer } from "next/font/google";
 import "./globals.css";
 
 const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
   subsets: ["latin"],
+});
+
+const imFellGreatPrimer = IM_Fell_Great_Primer({
+  variable: "--font-marcus",
+  subsets: ["latin"],
+  weight: ['400']
 });
 
 export const metadata: Metadata = {
@@ -40,7 +46,7 @@ export default async function RootLayout({
       lang="no"
       // Required to be set
       dir="ltr"
-      className={`${crimsonPro.variable} antialiased`}
+      className={`${crimsonPro.variable} ${imFellGreatPrimer.variable} antialiased`}
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
     >
