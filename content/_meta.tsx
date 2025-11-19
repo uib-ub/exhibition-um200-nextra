@@ -152,6 +152,15 @@ const meta = {
       toc: false,
     }
   },
+  'samlingene-og-tilvekst': {
+    title: 'Samlingene og tilvekst',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      layout: 'full',
+      toc: false,
+    }
+  },
   'documentation': {
     title: 'Doc [To be deleted]',
     type: 'page',

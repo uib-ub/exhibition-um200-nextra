@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 
 <ContentGrid>
 
-<div className="text-xl text-center pt-20">
+<div className="text-xl text-center py-20 md:py-42">
   <h2 className="text-xl text-center">— En digital jubileumsutstilling —</h2>
 
   Denne nettutstillingen feirer 200 år med forskning, bevaring og formidling av kulturarv ved Universitetsmuseet i Bergen. Gjennom digitale IIIF-manifester kan du utforske våre samlinger og lære mer om museets historie og betydning.
@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button'
 
 <NavCards title="Tematiske fortellinger" />
 
-<div className="text-xl text-center pt-20">
+<div className="text-xl text-center py-20 md:py-42">
   <h2 className="text-xl text-center">— Menneskene —</h2>
 
   Her er en liste over menneskene som er tilgjengelige for å bruke i utstillingen.
@@ -24,137 +24,40 @@ import { Button } from '@/components/ui/button'
   <Button variant="outline" className="w-min border-black mt-5" asChild>
     <Link href="/menneskene">Les mer</Link>
   </Button>
-  
 </div>
 
-<Carousel title="En institusjon bygges" topic="Bygg" className="full">
+<Carousel title="Samlingenes plass" className="full">
   <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="https://www.universitetsmuseet.no/en-institusjon-blir-til" 
+    title="Samlingene og tilvekst" 
+    href="/samlingene-og-tilvekst" 
+    image="/images/samlingene-og-tilvekst.jpg" 
+    imageAlt="Samlingene og tilvekst" 
+  />
+  <Carousel.Item 
+    title="Samlingene og tilvekst" 
+    href="/en-institusjon-blir-til" 
     image="/images/en-institusjon-blir-til.jpg" 
     imageAlt="En institusjon blir til" 
   />
   <Carousel.Item 
-    year="1825" 
     title="En institusjon blir til" 
     href="/en-institusjon-blir-til" 
     image="/images/en-institusjon-blir-til.jpg" 
     imageAlt="En institusjon blir til" 
   />
   <Carousel.Item 
-    year="1825" 
     title="En institusjon blir til" 
     href="/en-institusjon-blir-til" 
     image="/images/en-institusjon-blir-til.jpg" 
     imageAlt="En institusjon blir til" 
   />
   <Carousel.Item 
-    year="1825" 
     title="En institusjon blir til" 
     href="/en-institusjon-blir-til" 
     image="/images/en-institusjon-blir-til.jpg" 
     imageAlt="En institusjon blir til" 
   />
   <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-</Carousel>
-
-<Carousel title="En institusjon bygges" topic="Bygg" className="full">
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="https://www.universitetsmuseet.no/
-    en-institusjon-blir-til" image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-</Carousel>
-
-<Carousel title="En institusjon bygges" topic="Bygg" className="full">
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="https://www.universitetsmuseet.no/
-    en-institusjon-blir-til" image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
-    title="En institusjon blir til" 
-    href="/en-institusjon-blir-til" 
-    image="/images/en-institusjon-blir-til.jpg" 
-    imageAlt="En institusjon blir til" 
-  />
-  <Carousel.Item 
-    year="1825" 
     title="En institusjon blir til" 
     href="/en-institusjon-blir-til" 
     image="/images/en-institusjon-blir-til.jpg" 
