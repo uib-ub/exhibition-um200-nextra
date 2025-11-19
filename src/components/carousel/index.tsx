@@ -16,8 +16,11 @@ export function Carousel({ title, topic, children, className }: { title: string,
   return (
     <div className={cn("feature", className)}>
       <h2 className="text-xl md:text-xl flex items-center h-8 gap-5">
-        <span>{topic}</span>
-        <Separator orientation="vertical" className="bg-black" />
+        {topic ? (
+          <>
+            <span className="hidden md:block">{topic}</span>
+            <Separator orientation="vertical" className="bg-black" />
+          </>) : null}
         <span>{title}</span>
       </h2>
       <CarouselComponent>
