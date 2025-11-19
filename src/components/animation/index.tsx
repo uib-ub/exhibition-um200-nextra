@@ -7,7 +7,6 @@ export const Animation = () => {
   return (
     <DotLottieReact
       data={animation}
-      loop={true}
       autoplay
     />
   );
