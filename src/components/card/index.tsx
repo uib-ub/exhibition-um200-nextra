@@ -1,6 +1,7 @@
 import { CardContent, CardTitle, CardDescription } from '@/components/ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconArrowUpRight } from '@tabler/icons-react';
 import { Button } from '../ui/button'
 
 interface CardProps {
@@ -12,6 +13,8 @@ interface CardProps {
 }
 
 export function Card({ title, description, image, imageAlt, href }: CardProps) {
+  const ItemLink = href.startsWith('http') ? <Link href={href} target='_blank' rel='noopener noreferrer'>Les mer <IconArrowUpRight className="w-4 h-4" /></Link> : <Link href={href}>Les mer</Link>;
+
   return (
     <CardContent className="p-0 grid grid-rows-subgrid [grid-row:span_4/span_4] gap-2">
       <Link href={href}>
@@ -22,7 +25,7 @@ export function Card({ title, description, image, imageAlt, href }: CardProps) {
       </Link>
       <CardDescription className="text-xs md:text-sm font-light text-foreground my-2">{description ?? 'Mangler beskrivelse'}</CardDescription>
       <Button variant="outline" className="w-min border-black mt-2" asChild>
-        <Link href={href}>Les mer</Link>
+        {ItemLink}
       </Button>
     </CardContent>
   )
