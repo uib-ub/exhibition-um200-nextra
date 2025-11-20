@@ -9,32 +9,26 @@ import Image from 'next/image';
 
 export function ImageCarousel({ title, children }: { title: string, children: React.ReactNode }) {
   return (
-    <div className="feature">
-      <h2 className="text-xl md:text-xl flex items-center h-8 gap-5">
+    <CarouselComponent className="full py-20">
+      <h2 className="text-xl md:text-xl flex h-8 gap-5">
         {title}
       </h2>
-      <CarouselComponent>
-        <CarouselContent className="my-8 relative">
-          {children}
-        </CarouselContent>
-
-        <div className="flex w-full items-center justify-between">
-          <CarouselScrollbar />
-          <CarouselButtons nextLabel="Neste" previousLabel="Forrige" />
-        </div>
-      </CarouselComponent>
-    </div>
+      <CarouselContent className="my-8 @container">
+        {children}
+      </CarouselContent>
+      <div className="flex w-full items-center justify-between">
+        <CarouselScrollbar />
+        <CarouselButtons nextLabel="Neste" previousLabel="Forrige" />
+      </div>
+    </CarouselComponent>
   )
 }
 
-function ImageCarouselItem({ image, imageAlt, title, children }: { image: string, imageAlt: string, title: string, children: React.ReactNode }) {
+function ImageCarouselItem({ image, imageAlt, children }: { image: string, imageAlt: string, children: React.ReactNode }) {
   return (
-    <CarouselItem className=''>
-      <div className='flex flex-col gap-3 items-center justify-center'>
-        <Image src={image} alt={imageAlt} width={100} height={100} className="w-fit h-64 md:h-96 object-contain rounded" />
-        <h3 className="text-lg">{title}</h3>
-        <p className="max-w-fit">{children}</p>
-      </div>
+    <CarouselItem className='basis-full @sm:basis-1/2 @lg:basis-1/3 @xl:basis-1/4  @2xl:basis-1/5 @6xl:basis-1/6'>
+      <Image src={image} alt={imageAlt} width={600} height={600} className="object-contain bg-accent aspect-square" />
+      {children}
     </CarouselItem>
   )
 }
