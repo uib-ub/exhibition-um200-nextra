@@ -18,7 +18,7 @@ export function Card({ title, description, image, imageAlt, href }: CardProps) {
   return (
     <CardContent className="p-0 grid grid-rows-subgrid [grid-row:span_4/span_4] gap-2">
       <Link href={href}>
-        <Image src={image} alt={imageAlt} width={100} height={100} className="w-full aspect-square object-cover rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px]" />
+        <Image src={image} alt={imageAlt} width={300} height={300} className="w-full aspect-square object-cover rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px]" />
       </Link>
       <Link href={href} className="mb-2">
         <CardTitle className="text-md md:text-lg font-medium">{title}</CardTitle>
