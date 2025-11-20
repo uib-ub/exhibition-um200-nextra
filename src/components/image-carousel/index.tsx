@@ -26,7 +26,7 @@ export function ImageCarousel({ title, children }: { title: string, children: Re
 
 function ImageCarouselItem({ image, imageAlt, children }: { image: string, imageAlt: string, children: React.ReactNode }) {
   return (
-    <CarouselItem className='basis-full @sm:basis-1/2 @lg:basis-1/3 @xl:basis-1/4  @2xl:basis-1/5 @6xl:basis-1/6'>
+    <CarouselItem className='basis-full @md:basis-1/2 @xl:basis-1/3  @2xl:basis-1/4 @6xl:basis-1/5 @7xl:basis-1/7'>
       <Image src={image} alt={imageAlt} width={600} height={600} className="object-contain bg-accent aspect-square" />
       {children}
     </CarouselItem>

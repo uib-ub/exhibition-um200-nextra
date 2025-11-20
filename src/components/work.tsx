@@ -19,7 +19,7 @@ interface WorkProps extends VariantProps<typeof workVariants> {
 
 // Modern variant system with better organization
 const workVariants = cva(
-  'w-full rounded-b-lg border bg-card text-card-foreground shadow-sm my-10',
+  'w-full border bg-card text-card-foreground shadow-sm',
   {
     variants: {
       size: {
