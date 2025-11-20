@@ -1,6 +1,6 @@
-# The University Museum of Bergen - 200 Years Jubilee
+# Bylova - The Norwegian Town Law - 750th anniversary
 
-This is a project for the exhibition "The University Museum of Bergen - 200 Years Jubilee" at the University Museum of Bergen.
+This is a project for the exhibition celebrating the 750th anniversary of the Norwegian Town Law (Bylova) of 1276.
 
 ## Tech Stack
 
