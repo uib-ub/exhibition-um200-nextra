@@ -41,11 +41,11 @@ function CarouselItem({ year, title, href, image, imageAlt, index }: { year: str
   const ItemLink = href.startsWith('http') ? <Link href={href} target='_blank' rel='noopener noreferrer'>Les mer <IconArrowUpRight className="w-4 h-4" /></Link> : <Link href={href}>Les mer</Link>;
 
   return (
-    <CarouselItemComponent key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4 grid grid-rows-subgrid [grid-rows:span_4/span_4]">
-      <Image src={image} alt={imageAlt} width={100} height={100} className="w-full aspect-video bg-accent object-cover" />
+    <CarouselItemComponent key={index} className="basis-full @md:basis-1/2 @3xl:basis-1/3 @4xl:basis-1/4 flex flex-col">
+      <Image src={image} alt={imageAlt} width={300} height={100} className="w-full aspect-video bg-accent object-contain" />
       <div className="text-sm text-gray-500 my-3">{year}</div>
-      <h3 className="text-lg">{title}</h3>
-      <Button variant="outline" className="w-min border-black mt-5" asChild>
+      <h3 className="text-lg grow shrink-0">{title}</h3>
+      <Button variant="outline" className="w-min border-black justify-self-center" asChild>
         {ItemLink}
       </Button>
     </CarouselItemComponent>
