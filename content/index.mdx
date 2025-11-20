@@ -1,6 +1,7 @@
 import { MainHero } from '@/components/main-hero'
 import { NavCards } from '@/components/nav-cards'
 import { Carousel } from '@/components/carousel'
+import { PeopleMarquee } from '@/components/people-marquee'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
@@ -16,10 +17,12 @@ import { Button } from '@/components/ui/button'
 
 <NavCards title="Tematiske fortellinger" />
 
-<div className="text-xl text-center py-20 md:py-42">
+<div className="feature text-xl text-center py-20 md:py-42">
   <h2 className="text-xl text-center">— Menneskene —</h2>
 
   Her er en liste over menneskene som er tilgjengelige for å bruke i utstillingen.
+
+  <PeopleMarquee />
 
   <Button variant="outline" className="w-min border-black mt-5" asChild>
     <Link href="/menneskene">Les mer</Link>
