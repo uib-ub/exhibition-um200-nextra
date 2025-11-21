@@ -11,10 +11,9 @@ const meta = {
     type: 'page',
 
   },
-  'det-store-utland': {
-    title: 'Det store utland',
+  'verden-i-bergen': {
+    title: 'Verden i Bergen',
     type: 'page',
-
   },
   'dyr': {
     title: 'Dyr',

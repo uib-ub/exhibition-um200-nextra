@@ -20,7 +20,7 @@ export function Footer() {
           <ul className="md:columns-2">
             <li> <Link href="/tema/arkeologi">Arkeologi</Link> </li>
             <li> <Link href="/tema/bokstaver-og-tegn">Bokstaver og tegn</Link> </li>
-            <li> <Link href="/tema/det-store-utland">Det store utland</Link> </li>
+            <li> <Link href="/tema/verden-i-bergen">Verden i Bergen</Link> </li>
             <li> <Link href="/tema/dyr">Dyr</Link> </li>
             <li> <Link href="/tema/fisk">Fisk</Link> </li>
             <li> <Link href="/tema/glass">Glass</Link> </li>

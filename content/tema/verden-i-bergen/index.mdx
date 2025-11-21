@@ -1,0 +1,37 @@
+---
+title: Det store utland
+description: Dette er en beskrivelse av temaet det store utland.
+keywords: 
+  - utland
+  - land
+  - utenriks
+asIndexPage: true
+---
+
+import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Card, Cards } from '@/components/card'
+
+
+<Hero variant="verden-i-bergen" className="bg-um-utland-tint/60">
+  <HeroImage src="/verden-i-bergen-hero-ill.png" alt="Verden i Bergen" className="border-um-utland-solid" />
+  <HeroContent>
+    <HeroTitle>
+      Verden i Bergen
+    </HeroTitle>
+  </HeroContent>
+</Hero>
+
+<ContentGrid>
+
+<Cards id="historier" title="Historier om verden i Bergen" className="full pt-10 md:pt-20">
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+</Cards>
+
+</ContentGrid>
