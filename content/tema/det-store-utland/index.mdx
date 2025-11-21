@@ -1,0 +1,39 @@
+---
+title: Det store utland
+description: Dette er en beskrivelse av temaet det store utland.
+keywords: 
+  - utland
+  - land
+  - utenriks
+asIndexPage: true
+---
+
+import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Card, Cards } from '@/components/card'
+
+
+<Hero variant="det-store-utland" className="bg-um-utland-tint/60">
+  <HeroImage src="/det-store-utland-hero-ill.png" alt="Det store utland" className="border-um-utland-solid" />
+  <HeroContent>
+    <HeroTitle>
+      Det store utland
+    </HeroTitle>
+    <HeroDescription>
+      Her er en liste over temaene
+    </HeroDescription>
+  </HeroContent>
+</Hero>
+
+<ContentGrid>
+
+<Cards title="Historier om Verden i Bergen">
+ <Card 
+    title="Museets første gjenstand?" 
+    description="En modell av kinesisk pagode." 
+    image="/images/det-store-utland/E8500.jpg" 
+    imageAlt="Foto av en modell av en kinesisk pagode. I sju etasjer. Brun. Laget av tre." 
+    href="https://tohundrefortellinger.w.uib.no/1825/09/26/1827-en-kinesisk-pagode/" 
+  />
+</Cards>
+</ContentGrid>
