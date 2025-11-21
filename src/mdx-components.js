@@ -5,6 +5,7 @@ import { Quote } from '@/components/quote'
 import { IIIFViewer } from '@/components/iiif-viewer'
 import { IIIFManifest } from '@/components/ui/chc/iiif-manifest'
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
+import { ImageCarousel } from '@/components/image-carousel'
 
 // Get the default MDX components
 const themeComponents = getThemeComponents()
@@ -19,6 +20,7 @@ export function useMDXComponents(components) {
     IIIFViewer,
     IIIFManifest,
     ContentGrid,
+    ImageCarousel,
     ...components
   }
 }
