@@ -38,14 +38,14 @@ const meta = {
         ),
         href: '/tema/bokstaver-og-tegn'
       },
-      'det-store-utland': {
+      'verden-i-bergen': {
         title: (
           <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
             <IconWorld className="w-5 h-5 inline-block" />
-            <div>Det store utland</div>
+            <div>Verden i Bergen</div>
           </div>
         ),
-        href: '/tema/det-store-utland'
+        href: '/tema/verden-i-bergen'
       },
       'dyr': {
         title: (

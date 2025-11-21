@@ -49,9 +49,12 @@
       margin-block: 0.75rem !important;
     }
     > p {
+      font-size: var(--text-lg);
+      line-height: var(--text-lg--line-height);
+
       @media (min-width: 48rem) {
-        font-size: var(--text-lg);
-        line-height: var(--text-lg--line-height);
+        font-size: var(--text-xl);
+        line-height: var(--text-xl--line-height);
       }
     }
     h1, h2, h3, h4, h5, h6 {
@@ -66,11 +69,12 @@
         line-height: var(--leading-normal) !important;
       }
 
-      @container (width < 64rem) {
-        @apply border rounded-md;
+      @container (width < 58rem) {
+        @apply border rounded-md border-neutral-200;
         grid-column: content;
-        padding: 0.75rem;
-        margin-block: 0.75rem !important;
+        width: fit-content;
+        padding: 0.5rem;
+        margin-block: 0.5rem !important;
       }
     }
 

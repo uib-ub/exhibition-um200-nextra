@@ -9,9 +9,9 @@ asIndexPage: true
 ---
 
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
-import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Hero, HeroImage, HeroContent, HeroTitle } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="hverdag" className="bg-um-hverdag-tint/60">
   <HeroImage src="/hverdag-hero-ill.png" alt="Hverdag" className="border-um-hverdag-solid" />
@@ -19,14 +19,13 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Hverdag
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
 <ContentGrid>
 I den første innbydelsen Christie sendt ut ved opprettelsen av museet, hadde hverdagsgjenstander også en viktig plass og ble sett på som noe som var viktig å bevare. Det kaltes da husgeråd, som er satt sammen av ordene «hus» og «geråd» fra det tyske ordet «gerad» som betyr utstyr. Altså, hus-utstyr! I museets samlinger finnes den enkleste lille krakk til den største sengen som antageligvis overgår vår oppfatning av hva en hverdagslig gjenstand er. Det samme inntrykket hadde også Christie, i et brev av 1845 skriver han til kunstneren I.C. Dahl i Dresden, og beskriver sengen som et kunststykke av dens slag, som han skulle ønske han kunne se, for det ville skjenket ham en sann nytelse. «Kunne jeg bare fått noen til å tegne den». Mange år senere ble sengen tegnet med (nesten) alle detaljer, og trykket i 1866 i Illustreret Nyhedsblad. I en lang reportasje om Bergens Museum var det nettopp denne sengen som ble presentert først! Men, hverdag er så mye mer enn de ypperste gjenstandene av «hus-utstyr».
+
+<JumpToStories title="hverdag" />
 
 Med kanskje litt kalde gufs er også annerledeshverdagen dokumentert i arkivene, med bilder fra okkupasjonens dager her i Bergen, og en stor samling illegale aviser som sirkulerte fra hånd til hånd med siste nytt under krigen.
 I arkivene til museet finner vi også mange spor av hverdag – blant annet tallrike akvareller som dokumenterer åklemønstre og fargebruk, som bevarer tekstiltradisjonen i papirformat. Biblioteket har slektshistoriske arkiv, og gamle bibler på hyllen som vitner om levde liv med slektstre skrevet ned i familiens klenodium. Videre finner vi også dagbøker, minnebøker og brevsamlinger, hvor stort, smått og kjære minner er nedtegnet.
@@ -35,8 +34,13 @@ I håndskrevne kokebøker og samlinger med oppskrifter kan man inspireres til å
 Kanskje vi også skal tenke på hvordan vår hverdag blir dokumentert for fremtiden?
 
 
-{/* <Cards title="Historier om fisk">
-  <Card title="Christie og de «mærkelige Fiske»" description="" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
-</Cards> */}
+<Cards id="historier" title="Historier om hverdag" className="full pt-10 md:pt-20">
+  <Card title="Christie og de «mærkelige Fiske»" 
+    description="Les om Christie og de «mærkelige Fiske» i museet" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+</Cards>
 
 </ContentGrid>
