@@ -10,7 +10,8 @@ asIndexPage: true
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
+import { ImageCarousel } from '@/components/image-carousel'
 
 <Hero variant="bokstaver-og-tegn" className="bg-um-tegn-tint/60">
   <HeroImage src="/bokstaver-og-tegn-hero-ill.png" alt="Bokstaver og tegn" className="border-um-tegn-solid" />
@@ -18,41 +19,54 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Bokstaver og tegn
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
 <ContentGrid>
 Fra eldre tider finnes det få skriftlige kilder. Det første kjente skriftspråket her hjemme er runer, også kalt futhark. Runer ble hugget i stein eller risset inn i treverk, men det var de muntlige overleveringene som var vanligst. Runesteinene inneholdt oftest inskripsjoner til minne om personer eller spesielle hendelser. De små runepinnene derimot, der var det alt fra korte beskjeder og hilsener, til mer utsvevende språk som ble nedtegnet…
 
+<JumpToStories title="bokstaver-og-tegn" />
+
 Etter kristningen av landet i 1020-året kom det latinske skriftspråket for fullt med fremveksten av kirker og klostre. Den eldste håndskrevne boken som er bevart hos UiB er fra år 1200, og er skrevet av diakon Ulbaldus. Å produsere håndskrevne bøker var vanlig i klostrene. Vi syns jo dette er et fantastisk mesterverk av en bok, men i samtiden mistet innholdet sin verdi etter reformasjonen. Derimot var materialet fremdeles verdifullt! Det forstår man lett når man begynner å regne på det, for til en håndkrevet bok som dette måtte over hundre kalver slaktes og skinnene prepareres. 
 
 Den europeiske boktrykkerkunsten ble oppfunnet i første halvdel av 1400-tallet. Med den ble det også et større behov for bokbindere og økt etterspørsel etter materiale til innbinding. Fragmenter av slike gamle pergamenthåndskrifter finner vi derfor også på de stedene man ikke nødvendigvis ser! Oppkuttet i små biter ligger håndskrift og gamle notetegn gjemt inni bokens indre oppbygging, gjerne som forsterking i bokryggen, eller hvis vi er ekstra heldige er pergament-boksiden gjenbrukt som bokbind!
 
-<Cards title="Bokstaver og tegn i samlingene">
-  
-  <Card title="Christie og de «mærkelige Fiske»" 
-  description="" 
-  image="/nav-card-images/vintage-fish-illustration.jpg" 
-  imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
 
-<Card title="Runepinner fra Bergen" 
-  description="Ojda, les mer om det utsvevende språket på runepinnene i &quot;200 Fortellinger&quot;" 
-  image="/nav-card-images/vintage-fish-illustration.jpg" 
-  imageAlt="Runepinne" 
-  href="https://tohundrefortellinger.w.uib.no/1979/09/15/1979-frekke-runepinner-fra-bryggen/" />
+<ImageCarousel className="feature">
+  <ImageCarousel.Item
+    image="/images/bokstaver-og-tegn/image-1.jpg" 
+    imageAlt="Bokstaver og tegn"
+  >
+    Bokstaver og tegn
+  </ImageCarousel.Item>
+</ImageCarousel>
 
-<Card title="Christie og de «mærkelige Fiske»" 
-  description="" 
-  image="/nav-card-images/vintage-fish-illustration.jpg" 
-  imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
-
-<Card title="Christie og de «mærkelige Fiske»" 
-  description="" 
-  image="/nav-card-images/vintage-fish-illustration.jpg" 
-  imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
+<Cards id="historier" title="Bokstaver og tegn i samlingene" className="full pt-10 md:pt-20">
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+  <Card 
+    title="Runepinner fra Bergen" 
+    description="Ojda, les mer om det utsvevende språket på runepinnene i &quot;200 Fortellinger&quot;" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Runepinne" 
+    href="https://tohundrefortellinger.w.uib.no/1979/09/15/1979-frekke-runepinner-fra-bryggen/" 
+  />
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
 </Cards>
 
 </ContentGrid>
