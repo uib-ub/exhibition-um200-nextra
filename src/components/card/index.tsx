@@ -31,13 +31,13 @@ export function Card({ title, description, image, imageAlt, href }: CardProps) {
   )
 }
 
-export function Cards({ title, children }: { title: string, children: React.ReactNode }) {
+export function Cards({ title, children, id, className }: { title: string, children: React.ReactNode, id: string, className: string }) {
   return (
-    <>
-      <h2 className="feature text-xl pt-5">{title}</h2>
-      <div className="feature grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-14 w-full">
+    <div id={id} className={className}>
+      <h2 className="text-xl md:text-2xl pt-5">{title}</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-14 w-full">
         {children}
       </div>
-    </>
+    </div>
   )
 }

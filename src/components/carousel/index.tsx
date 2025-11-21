@@ -15,7 +15,7 @@ import { IconArrowUpRight } from '@tabler/icons-react';
 export function Carousel({ title, topic, children, className }: { title: string, topic: string, children: React.ReactNode, className: string }) {
   return (
     <div className={cn("feature", className)}>
-      <h2 className="text-xl md:text-xl flex items-center h-8 gap-5">
+      <h2 className="text-xl md:text-2xl flex items-center h-8 gap-5">
         {topic ? (
           <>
             <span className="hidden md:block">{topic}</span>

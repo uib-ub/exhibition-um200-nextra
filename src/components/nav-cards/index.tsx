@@ -12,7 +12,7 @@ interface NavCardProps {
   className?: string
 }
 
-function AnimatedOverlay() {
+/* function AnimatedOverlay() {
   return (
     <>
       <div className="pointer-events-none absolute -top-6 left-1/3 -translate-x-1/2 rotate-25 transform z-20">
@@ -57,7 +57,7 @@ function AnimatedOverlay() {
       </div>
     </>
   )
-}
+} */
 
 export function NavCard({ title, href, imageSrc, imageAlt, variant, className }: NavCardProps) {
   const variants: Record<string, string> = {
@@ -78,14 +78,14 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
 
   return (
     <Link href={href} className={cn("group cursor-pointer relative", className)}>
-      <AnimatedOverlay />
+      {/* <AnimatedOverlay /> */}
       <div
         className={cn(
           "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300 relative", variants[variant]
         )}
       >
         <div className={`z-1 relative aspect-3/4`}>
-          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-cover transition-opacity duration-300" />
+          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-contain object-bottom transition-opacity duration-300" />
           <div className="absolute inset-0 bg-black/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
       </div>
@@ -102,7 +102,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
 export function NavCards({ title }: { title: string }) {
   return (
     <div className="feature">
-      <h2 className="text-xl pb-10">{title}</h2>
+      <h2 className="text-xl md:text-2xl pb-10">{title}</h2>
 
       <div className="feature grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-y-5">
         {mainCategories.map((category, index) => (
