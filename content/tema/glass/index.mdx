@@ -9,10 +9,10 @@ asIndexPage: true
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="glass" className="bg-um-glass-tint/60">
-  <HeroImage src="/glass-hero-ill.png" alt="Glass" className="border-um-glass-solid" />
+  <HeroImage src="/images/glass/hero-glass.png" alt="" className="border-um-glass-solid" />
   <HeroContent>
     <HeroTitle>
       Glass
@@ -22,14 +22,14 @@ import { Card, Cards } from '@/components/card'
 
 <ContentGrid>
 
-Samlingene våre er fulle av glass, brukt til både hverdag og fest!  Vi finner glassperler fra vikingtid, nydelige glassmalerier og bruksgjenstander av glass. I arkivene finner vi informasjon om alt fra gjenstandene i samlingene, arkivene etter glarmesterlaugene i Bergen, og vi finner foto hvor glass har en hovedrolle. Eksemplene er mange og gir oss et godt innblikk i hvilke variasjoner som finnes i samlingene og arkivene.
-En helt spesiell kuriositet finner vi i museets bysamling. I 1828 får museet en glassflaske i gave fra kaptein Rummelhoff. Flasken er laget av nydelig blått glass og er formet som en pistol! Den er 36, 5 cm lang og 9 cm på sitt bredeste og er dekorert i emaljefarger på en detaljert måte, slik at det skal ligne en pistol. 
-I sine notater skriver museets grunnlegger Wilhelm Frimann Koren Christie (1778-1849) om denne glassflasken. Han definerer den som en «Brændevins-Flaske» og beskriver videre dens utseende. Han setter også objektet inn i en større kontekst, som i notatets punkt 2; 
-*for Faconens Skyld; I England kalder man endu en Lomme-flaske til Brændevin: Pocket Pistol*
-Det er jo artig at produsenten av flasken åpenbart lot seg inspirer av det engelske begrepet «Pocket Pistol»!
+Samlingene våre er fulle av glass, brukt til både hverdag og fest!  Vi finner glassperler fra vikingtid, nydelige glassmalerier og bruksgjenstander av glass. I arkivene finner vi informasjon om alt fra gjenstandene i samlingene, arkivene etter glarmesterlaugene i Bergen, og vi finner foto hvor glass har en hovedrolle. Eksemplene er mange og gir oss et godt innblikk i hvilke variasjoner som finnes i samlingene og arkivene. 
+
+<JumpToStories title="glass" />
+
+En helt spesiell kuriositet finner vi i museets bysamling. I 1828 får museet en glassflaske i gave fra kaptein Rummelhoff. Flasken er laget av nydelig blått glass og er formet som en pistol! Den er 36, 5 cm lang og 9 cm på sitt bredeste og er dekorert i emaljefarger på en detaljert måte, slik at det skal ligne en pistol. I sine notater skriver museets grunnlegger Wilhelm Frimann Koren Christie (1778-1849) om denne glassflasken. Han definerer den som en «Brændevins-Flaske» og beskriver videre dens utseende. Han setter også objektet inn i en større kontekst, som i notatets punkt 2; *for Faconens Skyld; I England kalder man endu en Lomme-flaske til Brændevin: Pocket Pistol* Det er jo artig at produsenten av flasken åpenbart lot seg inspirer av det engelske begrepet «Pocket Pistol»!
 
 
-<ImageCarousel className="feature" title="Glass!">
+<ImageCarousel className="feature">
   <ImageCarousel.Item
     image="/images/glass/By136_flaske.jpg" 
     imageAlt="En glassflaske formet som pistol, i blått glass 36 cm lang"
@@ -74,14 +74,13 @@ Det er jo artig at produsenten av flasken åpenbart lot seg inspirer av det enge
 
 </ImageCarousel>
 
-<Cards title="Historier om glass">
-
+<Cards id="historier" title="Historier om glass" className="full pt-10 md:pt-20">
   <Card title="Om Bergens Glasmesterlaug»" 
-  description="Dykk ned i arkivene til Glarmesterlauget (glassmestere) i Bergen" 
-  image="/nav-card-images/vintage-fish-illustration.jpg" 
-  imageAlt="Fisk" 
-  href="https://marcus.uib.no/topic/667c8a39-4444-49e3-8f51-bcf04f5d0ed5" />
-
+    description="Dykk ned i arkivene til Glarmesterlauget (glassmestere) i Bergen" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" 
+    href="https://marcus.uib.no/topic/667c8a39-4444-49e3-8f51-bcf04f5d0ed5" 
+  />
    <Card 
     title="Etnografiske gjenstander i glass" 
     description="En oversikt over gjenstander i glass i museets etnografiske samling" 
@@ -110,8 +109,6 @@ Det er jo artig at produsenten av flasken åpenbart lot seg inspirer av det enge
     imageAlt="" 
     href="" 
   />
-
 </Cards> 
-
 
 </ContentGrid>
