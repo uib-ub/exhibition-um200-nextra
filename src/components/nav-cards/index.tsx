@@ -85,7 +85,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
         )}
       >
         <div className={`z-1 relative aspect-3/4`}>
-          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-contain transition-opacity duration-300" />
+          <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-contain object-bottom transition-opacity duration-300" />
           <div className="absolute inset-0 bg-black/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
       </div>
