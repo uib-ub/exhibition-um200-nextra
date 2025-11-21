@@ -169,5 +169,13 @@
   }
   h2 {
     @apply border-none;
-   }
+  }
+  a {
+    @apply text-primary underline-offset-4 underline;
+  }
+  header a,
+  button a,
+  a[data-slot="button"] {
+    @apply text-inherit no-underline;
+  }
 }
