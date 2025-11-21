@@ -68,7 +68,7 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
     glass: "border-um-glass-solid group-hover:bg-um-glass-solid",
     helse: "border-um-helse-solid group-hover:bg-um-helse-solid",
     "hverdag": "border-um-hverdag-solid group-hover:bg-um-hverdag-solid",
-    "det-store-utland": "border-um-utland-solid group-hover:bg-um-utland-solid",
+    "verden-i-bergen": "border-um-utland-solid group-hover:bg-um-utland-solid",
     kirkekunst: "border-um-kirkekunst-solid group-hover:bg-um-kirkekunst-solid",
     stein: "border-um-stein-solid group-hover:bg-um-stein-solid",
     "tid-og-rom": "border-um-tidrom-solid group-hover:bg-um-tidrom-solid",

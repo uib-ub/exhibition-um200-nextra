@@ -9,9 +9,9 @@ asIndexPage: true
 ---
 
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
-import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Hero, HeroImage, HeroContent, HeroTitle } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="helse" className="bg-um-helse-tint/60">
   <HeroImage src="/helse-hero-ill.png" alt="Helse" className="border-um-helse-solid" />
@@ -19,16 +19,25 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Helse
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
 <ContentGrid>
 
-{/* <Cards title="Historier om fisk">
-  <Card title="Christie og de «mærkelige Fiske»" description="" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Fisk" href="/tema/fisk/christie-og-de-maerkelige-fiske" />
-</Cards> */}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+<JumpToStories title="helse" />
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Te cum aeque repudiandae delicatissimi, cu populo dictas ponderum vel, dolor consequat ut vix. Qui gloriatur scribentur et, id velit verear mel, cum no porro debet. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Et clita interesset quo. Eos verear percipit ex, eos ne eligendi inimicus. Id doctus accommodare eam, pri an esse tota prodesset, te veniam oblique posidonium mel. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Accusam explicari sed ei. Scripta periculis ei eam, te pro movet reformidans. His an amet petentium voluptatibus, modo malis error nec no. Te cum aeque repudiandae delicatissimi, cu populo dictas ponderum vel, dolor consequat ut vix. Ne assum fierent his, cibo eruditi necessitatibus id vix, cum tantas audiam reprehendunt in.
+
+<Cards id="historier" title="Historier om helse" className="full pt-10 md:pt-20">
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="Les om Christie og de «mærkelige Fiske» i museet" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+</Cards>
 
 </ContentGrid>

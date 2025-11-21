@@ -13,6 +13,12 @@ const meta = {
   'christie-og-de-maerkelige-fiske': {
     type: 'doc',
   },
+  'thorholv-rasmussen': {
+    type: 'doc',
+  },
+  'peter-stuwitz': {
+    type: 'doc',
+  },
 }
 
 export default meta;

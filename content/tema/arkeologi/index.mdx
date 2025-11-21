@@ -10,6 +10,7 @@ asIndexPage: true
 import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
 import { ImageCarousel } from '@/components/image-carousel'
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="arkeologi" className="bg-um-arkeologi-tint">
   <HeroImage src="/arkeologi-hero-ill.png" alt="Arkeologi" className="border-um-arkeologi-solid" />
@@ -21,10 +22,9 @@ import { ImageCarousel } from '@/components/image-carousel'
 </Hero>
 
 <ContentGrid>
-
-## I arkeologenes fotspor 
-
 I Nordfjordeid ligger gården Myklebust. Et dypdykk i arkivene viser at denne gården har en helt spesiell plass i museets 200 år lange historie.   
+
+<JumpToStories title="arkeologi" />
 
 Det første sporet finner vi i reiseskildringene til museets grunnlegger W.F.K. Christie. Etter at han grunnla Bergens Museum reiser han rundt i Norge for å samle inn informasjon han synes er interessant, som han skriver ned i «Antikvariske notiser». I juni 1828 besøker han gården Myklebust. I hans notater fra reisen i Nordfjordeid kan vi lese; (…) ere adskillige Gravhøje af Sand og Gruus, nogle meget store og runde, andre flade og aflange, de allerfleste undersøgte. 
 
@@ -79,7 +79,7 @@ Arkivene gir museumsgjenstandene kontekst, noe som gjør disse arkivene til vår
   </ImageCarousel.Item>
 </ImageCarousel>
 
-<Cards title="Historier om arkeologi">
+<Cards id="historier" title="Historier om arkeologi" className="full pt-10 md:pt-20">
   <Card 
     title="Myklebustskipet" 
     description="Les mer om den storslåtte skipsgraven fra vikingtid funnet på gården Myklebust" 
@@ -144,7 +144,6 @@ Arkivene gir museumsgjenstandene kontekst, noe som gjør disse arkivene til vår
     imageAlt="" 
     href="/" 
   />
-  
 </Cards>
 
 </ContentGrid>

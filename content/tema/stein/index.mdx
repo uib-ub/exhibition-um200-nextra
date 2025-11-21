@@ -12,8 +12,9 @@ asIndexPage: true
 ---
 
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
-import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Hero, HeroImage, HeroContent, HeroTitle } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
+import { JumpToStories } from '@/components/jump-to-stories'
 
 
 <Hero variant="stein" className="bg-um-stein-tint/60">
@@ -22,9 +23,6 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Stein
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
@@ -32,14 +30,34 @@ import { Card, Cards } from '@/components/card'
 
 Denne vakre korallfossilen, Reuschia aperta Kiær, er utstilt ved Universitetsmuseet i Bergen. Den ble funnet av fossilsamleren Olaf Hanssen i hans hjembygd Hegglandsdalen i Os. Hanssen avleverte mange tilsvarende fossiler fra Hegglandsdalen til Bergens Museum, og han deltok på feltarbeid som assistent til museets geologikonservator Astrid Monsen i 1920-årene. Et tilsvarende fossil fra Hegglandsdalen finnes på et fotografi i en av Monsens feltbøker fra Os, trolig fotografert av Monsen selv. 
 
+<JumpToStories title="stein" />
+
 Allerede før han grunnla Bergens Museum i 1825 hadde W.F.K. Christie samlet inn mineraler og fossiler, som han donerte til museet. Men den formelle etableringen av Mineralogisk-geologisk avdeling ved museet skjedde først i 1890, med Carl Fredrik Kolderup som leder og senere professor. Astrid Monsen ble ansatt som konservator i 1918, som den første vitenskapelig ansatte kvinne ved museet.  
 
 Forskningen til geologene ved museet og senere UiB har generert store mengder arkivmateriale, særlig feltbøker, fotografier, illustrasjoner, og håndtegnede og trykte geologiske kart. Ved Universitetsbiblioteket er det bevart ca. 170 håndskrevne feltbøker, samt en mengde maskinskrevne feltbøker med fotografier. Det er bevart fotosamlinger etter flere av geologene som brukte fotografi aktivt i feltarbeidet, og det er bevart en unik samling med over 750 fargerike og håndtegnede geologiske undervisningsplansjer, de aller fleste laget av illustratører ved museet. 
 
-<Cards title="Historier om stein">
-  <Card title="Geologi og folkeliv i Hardanger" description="Les om Geologi og folkeliv i Hardanger" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="" href="/tema/stein/geologi-og-folkeliv-i-hardanger" />
-  <Card title="Astrid Monsen – En kvinnelig pioner ved Bergens Museum" description="Les om Astrid Monsen – En kvinnelig pioner ved Bergens Museum" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="" href="/tema/stein/astrid-monsen-en-kvinnelig-pioner-ved-bergens-museum" />
-  <Card title="Geologiske undervisningsplansjer" description="Les om Geologiske undervisningsplansjer" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="" href="/tema/stein/geologiske-undervisningsplansjer" />
+<Cards id="historier" title="Historier om stein" className="full pt-10 md:pt-20">
+  <Card 
+    title="Geologi og folkeliv i Hardanger" 
+    description="Les om Geologi og folkeliv i Hardanger" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="" 
+    href="/tema/stein/geologi-og-folkeliv-i-hardanger" 
+  />
+  <Card 
+    title="Astrid Monsen – En kvinnelig pioner ved Bergens Museum" 
+    description="Les om Astrid Monsen – En kvinnelig pioner ved Bergens Museum" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="" 
+    href="/tema/stein/astrid-monsen-en-kvinnelig-pioner-ved-bergens-museum" 
+  />
+  <Card 
+    title="Geologiske undervisningsplansjer" 
+    description="Les om Geologiske undervisningsplansjer" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="" 
+    href="/tema/stein/geologiske-undervisningsplansjer" 
+  />
 </Cards>
 
 </ContentGrid>

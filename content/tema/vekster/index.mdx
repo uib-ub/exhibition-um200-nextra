@@ -9,9 +9,9 @@ asIndexPage: true
 ---
 
 import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
-import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Hero, HeroImage, HeroContent, HeroTitle } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="vekster" className="bg-um-vekster-tint/60">
   <HeroImage src="/vekster-hero-ill.png" alt="Vekster" className="border-um-vekster-solid" />
@@ -19,9 +19,6 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Vekster
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
@@ -29,17 +26,43 @@ import { Card, Cards } from '@/components/card'
 
 I midten av august 1878 botaniserte museumsdirektør D.C. Danielssen ved Adventfjorden på Svalbard, som medlem av den norske Nordhavsekspedisjonen. En av plantene han plukket var en reinrose (Dryas octopetala L.), som han puttet inn i feltdagboken sin. Og der har den blitt liggende siden, i 147 år. Det er ikke uvanlig å finne planter, moser eller lav i feltbøker og floraer i samlingene våre, men akkurat denne  reinrosa er bemerkelsesverdig godt bevart. 
 
+<JumpToStories title="vekster" />
+
 Botanisk avdeling ved Bergens Museum ble etablert i 1886, med Jørgen Brunchorst som museets første botaniker, grunnlegger av Muséhagen, og senere direktør. Det er bevart samlinger etter flere av de markante botanikerne ved museet og UiB, den klart mest omfattende etter professor Knut Fægri – arkivmaterialet hans er skapt gjennom hele 75 år. 
 
 Reinrosa er selvsagt med i alle floraene bevart i samlingene våre, fra praktverket Flora Danica til illustrasjonsbindet av Norsk Flora fra 1979, der den ble tegnet av Miranda Bødtker – hennes enorme samling med originalillustrasjoner er bevart ved Universitetsmuseet. 
 
 Herbariesamlingen ved Universitetsmuseet – Herbarium BG med 535 000 objekter – inneholder hele 359 reinroser, 17 funnet på Svalbard. Danielssens reinroser fra Adventfjorden i 1878 er de eldste eksemplarene i herbariet, men en ble altså godt gjemt og bevart i Danielssens feltdagbok. 
 
-<Cards title="Historier om vekster">
-  <Card title="Miranda Bødtker" description="Les om Miranda Bødtker" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Vekster" href="/tema/vekster/miranda-boedtker" />
-  <Card title="Knut Fægri" description="Les om Knut Fægri" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Vekster" href="/tema/vekster/knut-faegri" />
-  <Card title="Bokflora" description="Les om Bokflora" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Vekster" href="/tema/vekster/bokflora" />
-  <Card title="Miranda Bødtkers akrareller" description="Les om Miranda Bødtkers akrareller" image="/nav-card-images/vintage-fish-illustration.jpg" imageAlt="Vekster" href="https://tohundrefortellinger.w.uib.no/2016/09/15/1999-miranda-bodtkers-akvareller/" />
+<Cards id="historier" title="Historier om vekster" className="full pt-10 md:pt-20">
+  <Card 
+    title="Miranda Bødtker" 
+    description="Les om Miranda Bødtker" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Vekster" 
+    href="/tema/vekster/miranda-boedtker" 
+  />
+  <Card 
+    title="Knut Fægri" 
+    description="Les om Knut Fægri" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Vekster" 
+    href="/tema/vekster/knut-faegri" 
+  />
+  <Card 
+    title="Bokflora" 
+    description="Les om Bokflora" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Vekster" 
+    href="/tema/vekster/bokflora" 
+  />
+  <Card 
+    title="Miranda Bødtkers akrareller" 
+    description="Les om Miranda Bødtkers akrareller" 
+    image="/nav-card-images/vintage-fish-illustration.jpg" 
+    imageAlt="Vekster" 
+    href="https://tohundrefortellinger.w.uib.no/2016/09/15/1999-miranda-bodtkers-akvareller/" 
+  />
 </Cards>
 
 </ContentGrid>

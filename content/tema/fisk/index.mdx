@@ -8,9 +8,9 @@ keywords:
 asIndexPage: true
 ---
 
-import { Hero, HeroImage, HeroContent, HeroTitle, HeroDescription } from '@/components/hero'
+import { Hero, HeroImage, HeroContent, HeroTitle } from '@/components/hero'
 import { Card, Cards } from '@/components/card'
-
+import { JumpToStories } from '@/components/jump-to-stories'
 
 <Hero variant="fisk" className="bg-um-fisk-tint/60">
   <HeroImage src="/fisk-hero-ill.png" alt="Fisk" className="border-um-fisk-solid" />
@@ -18,9 +18,6 @@ import { Card, Cards } from '@/components/card'
     <HeroTitle>
       Fisk
     </HeroTitle>
-    <HeroDescription>
-      Her er en liste over temaene
-    </HeroDescription>
   </HeroContent>
 </Hero>
 
@@ -28,30 +25,35 @@ import { Card, Cards } from '@/components/card'
 
 I desember 1839 sendte W.F.K. Christie ut en anmodning til «Det Bergenske Musæums Velyndere, om at forskaffe Musæet Natur-Gjenstande, som fanges i Søen». Gjennom museets gavelister kan vi spore om «Velynderne» fulgte Christies anmodning, men uansett er fiskene som ble avlevert og bevart i «Brændevin» ved museet i 1840-årene for lengst gått i oppløsning.  Men mange av eksemplarene er heldigvis bevart i visuell form, dokumentert i fargerike akvareller og tegninger. 
 
+<JumpToStories title="fisk" />
+
 I andre halvdel av 1800-tallet publiserte museet oversikter og fører til sine ulike samlinger. I 1898 kom «Norge’s Fiske. Deres udbredelse og levevis. Fører gjennem Bergens Museums norske fiskesamling», pussig nok skrevet av botanikeren Jørgen Brunchorst. 
 
 Foruten en mengde publiserte gamle plansjeverk med trykte fiskeillustrasjoner, finnes det i samlingene ved Universitetsbiblioteket bevart svært mange originalillustrasjoner av fisk, bl.a. sognepresten Iver Anker Heltzen (1785-1842) fra Hemnes i Nordland. I hans upubliserte manuskripter finnes det bl.a. beskrivelser og akvareller av «Helgelands Fiske», mange av tegningene kopiert med vekslende hell etter eldre bøker. Spranget er stort fra Heltzens noe naivistiske akvareller til fiskene tegnet med faglig presis hånd av den profesjonelle bergenskunstneren Thorolv Rasmussen under ekspedisjonen med forskningsskipet «Michael Sars» i 1910. Rasmussens uvurderlige samling er bevart ved Universitetsmuseet i Bergen. 
 
-<Cards title="Historier om fisk">
 
-  <Card title="Christie og de «mærkelige Fiske»" 
-  description="Les om Christie og de «mærkelige Fiske» i museet" 
-  image="/nav-card-images/ubb-ms-0285-07-a-009-icon.jpg" 
-  imageAlt="Fisk" 
-  href="/tema/fisk/christie-og-de-maerkelige-fiske" />
-
-<Card title="Thorolv Rasmussen" 
-  description="Les mer om «fiskekunstneren»" 
-  image="/nav-card-images/um-rasmussen-icon.jpg" 
-  imageAlt="Fisk" 
-  href="/tema/fisk/thorholv-rasmussen" />
-
-<Card title="Peter Stuwitz" 
-  description="Les om Peter Stuwitz' bidrag til museets historie." 
-  image="/nav-card-images/ubb-ms-0311-a-001-icon.jpg" 
-  imageAlt="Fisk" 
-  href="/tema/fisk/peter-stuwitz" />
-
+<Cards id="historier" title="Historier om fisk" className="full pt-10 md:pt-20">
+  <Card 
+    title="Christie og de «mærkelige Fiske»" 
+    description="Les om Christie og de «mærkelige Fiske» i museet" 
+    image="/nav-card-images/ubb-ms-0285-07-a-009-icon.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/christie-og-de-maerkelige-fiske" 
+  />
+  <Card 
+    title="Thorolv Rasmussen" 
+    description="Les mer om «fiskekunstneren»" 
+    image="/nav-card-images/um-rasmussen-icon.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/thorholv-rasmussen" 
+  />
+  <Card 
+    title="Peter Stuwitz" 
+    description="Les om Peter Stuwitz' bidrag til museets historie." 
+    image="/nav-card-images/ubb-ms-0311-a-001-icon.jpg" 
+    imageAlt="Fisk" 
+    href="/tema/fisk/peter-stuwitz" 
+  />
 </Cards>
 
 </ContentGrid>
