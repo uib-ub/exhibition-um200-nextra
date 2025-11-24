@@ -60,20 +60,72 @@ interface NavCardProps {
 } */
 
 export function NavCard({ title, href, imageSrc, imageAlt, variant, className }: NavCardProps) {
-  const variants: Record<string, string> = {
-    arkeologi: "border-um-arkeologi-solid group-hover:bg-um-arkeologi-solid",
-    "bokstaver-og-tegn": "border-um-tegn-solid group-hover:bg-um-tegn-solid",
-    dyr: "border-um-dyr-solid group-hover:bg-um-dyr-solid",
-    fisk: "border-um-fisk-solid group-hover:bg-um-fisk-solid",
-    glass: "border-um-glass-solid group-hover:bg-um-glass-solid",
-    helse: "border-um-helse-solid group-hover:bg-um-helse-solid",
-    "hverdag": "border-um-hverdag-solid group-hover:bg-um-hverdag-solid",
-    "verden-i-bergen": "border-um-utland-solid group-hover:bg-um-utland-solid",
-    kirkekunst: "border-um-kirkekunst-solid group-hover:bg-um-kirkekunst-solid",
-    stein: "border-um-stein-solid group-hover:bg-um-stein-solid",
-    "tid-og-rom": "border-um-tidrom-solid group-hover:bg-um-tidrom-solid",
-    "vann-vaer-og-vind": "border-um-vaer-solid group-hover:bg-um-vaer-solid",
-    vekster: "border-um-vekster-solid group-hover:bg-um-vekster-solid",
+  const variants: Record<string, Record<string, string>> = {
+    arkeologi: {
+      border: "border-um-arkeologi-solid",
+      bg: "bg-um-arkeologi-tint",
+      bgHover: "group-hover:bg-um-arkeologi-solid"
+    },
+    "bokstaver-og-tegn": {
+      border: "border-um-tegn-solid",
+      bg: "bg-um-tegn-tint",
+      bgHover: "group-hover:bg-um-tegn-solid"
+    },
+    dyr: {
+      border: "border-um-dyr-solid",
+      bg: "bg-um-dyr-tint",
+      bgHover: "group-hover:bg-um-dyr-solid"
+    },
+    fisk: {
+      border: "border-um-fisk-solid",
+      bg: "bg-um-fisk-tint",
+      bgHover: "group-hover:bg-um-fisk-solid",
+    },
+    glass: {
+      border: "border-um-glass-solid",
+      bg: "bg-um-glass-tint",
+      bgHover: "group-hover:bg-um-glass-solid",
+    },
+    helse: {
+      border: "border-um-helse-solid",
+      bg: "bg-um-helse-tint",
+      bgHover: "group-hover:bg-um-helse-solid",
+    },
+    "hverdag": {
+      border: "border-um-hverdag-solid",
+      bg: "bg-um-hverdag-tint",
+      bgHover: "group-hover:bg-um-hverdag-solid",
+    },
+    "verden-i-bergen": {
+      border: "border-um-utland-solid",
+      bg: "bg-um-utland-tint",
+      bgHover: "group-hover:bg-um-utland-solid",
+    },
+    kirkekunst: {
+      border: "border-um-kirkekunst-solid",
+      bg: "bg-um-kirkekunst-tint",
+      bgHover: "group-hover:bg-um-kirkekunst-solid",
+    },
+    stein: {
+      border: "border-um-stein-solid",
+      bg: "bg-um-stein-tint",
+      bgHover: "group-hover:bg-um-stein-solid",
+    },
+    "tid-og-rom": {
+      border: "border-um-tidrom-solid",
+      bg: "bg-um-tidrom-tint",
+      bgHover: "group-hover:bg-um-tidrom-solid",
+    },
+    "vann-vaer-og-vind": {
+      border: "border-um-vaer-solid",
+      bg: "bg-um-vaer-tint",
+      bgHover: "group-hover:bg-um-vaer-solid",
+    },
+    vekster: {
+      border: "border-um-vekster-solid",
+      bg: "bg-um-vekster-tint",
+      bgHover: "group-hover:bg-um-vekster-solid",
+    },
   }
 
   return (
@@ -81,17 +133,19 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
       {/* <AnimatedOverlay /> */}
       <div
         className={cn(
-          "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300 relative", variants[variant]
+          "overflow-hidden rounded-t-[120px] border-4 transition-all duration-300 relative",
+          variants[variant].border,
+          variants[variant].bg
         )}
       >
-        <div className={`z-1 relative aspect-3/4`}>
+        <div className={`z-1 relative aspect-3/4 `}>
           <Image src={imageSrc} alt={imageAlt} fill sizes="100%" className="object-contain object-bottom transition-opacity duration-300" />
-          <div className="absolute inset-0 bg-black/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
       </div>
       <div className={cn(
         "px-2 py-1 text-center transition-all duration-300",
-        variants[variant]
+        variants[variant].bgHover
       )}>
         <h3 className="font-serif font-medium uppercase tracking-wider text-foreground">{title}</h3>
       </div>
