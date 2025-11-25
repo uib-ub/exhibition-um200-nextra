@@ -1,6 +1,7 @@
 import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs' // nextra-theme-blog or your custom theme
 import { Figure } from '@/components/figure'
 import { Work } from '@/components/work'
+import { Video } from '@/components/video'
 import { Quote } from '@/components/quote'
 import { IIIFViewer } from '@/components/iiif-viewer'
 import { IIIFManifest } from '@/components/ui/chc/iiif-manifest'
@@ -18,6 +19,7 @@ export function useMDXComponents(components) {
     Link,
     Figure,
     Work,
+    Video,
     Quote,
     IIIFViewer,
     IIIFManifest,
