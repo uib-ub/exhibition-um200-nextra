@@ -18,10 +18,7 @@ const imFellGreatPrimer = IM_Fell_Great_Primer({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "200 år med vidunderlig vitenskap",
-    template: "%s | 200 år med vidunderlig vitenskap",
-  },
+  title: "200 år med vidunderlig vitenskap",
   keywords: ["Universitetsmuseet i Bergen", "200 år", "nettutstilling", "vitenskap"],
   description: "Kommer snart",
 };
