@@ -9,11 +9,11 @@ import Image from 'next/image';
 
 const people = [
   {
-    image: '/images/Mennesker-museet/Christie_grunnleggerBy1871.jpg',
+    image: '/images/menneskene/Christie_grunnleggerBy1871.jpg',
     imageAlt: 'Portrett av Wilhelm Frimann Koren Christie',
   },
   {
-    image: '/images/Mennesker-museet/By7851_Neumann_red.jpg',
+    image: '/images/menneskene/By7851_Neumann_red.jpg',
     imageAlt: 'Portrett av Jacob Neumann',
   },
   {
@@ -21,7 +21,7 @@ const people = [
     imageAlt: 'Portrett av August Konow',
   },
   {
-    image: '/images/Mennesker-museet/AndersLorange_red.jpg',
+    image: '/images/menneskene/AndersLorange_red.jpg',
     imageAlt: 'Portrett av Andres Lorange',
   },
   {
@@ -33,11 +33,11 @@ const people = [
     imageAlt: 'Portrett av Magdalene Abel',
   },
   {
-    image: '/images/Mennesker-museet/HaakonShetelig_red.jpg',
+    image: '/images/menneskene/HaakonShetelig_red.jpg',
     imageAlt: 'Portrett av Haakon Shetelig',
   },
   {
-    image: '/images/Mennesker-museet/Johs_Bøe_red.jpg',
+    image: '/images/menneskene/Johs_Bøe_red.jpg',
     imageAlt: 'Portrett av Johs. Bøe',
   },
   {
