@@ -10,8 +10,8 @@ const meta = {
     ),
     href: '/tema/kirkekunst',
   },
-  'kirkekunst-360_link': {
-    title: 'Kirkekunst 360',
+  'kirkekunsten-360_link': {
+    title: 'Kirkekunsten 360°',
     href: 'https://kuula.co/share/collection/7J7Sx?logo=1&info=0&fs=1&vr=1&zoom=1&initload=0&thumbs=-1',
   },
   'middelalderens-kirkekunst_link': {
