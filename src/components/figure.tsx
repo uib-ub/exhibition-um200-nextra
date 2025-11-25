@@ -7,13 +7,12 @@ import { ExternalLink } from 'lucide-react';
 
 // Modern variant system with better organization
 const figureVariants = cva(
-  'w-full rounded-b-lg border bg-card text-card-foreground shadow-sm my-10',
+  'w-full border bg-card text-card-foreground shadow-sm my-10',
   {
     variants: {
-      size: {
-        sm: 'min-h-[400px]',
-        default: 'min-h-[500px] md:min-h-[600px]',
-        lg: 'min-h-[700px]',
+      mode: {
+        landscape: '',
+        portrait: 'xl:flex flex-row gap-6 items-start',
       },
       variant: {
         default: 'border-border',
@@ -21,7 +20,7 @@ const figureVariants = cva(
       },
     },
     defaultVariants: {
-      size: 'default',
+      mode: 'landscape',
       variant: 'default',
     },
   }
@@ -90,7 +89,7 @@ export function Figure({
   width,
   height,
   className,
-  size,
+  mode,
   variant,
   children,
   ...props
@@ -105,9 +104,9 @@ export function Figure({
 
 
   return (
-    <div className={cn(figureVariants({ size, variant }), className)} {...props}>
+    <div className={cn(figureVariants({ mode, variant }), className)} {...props}>
       {/* Image Section */}
-      <Image src={image} alt={alt} width={width} height={height} />
+      <Image src={image} alt={alt} width={width} height={height} className="object-cover" />
 
       {/* Content Section - Always render if description or link exists */}
       {children}
