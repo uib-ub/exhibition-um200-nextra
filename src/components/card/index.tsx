@@ -3,6 +3,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { Button } from '../ui/button'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { cn } from '@/lib/utils'
+
+const imageVariants = cva(
+  "w-full aspect-square object-cover",
+  {
+    variants: {
+      rounded: {
+        true: "rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px]",
+        false: "rounded-none",
+      },
+    },
+    defaultVariants: {
+      rounded: true,
+    },
+  }
+)
 
 interface CardProps {
   title: string
@@ -10,15 +27,16 @@ interface CardProps {
   image: string
   imageAlt: string
   href: string
+  rounded?: VariantProps<typeof imageVariants>['rounded']
 }
 
-export function Card({ title, description, image, imageAlt, href }: CardProps) {
+export function Card({ title, description, image, imageAlt, href, rounded }: CardProps) {
   const ItemLink = href.startsWith('http') ? <Link href={href} target='_blank' rel='noopener noreferrer'>Les mer <IconArrowUpRight className="w-4 h-4" /></Link> : <Link href={href}>Les mer</Link>;
 
   return (
     <CardContent className="p-0 grid grid-rows-subgrid [grid-row:span_4/span_4] gap-2">
       <Link href={href}>
-        <Image src={image} alt={imageAlt} width={300} height={300} className="w-full aspect-square object-cover rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px]" />
+        <Image src={image} alt={imageAlt} width={300} height={300} className={cn(imageVariants({ rounded }))} />
       </Link>
       <Link href={href} className="mb-2">
         <CardTitle className="text-md md:text-lg font-medium">{title}</CardTitle>
