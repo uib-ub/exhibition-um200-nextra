@@ -10,6 +10,9 @@ const meta = {
     ),
     href: '/tema/dyr',
   },
+  'nordspisshvalen': {
+    type: 'doc',
+  },
   'kvalsalen': {
     type: 'doc',
   },
