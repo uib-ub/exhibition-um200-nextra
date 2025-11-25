@@ -9,7 +9,8 @@ import { ResourceGrid } from '@/components/resource-grid'
 
 <div className="text-xl text-center pb-10 md:pb-20">
   <h1 className="text-5xl text-center">— Ressurser —</h1>
-  Her er en liste over ressursene som er tilgjengelige for å bruke i utstillingen.
+  
+  Utforsk våre digitale samlinger og utstillinger!
 </div>
 
 <ResourceGrid>
@@ -22,15 +23,14 @@ import { ResourceGrid } from '@/components/resource-grid'
       </div>
     }
     links={[
-      { href: 'https://marcus.uib.no', label: 'Manuskripter' },
-      { href: 'https://marcus.uib.no', label: 'Fotografi' },
-      { href: 'https://marcus.uib.no', label: 'Diplomer' },
-      { href: 'https://marcus.uib.no', label: 'Mye mer' },
+      { href: 'https://marcus.uib.no', label: 'UM' },
+      { href: 'https://marcus.uib.no', label: 'Faghistorisk' },
+      { href: 'https://marcus.uib.no/search', label: 'Søk i Marcus' },
     ]}
   />
   <ResourceGrid.Item
     title="Unimus"
-    description="Unimus er Universtetets arkivportal for digitale ressurser."
+    description="Her finner du alle gjenstander og foto, som Universitetsmuseet i Bergen har i sine samlinger."
     image={
       <Image
         src="/resources/unimus-logo.png"
@@ -41,17 +41,14 @@ import { ResourceGrid } from '@/components/resource-grid'
       />
     }
     links={[
-      { href: 'https://unimus.no', label: 'Digitaliserte arkivmaterialer' },
-      { href: 'https://unimus.no', label: 'Digitaliserte fotografier' },
-      { href: 'https://unimus.no', label: 'Digitaliserte dokumenter' },
-      { href: 'https://unimus.no', label: 'Digitaliserte kart' },
+      { href: 'https://www.unimus.no/portal/#/search/things?requirePhoto=false&museum=UM&limit=100 ', label: 'Unimusportalen' },
     ]}
   />
   <ResourceGrid.Item
     title="Digitalarkivet"
-    description="Digitaltarkivet er en resurs som er tilgjengelig for å bruke i utstillingen."
+    description="Her finner du digitaliserte arkiver fra Universitetsmuseet i Bergen"
     image={
-      <div className="flex flex-row items-center justify-center gap-2">
+      <div className="flex h-full flex-row items-center align-middle justify-center gap-2">
         <Image
           src="/resources/digitalarkivet-logo.png"
           alt="Digitalarkivet"
@@ -63,12 +60,104 @@ import { ResourceGrid } from '@/components/resource-grid'
       </div>
     }
     links={[
-      { href: 'https://digitalarkivet.no', label: 'Digitaliserte arkivmaterialer' },
-      { href: 'https://digitalarkivet.no', label: 'Digitaliserte fotografier' },
-      { href: 'https://digitalarkivet.no', label: 'Digitaliserte dokumenter' },
-      { href: 'https://digitalarkivet.no', label: 'Digitaliserte kart' },
+      { href: 'https://media.digitalarkivet.no/db/browse?depository%5B%5D=190&archive_key=&start_year=&end_year=&text=', label: 'Digitalarkivet' },
     ]}
   />
+  <ResourceGrid.Item
+    title="Topografisk arkiv"
+    description="Her finner du all arkeologiske dokumentasjon fra begynnelsen av 1800-tallet og fram til i dag."
+    image={
+      <div className="text-4xl font-bold font-sans content-center items-center text-center h-full">
+        Topografisk arkiv
+      </div>
+    }
+    links={[
+      { href: 'https://www.uib.no/samlingsforvaltning/113292/topografisk-arkiv ', label: 'Topografisk arkiv' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="Arkivportalen"
+    description="Her finner du arkivkatalogen til Universitetsmuseet i Bergen og Skeivt arkiv"
+    image={
+       <Image
+        src="/resources/archive-portal-logo.png"
+        alt="Unimus"
+        width={300}
+        height={100}
+        className="mx-auto object-contain content-center items-center h-full"
+      />
+    }
+    links={[
+      { href: 'https://www.arkivportalen.no/search/1?repository=UMB ', label: 'Universitetsmuseet i Bergen' },
+      { href: 'https://www.arkivportalen.no/search/1?contributorType=1&repository=SKA&categoryType=contributorType&categoryId=1 ', label: 'Skeivt arkiv' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="Samla"
+    description="Her finner du digitaliserte norske tradisjonsarkiv."
+    image={
+       <Image
+        src="/resources/samla_b.png"
+        alt="Unimus"
+        width={300}
+        height={100}
+        className="mx-auto object-contain content-center items-center h-full px-10"
+      />
+    }
+    links={[
+      { href: 'https://samla.no/ ', label: 'Samla' },
+      { href: 'https://samla.w.uib.no/ ', label: 'Samla bloggen' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="To hundre fortellinger"
+    description="En nettside hvor du finner fortellinger om museet og gjenstander gjennom 200 år 1825-2025"
+    image={
+      <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+        To hundre fortellinger
+      </div>
+    }
+    links={[
+      { href: 'https://tohundrefortellinger.w.uib.no/ ', label: 'To hundre fortellinger' },
+    ]}
+  />
+  <ResourceGrid.Item
+    title="Kirkekunsten 360°"
+    description="En digital versjon av kirkekunstutstillingen ved Universitetsmuseet i Bergen"
+    image={
+      <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+        Kirkekunsten 360°
+      </div>
+    }
+    links={[
+      { href: 'https://kuula.co/share/collection/7J7Sx?logo=1&info=0&fs=1&vr=1&zoom=1&initload=0&thumbs=-1 ', label: 'Kirkekunsten 360°' },
+    ]}
+  />
+    <ResourceGrid.Item
+      title="Digitale utstillinger ved Universitetsmuseet i Bergen "
+      description="Her er en samleside for forskjellige digitale utstillinger ved Universitetsmuseet i Bergen."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          Digitale utstillinger ved Universitetsmuseet i Bergen 
+        </div>
+      }
+      links={[
+        { href: 'https://www.uib.no/universitetsmuseet/178438/historisk-museum-digitalt ', label: 'Digitale utstillinger' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Virtuelle Vingen"
+      description="Utforsk Virtuelle Vingen, Vingen er et av de største og mest uberørte helleristningsfelt
+i Europa."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          Virtuelle Vingen
+        </div>
+      }
+      links={[
+        { href: 'https://www.virtuellevingen.no/ ', label: 'Virtuelle Vingen' },
+      ]}
+    />
 </ResourceGrid>
 
 </ContentGrid>
