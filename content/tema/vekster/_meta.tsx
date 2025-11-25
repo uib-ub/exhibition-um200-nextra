@@ -10,6 +10,9 @@ const meta = {
     ),
     href: '/tema/vekster',
   },
+  'reinrose-vekster': {
+    type: 'doc',
+  },
   'miranda-boedtker': {
     type: 'doc',
   },
@@ -19,10 +22,13 @@ const meta = {
   'bokflora': {
     type: 'doc',
   },
-  'miranda-bodtkers-akvareller_link': {
+  'spesialutfordringen-dagfinn-moe': {
+    type: 'doc',
+  },
+  /* 'miranda-bodtkers-akvareller_link': {
     title: 'Miranda Bødtkers akvareller',
     href: 'https://tohundrefortellinger.w.uib.no/2016/09/15/1999-miranda-bodtkers-akvareller/'
-  }
+  } */
 }
 
 export default meta;
