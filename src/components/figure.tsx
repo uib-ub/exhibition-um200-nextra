@@ -4,6 +4,8 @@ import type { ReactNode } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { ExternalLink } from 'lucide-react';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 // Modern variant system with better organization
 const figureVariants = cva(
@@ -106,7 +108,9 @@ export function Figure({
   return (
     <div className={cn(figureVariants({ mode, variant }), className)} {...props}>
       {/* Image Section */}
-      <Image src={image} alt={alt} width={width} height={height} className="object-cover" />
+      <Zoom>
+        <Image src={image} alt={alt} width={width} height={height} className="object-cover" />
+      </Zoom>
 
       {/* Content Section - Always render if description or link exists */}
       {children}
