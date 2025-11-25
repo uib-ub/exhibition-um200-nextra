@@ -10,6 +10,18 @@ const meta = {
     ),
     href: '/tema/vann-vaer-og-vind',
   },
+  'vann-is-bilder': {
+    type: 'doc',
+  },
+  'breforskning': {
+    type: 'doc',
+  },
+  'nordhavsekspedisjonen': {
+    type: 'doc',
+  },
+  'herman-friele-og-fotografiet': {
+    type: 'doc',
+  },
 }
 
 export default meta;
