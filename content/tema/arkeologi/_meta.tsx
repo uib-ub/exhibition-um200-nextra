@@ -10,25 +10,33 @@ const meta = {
     ),
     href: '/tema/arkeologi',
   },
+  'unimusportalen_link': {
+    title: 'Unimusportalen',
+    href: 'https://www.unimus.no/portal/#/things/fa8a886f-d634-442a-9d07-54f508ba8165',
+  },
+  'topografisk-arkiv_link': {
+    title: 'Topografisk arkiv',
+    href: 'https://www.uib.no/samlingsforvaltning/113292/topografisk-arkiv',
+  },
+  'rapporter-fra-utgravinger-upubliserte_link': {
+    title: 'Rapporter fra arkeologiske undersøkelser',
+    href: 'https://www.uib.no/fms/89018/rapporter-fra-utgravinger-upubliserte',
+  },
   'myklebustskipet_link': {
     title: 'Myklebustskipet',
     href: 'https://tohundrefortellinger.w.uib.no/1874/10/04/1874-myklebustskipet/',
   },
-  'det-brente-skipet': {
+  'gravritualer-i-vikingtiden': {
     title: 'Gravritualer i vikingtid',
+    type: 'doc',
+  },
+  'bevare-for-evigheten': {
+    title: 'Å bevare for evigheten!',
     type: 'doc',
   },
   'en-hilsen-fra-1874_link': {
     title: 'En hilsen fra 1874',
     href: 'https://riksantikvaren.no/kartlegger-vikingarven-som-mulig-verdensarv/',
-  },
-  'unimusportalen_link': {
-    title: 'Unimusportalen',
-    href: 'https://www.unimus.no/portal/#/things/fa8a886f-d634-442a-9d07-54f508ba8165',
-  },
-  'topografisk-arkiv': {
-    title: 'Topografisk arkiv',
-    type: 'doc',
   },
   'digitalarkiv_link': {
     title: 'Digitalarkiv - Et skattekammer!',
