@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import animation from './Hoved_3_optimized-lottie.json'
+import animation from './hoved.json'
 
 export const Animation = () => {
   return (
