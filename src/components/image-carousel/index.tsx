@@ -7,6 +7,8 @@ import {
 } from '@/components/vibes/soul/primitives/carousel';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export function ImageCarousel({ title, children, className }: { title: string, children: React.ReactNode, className: string }) {
   return (
@@ -28,7 +30,9 @@ export function ImageCarousel({ title, children, className }: { title: string, c
 function ImageCarouselItem({ image, imageAlt, children }: { image: string, imageAlt: string, children: React.ReactNode }) {
   return (
     <CarouselItem className='basis-full @md:basis-1/2 @6xl:basis-1/3'>
-      <Image src={image} alt={imageAlt} width={600} height={600} className="object-contain bg-accent aspect-square" />
+      <Zoom>
+        <Image src={image} alt={imageAlt} width={600} height={600} className="object-contain bg-accent aspect-square" />
+      </Zoom>
       {children}
     </CarouselItem>
   )
