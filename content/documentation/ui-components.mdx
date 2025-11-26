@@ -139,13 +139,27 @@ The third boxs shows you the actual content of the Base64 text, it is a JSON obj
 
 `<Figure />` is a component that can be used to display an image with a description and a link. **NB!** You _must_ add a `alt` text that describes the image. Describe the image in a way that is accessible to everyone, including people who use screen readers. "Man smoking a pipe wearing a striking jacket" is a good alt text. "Ole Olsen, director of the National Archives during the 1930s, was a very important person" is not. Thats a caption, not an `alt` text!
 
+### Properties
+
+| Name | Description | Default |
+|------|-------------|---------|
+| **image** | The image to display. | — |
+| **alt** | The alt text for the image. | — |
+| **width** | The width of the image. | — |
+| **height** | The height of the image. | — |
+| **className** | The class name for the image. | — |
+| **mode** | The mode of the image, either `landscape` or `portrait`. | `landscape` |
+| **size** | The size of the image. Can be `default`, `popout`, `feature`, or `full`. | `popout` |
+
 ### Basic usage
 
 Using an image from the `public/images` folder, but you can link to an image. But tell the developer as some changes needs to be done for it to show.
 
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
-    <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000} />
+    <ContentGrid>
+      <Figure image="/images/arkeologi/B2978_Myklebustmannen.jpg" alt="Myklebustmannen" width={1000} height={1000} />
+    </ContentGrid>
   </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
@@ -158,6 +172,7 @@ Using an image from the `public/images` folder, but you can link to an image. Bu
 
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
+  <ContentGrid>
     <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
       <Figure.Content>
         <Figure.Description>
@@ -168,10 +183,11 @@ Using an image from the `public/images` folder, but you can link to an image. Bu
         </Figure.Link>
       </Figure.Content>
     </Figure>
+  </ContentGrid>
   </Tabs.Tab>
   <Tabs.Tab>
     ```tsx copy
-    <Figure image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
+    <Figure mode="portrait" image="https://urn.digitalarkivet.no/URN:NBN:no-a1450-ed60225609000001.jpg" alt="" width={1000} height={1000}>
       <Figure.Content>
         <Figure.Description>
           Fra Digitalarkivet
