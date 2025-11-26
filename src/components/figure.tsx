@@ -9,49 +9,36 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 // Modern variant system with better organization
 const figureVariants = cva(
-  'w-full border bg-card text-card-foreground shadow-sm my-10',
+  'w-full xl:max-w-5/6 mx-auto bg-card text-card-foreground border shadow-sm my-10',
   {
     variants: {
       mode: {
         landscape: '',
-        portrait: 'xl:flex flex-row gap-6 items-start',
+        portrait: 'lg:flex flex-row items-start',
       },
-      variant: {
-        default: 'border-border',
-        elevated: 'border-border shadow-lg',
+      size: {
+        default: '',
+        popout: 'popout',
+        feature: 'feature',
+        full: 'full',
       },
     },
+    /*     compoundVariants: [
+          {
+            mode: 'portrait',
+            size: 'feature',
+            class: '',
+          },
+        ], */
     defaultVariants: {
       mode: 'landscape',
-      variant: 'default',
+      size: 'popout',
     },
   }
 );
 
 const contentVariants = cva(
-  'px-4 md:px-6 pt-4 md:pt-6 pb-3 md:pb-4 border-t flex flex-col gap-3 md:gap-4',
-  {
-    variants: {
-      layout: {
-        default: 'justify-start',
-        stacked: 'justify-start',
-        compact: 'justify-between',
-      },
-      hasContent: {
-        true: 'bg-muted/10',
-        false: 'bg-transparent',
-      },
-      contentDensity: {
-        default: '',
-        minimal: 'bg-muted/5 pb-2 md:pb-3',
-      },
-    },
-    defaultVariants: {
-      layout: 'default',
-      hasContent: true,
-      contentDensity: 'default',
-    },
-  }
+  'p-4 md:p-5 flex flex-col gap-3 md:gap-4',
 );
 
 const linkVariants = cva(
@@ -92,7 +79,7 @@ export function Figure({
   height,
   className,
   mode,
-  variant,
+  size,
   children,
   ...props
 }: {
@@ -106,7 +93,7 @@ export function Figure({
 
 
   return (
-    <div className={cn(figureVariants({ mode, variant }), className)} {...props}>
+    <figure className={cn(figureVariants({ mode, size }), className)} {...props}>
       {/* Image Section */}
       <Zoom>
         <Image src={image} alt={alt} width={width} height={height} className="object-cover" />
@@ -114,7 +101,7 @@ export function Figure({
 
       {/* Content Section - Always render if description or link exists */}
       {children}
-    </div>
+    </figure>
   );
 }
 
@@ -122,9 +109,6 @@ export function Figure({
 function FigureContent({
   children,
   className,
-  layout,
-  hasContent,
-  contentDensity,
   ...props
 }: {
   children: ReactNode;
@@ -135,12 +119,12 @@ function FigureContent({
   }
 
   return (
-    <div
-      className={cn(contentVariants({ layout, hasContent, contentDensity }), className)}
+    <figcaption
+      className={cn(contentVariants(), className)}
       {...props}
     >
       {children}
-    </div>
+    </figcaption>
   );
 }
 
@@ -195,7 +179,7 @@ function FigureLink({
       {...props}
     >
       {children || 'Se mer...'}
-      <ExternalLink className="h-4 w-4" />
+      <ExternalLink className="h-3 w-3" />
     </a>
   );
 }
