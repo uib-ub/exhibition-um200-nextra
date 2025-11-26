@@ -41,7 +41,7 @@ import { ResourceGrid } from '@/components/resource-grid'
       />
     }
     links={[
-      { href: 'https://www.unimus.no/portal/#/search/things?requirePhoto=false&museum=UM&limit=100 ', label: 'Unimusportalen' },
+      { href: 'https://www.unimus.no/portal/#/search/things?requirePhoto=false&museum=UM&limit=100', label: 'Unimusportalen' },
     ]}
   />
   <ResourceGrid.Item
@@ -72,7 +72,7 @@ import { ResourceGrid } from '@/components/resource-grid'
       </div>
     }
     links={[
-      { href: 'https://www.uib.no/samlingsforvaltning/113292/topografisk-arkiv ', label: 'Topografisk arkiv' },
+      { href: 'https://www.uib.no/samlingsforvaltning/113292/topografisk-arkiv', label: 'Topografisk arkiv' },
     ]}
   />
   <ResourceGrid.Item
@@ -88,8 +88,9 @@ import { ResourceGrid } from '@/components/resource-grid'
       />
     }
     links={[
-      { href: 'https://www.arkivportalen.no/search/1?repository=UMB ', label: 'Universitetsmuseet i Bergen' },
-      { href: 'https://www.arkivportalen.no/search/1?contributorType=1&repository=SKA&categoryType=contributorType&categoryId=1 ', label: 'Skeivt arkiv' },
+      { href: 'https://www.arkivportalen.no/search/1?repository=UMB', label: 'Universitetsmuseet i Bergen' },
+      { href: 'https://www.arkivportalen.no/search/1?contributorType=1&repository=SKA&categoryType=contributorType&categoryId=1', label: 'Skeivt arkiv' },
+      { href: 'https://www.arkivportalen.no/search/1?repository=SPR&text=Spr%C3%A5ksamlingane', label: 'Språksamlingane' },
     ]}
   />
   <ResourceGrid.Item
@@ -105,8 +106,8 @@ import { ResourceGrid } from '@/components/resource-grid'
       />
     }
     links={[
-      { href: 'https://samla.no/ ', label: 'Samla' },
-      { href: 'https://samla.w.uib.no/ ', label: 'Samla bloggen' },
+      { href: 'https://samla.no/', label: 'Samla' },
+      { href: 'https://samla.w.uib.no/', label: 'Samla bloggen' },
     ]}
   />
   <ResourceGrid.Item
@@ -118,7 +119,7 @@ import { ResourceGrid } from '@/components/resource-grid'
       </div>
     }
     links={[
-      { href: 'https://tohundrefortellinger.w.uib.no/ ', label: 'To hundre fortellinger' },
+      { href: 'https://tohundrefortellinger.w.uib.no/', label: 'To hundre fortellinger' },
     ]}
   />
   <ResourceGrid.Item
@@ -130,7 +131,7 @@ import { ResourceGrid } from '@/components/resource-grid'
       </div>
     }
     links={[
-      { href: 'https://kuula.co/share/collection/7J7Sx?logo=1&info=0&fs=1&vr=1&zoom=1&initload=0&thumbs=-1 ', label: 'Kirkekunsten 360°' },
+      { href: 'https://kuula.co/share/collection/7J7Sx?logo=1&info=0&fs=1&vr=1&zoom=1&initload=0&thumbs=-1', label: 'Kirkekunsten 360°' },
     ]}
   />
     <ResourceGrid.Item
@@ -142,7 +143,7 @@ import { ResourceGrid } from '@/components/resource-grid'
         </div>
       }
       links={[
-        { href: 'https://www.uib.no/universitetsmuseet/178438/historisk-museum-digitalt ', label: 'Digitale utstillinger' },
+        { href: 'https://www.uib.no/universitetsmuseet/178438/historisk-museum-digitalt', label: 'Digitale utstillinger' },
       ]}
     />
     <ResourceGrid.Item
@@ -155,7 +156,90 @@ i Europa."
         </div>
       }
       links={[
-        { href: 'https://www.virtuellevingen.no/ ', label: 'Virtuelle Vingen' },
+        { href: 'https://www.virtuellevingen.no/', label: 'Virtuelle Vingen' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Naturhistoriske samlinger"
+      description="Søk i Databaser fra Botanikk, Zoologi og Mykologi."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          Naturhistoriske samlinger
+        </div>
+      }
+      links={[
+        { href: 'https://samlingsportal.nhm.uio.no/museum/um', label: 'Naturhistoriske samlinger' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="De osteologiske samlingene"
+      description="Samlingen av resent osteologisk skjelettmateriale ved Universitetsmuseet i Bergen inneholder over 14.000 skjeletter, noe som gjør den til en av de største osteologiske samlinger i Skandinavia."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          De osteologiske samlingene
+        </div>
+      }
+      links={[
+        { href: 'https://reg.app.uib.no/apex/f?p=608:1::::::', label: 'De osteologiske samlingene' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Lavdatabasen"
+      description="..."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          Lavdatabasen
+        </div>
+      }
+      links={[
+        { href: 'https://nhm2.uio.no/lav/web/index.html', label: 'Lavdatabasen' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Termportalen"
+      description="Termportalen gir fri tilgang til norsk terminologi på en lang rekke fagområder via én felles søkerute. Du kan søke etter termer på tvers av domener, termbaser og språk."
+      image={
+        <Image
+          src="/resources/logo-termportalen.svg"
+          alt="Termportalen"
+          width={300}
+          height={100}
+          className="mx-auto object-contain content-center items-center h-full"
+        />
+      }
+      links={[
+        { href: 'https://www.termportalen.no/', label: 'Termportalen' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Stadnamnportalen"
+      description="Stadnamnportalen er en samlet vising av alle digitale kilder til stadnamn i Språksamlingene ved Universitetet i Bergen."
+      image={
+        <div className="text-3xl font-bold font-sans content-center items-center text-center h-full">
+          Stadnamnportalen
+        </div>
+      }
+      links={[
+        { href: 'https://stadnamnportalen.uib.no/', label: 'Stadnamnportalen' },
+      ]}
+    />
+    <ResourceGrid.Item
+      title="Skeivt arkiv"
+      description="Skeivt arkivs samlinger består av en rekke arkiver fra personer og organisasjoner samt bøker og tidsskrift. I tillegg bygger Skeivt arkiv opp en Livsminnesamling."
+      image={
+         <Image
+          src="/resources/logo-skeivtarkiv.svg"
+          alt="Termportalen"
+          width={300}
+          height={100}
+          className="mx-auto object-contain content-center items-center h-full"
+        />
+      }
+      links={[
+        { href: 'https://skeivtarkiv.no', label: 'Skeivt arkiv' },
+        { href: 'https://skeivtarkiv.no/skeivopedia', label: 'Skeivopedia' },
+        { href: 'https://katalog.skeivtarkiv.no', label: 'Katalog' },
+        { href: 'https://www.arkivportalen.no/search/1?contributorType=1&repository=SKA&categoryType=contributorType&categoryId=1', label: 'Arkivportalen' },
       ]}
     />
 </ResourceGrid>
