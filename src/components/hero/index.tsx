@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
+import { LottieAnimation } from '../animation'
 
 export function Hero({ className, children }: { className: string, children: React.ReactNode }) {
   return (
@@ -11,11 +11,11 @@ export function Hero({ className, children }: { className: string, children: Rea
   )
 }
 
-export function HeroImage({ src, alt, className }: { src: string, alt: string, className: string }) {
+export function HeroAnimation({ animation, className }: { animation: string, className: string }) {
   return (
     <div className={cn("border-4 rounded-t-[60px] sm:rounded-t-[140px] md:rounded-t-[220px]", className)}>
       <div className="relative aspect-video max-w-4xl mx-auto">
-        <Image src={src} alt={alt} fill sizes="100%" className="object-contain p-2" />
+        <LottieAnimation animation={animation} />
       </div>
     </div>
   )

@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import animation from './hoved.json'
 
-export const Animation = () => {
+export const LottieAnimation = ({ animation }: { animation: string }) => {
   return (
     <DotLottieReact
-      data={animation}
+      src={`/animations/${animation}.json`}
       autoplay
     />
   );

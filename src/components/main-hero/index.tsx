@@ -1,6 +1,6 @@
 /* import Image from 'next/image'
 import illustration from '@/components/main-hero/main-illustration.png' */
-import { Animation } from '@/components/animation'
+import { LottieAnimation } from '@/components/animation'
 
 export function MainHero() {
   return (
@@ -14,7 +14,7 @@ export function MainHero() {
 
       </div>
       {/* <Image src={illustration} alt="200 år med vidunderlig vitenskap" width={1200} height={1000} className="w-full" /> */}
-      <Animation />
+      <LottieAnimation animation="hoved" />
       <div className="flex flex-row gap-5 items-center justify-between w-full">
         <p className="text-xl aspect-square flex items-center justify-center font-medium md:text-2xl ">1825</p>
         <p className="text-xl md:text-2xl text-center">Universitetet i Bergen, Universitetsmuseet<br />& Universitetsbiblioteket</p>
