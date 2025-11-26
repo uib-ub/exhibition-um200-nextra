@@ -31,14 +31,15 @@ interface CardProps {
 }
 
 export function Card({ title, description, image, imageAlt, href, rounded }: CardProps) {
+  const isExternal = href.startsWith('http');
   const ItemLink = href.startsWith('http') ? <Link href={href} target='_blank' rel='noopener noreferrer'>Les mer <IconArrowUpRight className="w-4 h-4" /></Link> : <Link href={href}>Les mer</Link>;
 
   return (
     <CardContent className="p-0 grid grid-rows-subgrid [grid-row:span_4/span_4] gap-2">
-      <Link href={href}>
+      <Link href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
         <Image src={image} alt={imageAlt} width={300} height={300} className={cn(imageVariants({ rounded }))} />
       </Link>
-      <Link href={href} className="mb-2">
+      <Link href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} className="mb-2">
         <CardTitle className="text-md md:text-lg font-medium">{title}</CardTitle>
       </Link>
       <CardDescription className="text-xs md:text-sm font-light text-foreground my-2">{description ?? 'Mangler beskrivelse'}</CardDescription>
