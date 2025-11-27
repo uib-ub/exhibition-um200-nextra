@@ -32,6 +32,9 @@ export function Footer() {
             <li> <Link href="/tema/vann-vaer-og-vind">Vann, vær & vind</Link> </li>
             <li> <Link href="/tema/vekster">Vekster</Link> </li>
           </ul>
+          <div className="mt-4">
+            <Link href="/documentation">Dokumentasjon</Link>
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
