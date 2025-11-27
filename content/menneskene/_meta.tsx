@@ -1,10 +1,14 @@
 const meta = {
-  'index': {
-    type: 'page',
-    theme: {
-      layout: 'full',
-      toc: false,
-    }
+  /*   'index': {
+      type: 'page',
+      theme: {
+        layout: 'full',
+        toc: false,
+      }
+    }, */
+  'root_link': {
+    title: 'Menneskene',
+    href: '/menneskene',
   },
   'aagaat-daae': {
     type: 'page',
