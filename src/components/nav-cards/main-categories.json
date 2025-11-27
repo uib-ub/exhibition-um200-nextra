@@ -2,91 +2,91 @@
   {
     "title": "Arkeologi",
     "href": "/tema/arkeologi",
-    "imageSrc": "/nav-card-images/B2978_Myklebustmannen.png",
+    "imageSrc": "/nav-card-images/20251127/arkeologi.png",
     "imageAlt": "Archaeological artifact",
     "variant": "arkeologi"
   },
   {
     "title": "Bokstaver og tegn",
     "href": "/tema/bokstaver-og-tegn",
-    "imageSrc": "/nav-card-images/ubb-ms-0028_p115_orig.png",
+    "imageSrc": "/nav-card-images/20251127/bokstaver-og-tegn.png",
     "imageAlt": "Letters and signs",
     "variant": "bokstaver-og-tegn"
   },
   {
     "title": "Verden i Bergen",
     "href": "/tema/verden-i-bergen",
-    "imageSrc": "/nav-card-images/Java_E9292.png",
+    "imageSrc": "/nav-card-images/20251127/verden-i-bergen.png",
     "imageAlt": "The great abroad",
     "variant": "verden-i-bergen"
   },
   {
     "title": "Dyr",
     "href": "/tema/dyr",
-    "imageSrc": "/nav-card-images/Nansen-Guldberg_bok.png",
+    "imageSrc": "/nav-card-images/20251127/dyr.png",
     "imageAlt": "Animals",
     "variant": "dyr"
   },
   {
     "title": "Fisk",
     "href": "/tema/fisk",
-    "imageSrc": "/nav-card-images/Fisk_test_2.gif",
+    "imageSrc": "/nav-card-images/20251127/fisk.png",
     "imageAlt": "Fish illustration",
     "variant": "fisk"
   },
   {
     "title": "Glass",
     "href": "/tema/glass",
-    "imageSrc": "/nav-card-images/Glass_X11379.png",
+    "imageSrc": "/nav-card-images/20251127/glass.png",
     "imageAlt": "Glass",
     "variant": "glass"
   },
   {
     "title": "Helse",
     "href": "/tema/helse",
-    "imageSrc": "/nav-card-images/Apotekerglass_Løveaptoeket_Bergen_UM.png",
+    "imageSrc": "/nav-card-images/20251127/helse.png",
     "imageAlt": "Health",
     "variant": "helse"
   },
   {
     "title": "Hverdag",
     "href": "/tema/hverdag",
-    "imageSrc": "/nav-card-images/ubb-ekst-k-box-084-60_p0001_orig.png",
+    "imageSrc": "/nav-card-images/20251127/hverdag.png",
     "imageAlt": "Everyday life",
     "variant": "hverdag"
   },
   {
     "title": "Kirkekunst",
     "href": "/tema/kirkekunst",
-    "imageSrc": "/nav-card-images/Doerslag_stavkirke_Ma281.png",
+    "imageSrc": "/nav-card-images/20251127/kirkekunst.png",
     "imageAlt": "Church art",
     "variant": "kirkekunst"
   },
   {
     "title": "Stein",
     "href": "/tema/stein",
-    "imageSrc": "/nav-card-images/Monsen-03.png",
+    "imageSrc": "/nav-card-images/20251127/stein.png",
     "imageAlt": "Stone",
     "variant": "stein"
   },
   {
     "title": "Tid og rom",
     "href": "/tema/tid-og-rom",
-    "imageSrc": "/nav-card-images/ubb-ms-0380_p0088_orig.png",
+    "imageSrc": "/nav-card-images/20251127/tid-og-rom.png",
     "imageAlt": "Time and space",
     "variant": "tid-og-rom"
   },
   {
     "title": "Vann, vær og vind",
     "href": "/tema/vann-vaer-og-vind",
-    "imageSrc": "/nav-card-images/Schiertz_010_Original-1.png",
+    "imageSrc": "/nav-card-images/20251127/vann-vaer-og-vind.png",
     "imageAlt": "Water, weather and wind",
     "variant": "vann-vaer-og-vind"
   },
   {
     "title": "Vekster",
     "href": "/tema/vekster",
-    "imageSrc": "/nav-card-images/Ascanius.png",
+    "imageSrc": "/nav-card-images/20251127/vekster.png",
     "imageAlt": "Plants",
     "variant": "vekster"
   }
