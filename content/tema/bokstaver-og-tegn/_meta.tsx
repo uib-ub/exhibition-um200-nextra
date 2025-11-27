@@ -10,6 +10,19 @@ const meta = {
     ),
     href: '/tema/bokstaver-og-tegn',
   },
+  'ms-28': {
+    type: 'doc',
+  },
+  'fragmenter': {
+    type: 'doc',
+  },
+  'runepinner-fra-bergen': {
+    title: 'Runepinner fra Bergen',
+    href: 'https://tohundrefortellinger.w.uib.no/1979/09/15/1979-frekke-runepinner-fra-bryggen/',
+  },
+  'spesialutfordringen-julia-king': {
+    type: 'doc',
+  },
 }
 
 export default meta;
