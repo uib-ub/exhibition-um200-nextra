@@ -23,7 +23,7 @@ export function HeroAnimation({ animation, className }: { animation: string, cla
 
 export function HeroContent({ children, className }: { children: React.ReactNode, className: string }) {
   return (
-    <div className={cn("flex flex-col gap-3 items-center justify-center py-3", className)}>
+    <div className={cn("flex flex-col gap-3 items-center justify-center py-1 sm:py-2 md:py-3", className)}>
       {children}
     </div>
   )
