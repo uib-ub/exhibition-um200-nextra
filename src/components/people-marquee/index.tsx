@@ -192,10 +192,10 @@ export const PeopleMarquee = () => (
       <MarqueeFade side="right" />
       <MarqueeContent direction="right" loop={1}>
         {peopleRow1.map((person, index) => (
-          <MarqueeItem className="size-44" key={index}>
+          <MarqueeItem className="size-44 aspect-square" key={index}>
             <Image
               alt={person.imageAlt}
-              className="overflow-hidden object-cover rounded-full"
+              className="overflow-hidden object-top object-cover rounded-full size-44"
               src={person.image}
               width={192}
               height={192}
@@ -209,10 +209,10 @@ export const PeopleMarquee = () => (
       <MarqueeFade side="right" />
       <MarqueeContent direction="left" loop={1}>
         {peopleRow2.map((person, index) => (
-          <MarqueeItem className="size-44" key={index}>
+          <MarqueeItem className="size-44 aspect-square" key={index}>
             <Image
               alt={person.imageAlt}
-              className="overflow-hidden object-cover rounded-full"
+              className="overflow-hidden object-top object-cover rounded-full size-44"
               src={person.image}
               width={192}
               height={192}
