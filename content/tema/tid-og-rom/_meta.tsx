@@ -10,6 +10,24 @@ const meta = {
     ),
     href: '/tema/tid-og-rom',
   },
+  'solur': {
+    type: 'doc',
+  },
+  'mellom-sol-og-maane': {
+    type: 'doc',
+  },
+  'kortere-aar': {
+    type: 'doc',
+  },
+  'almanakk': {
+    type: 'doc',
+  },
+  'scholeusstikket': {
+    type: 'doc',
+  },
+  'bergen-1740': {
+    type: 'doc',
+  },
 }
 
 export default meta;
