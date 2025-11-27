@@ -38,15 +38,6 @@ const meta = {
         ),
         href: '/tema/bokstaver-og-tegn'
       },
-      'verden-i-bergen': {
-        title: (
-          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
-            <IconWorld className="w-5 h-5 inline-block" />
-            <div>Verden i Bergen</div>
-          </div>
-        ),
-        href: '/tema/verden-i-bergen'
-      },
       'dyr': {
         title: (
           <div className="flex flex-row items-center gap-1 bg-um-dyr-tint px-2 py-1 rounded-md justify-self-stretch">
@@ -136,6 +127,15 @@ const meta = {
           </div>
         ),
         href: '/tema/vekster'
+      },
+      'verden-i-bergen': {
+        title: (
+          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
+            <IconWorld className="w-5 h-5 inline-block" />
+            <div>Verden i Bergen</div>
+          </div>
+        ),
+        href: '/tema/verden-i-bergen'
       },
     }
   },
