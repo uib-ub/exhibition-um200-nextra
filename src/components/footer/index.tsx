@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import SvgUibCenteredNo from "../icons/uib-centered-no"
-// import SvgUibUmCenteredNo from "../icons/uib-um-centered-no"
-// import SvgUibUbCenteredNo from "../icons/uib-ub-centered-no"
+import { IconClock, IconBuildingChurch, IconCloudRain, IconPencil, IconPlant, IconMountain, IconCalendar, IconHeart, IconFish, IconWorld, IconTower, IconGlass, IconHorse } from '@tabler/icons-react'
 
 export function Footer() {
   return (
@@ -18,28 +17,27 @@ export function Footer() {
         <div className="col-span-1 md:col-span-2">
           <h3 className="text-lg">Tema</h3>
           <ul className="md:columns-2">
-            <li> <Link href="/tema/arkeologi">Arkeologi</Link> </li>
-            <li> <Link href="/tema/bokstaver-og-tegn">Bokstaver og tegn</Link> </li>
-            <li> <Link href="/tema/verden-i-bergen">Verden i Bergen</Link> </li>
-            <li> <Link href="/tema/dyr">Dyr</Link> </li>
-            <li> <Link href="/tema/fisk">Fisk</Link> </li>
-            <li> <Link href="/tema/glass">Glass</Link> </li>
-            <li> <Link href="/tema/helse">Helse</Link> </li>
-            <li> <Link href="/tema/hverdag">Hverdag</Link> </li>
-            <li> <Link href="/tema/kirkekunst">Kirkekunst</Link> </li>
-            <li> <Link href="/tema/stein">Stein</Link> </li>
-            <li> <Link href="/tema/tid-og-rom">Tid og rom</Link> </li>
-            <li> <Link href="/tema/vann-vaer-og-vind">Vann, vær & vind</Link> </li>
-            <li> <Link href="/tema/vekster">Vekster</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconTower className="w-5 h-5 inline-block" /> <Link href="/tema/arkeologi">Arkeologi</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconPencil className="w-5 h-5 inline-block" /> <Link href="/tema/bokstaver-og-tegn">Bokstaver og tegn</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconWorld className="w-5 h-5 inline-block" /> <Link href="/tema/verden-i-bergen">Verden i Bergen</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconHorse className="w-5 h-5 inline-block" /> <Link href="/tema/dyr">Dyr</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconFish className="w-5 h-5 inline-block" /> <Link href="/tema/fisk">Fisk</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconGlass className="w-5 h-5 inline-block" /> <Link href="/tema/glass">Glass</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconHeart className="w-5 h-5 inline-block" /> <Link href="/tema/helse">Helse</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconCalendar className="w-5 h-5 inline-block" /> <Link href="/tema/hverdag">Hverdag</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconBuildingChurch className="w-5 h-5 inline-block" /> <Link href="/tema/kirkekunst">Kirkekunst</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconMountain className="w-5 h-5 inline-block" /> <Link href="/tema/stein">Stein</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconClock className="w-5 h-5 inline-block" /> <Link href="/tema/tid-og-rom">Tid og rom</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconCloudRain className="w-5 h-5 inline-block" /> <Link href="/tema/vann-vaer-og-vind">Vann, vær & vind</Link> </li>
+            <li className="flex flex-row items-center gap-2"><IconPlant className="w-5 h-5 inline-block" /> <Link href="/tema/vekster">Vekster</Link> </li>
           </ul>
+          <div className="mt-4">
+            <Link href="/documentation">Dokumentasjon</Link>
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-
         <SvgUibCenteredNo className="size-96" />
-
-        {/* <SvgUibUbCenteredNo className="" />
-        <SvgUibUmCenteredNo className="" /> */}
       </div>
     </footer>
   )

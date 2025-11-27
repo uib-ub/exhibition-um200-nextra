@@ -170,8 +170,9 @@ const meta = {
     }
   },
   'documentation': {
-    title: 'Doc [To be deleted]',
+    title: 'Dokumentasjon',
     type: 'page',
+    display: 'hidden',
     theme: {
       toc: false
     }
