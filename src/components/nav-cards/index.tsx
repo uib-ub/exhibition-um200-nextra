@@ -96,11 +96,6 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
       bg: "bg-um-hverdag-tint",
       bgHover: "group-hover:bg-um-hverdag-solid",
     },
-    "verden-i-bergen": {
-      border: "border-um-utland-solid",
-      bg: "bg-um-utland-tint",
-      bgHover: "group-hover:bg-um-utland-solid",
-    },
     kirkekunst: {
       border: "border-um-kirkekunst-solid",
       bg: "bg-um-kirkekunst-tint",
@@ -125,6 +120,11 @@ export function NavCard({ title, href, imageSrc, imageAlt, variant, className }:
       border: "border-um-vekster-solid",
       bg: "bg-um-vekster-tint",
       bgHover: "group-hover:bg-um-vekster-solid",
+    },
+    "verden-i-bergen": {
+      border: "border-um-utland-solid",
+      bg: "bg-um-utland-tint",
+      bgHover: "group-hover:bg-um-utland-solid",
     },
   }
 

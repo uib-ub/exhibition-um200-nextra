@@ -14,13 +14,6 @@
     "variant": "bokstaver-og-tegn"
   },
   {
-    "title": "Verden i Bergen",
-    "href": "/tema/verden-i-bergen",
-    "imageSrc": "/nav-card-images/20251127/verden-i-bergen.png",
-    "imageAlt": "The great abroad",
-    "variant": "verden-i-bergen"
-  },
-  {
     "title": "Dyr",
     "href": "/tema/dyr",
     "imageSrc": "/nav-card-images/20251127/dyr.png",
@@ -89,5 +82,12 @@
     "imageSrc": "/nav-card-images/20251127/vekster.png",
     "imageAlt": "Plants",
     "variant": "vekster"
+  },
+  {
+    "title": "Verden i Bergen",
+    "href": "/tema/verden-i-bergen",
+    "imageSrc": "/nav-card-images/20251127/verden-i-bergen.png",
+    "imageAlt": "The great abroad",
+    "variant": "verden-i-bergen"
   }
 ]
