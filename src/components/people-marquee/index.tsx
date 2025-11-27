@@ -17,7 +17,7 @@ const peopleRow1 = [
     imageAlt: 'Portrett av Jacob Neumann',
   },
   {
-    image: '/nav-card-images/vintage-fish-illustration.jpg',
+    image: '/images/menneskene/August_Konow.jpg',
     imageAlt: 'Portrett av August Konow',
   },
   {
@@ -29,7 +29,7 @@ const peopleRow1 = [
     imageAlt: 'Portrett av Olaf Hanssen',
   },
   {
-    image: '/nav-card-images/vintage-fish-illustration.jpg',
+    image: '/images/menneskene/Magdalene_Abel1.jpg',
     imageAlt: 'Portrett av Magdalene Abel',
   },
   {
@@ -41,11 +41,11 @@ const peopleRow1 = [
     imageAlt: 'Portrett av Johs. Bøe',
   },
   {
-    image: '/nav-card-images/vintage-fish-illustration.jpg',
+    image: '/images/menneskene/Eva_Fett_red.jpg',
     imageAlt: 'Portrett av Eva Fett',
   },
   {
-    image: '/nav-card-images/vintage-fish-illustration.jpg',
+    image: '/images/menneskene/Per_fett.jpg',
     imageAlt: 'Portrett av Per Fett',
   },
   {
@@ -144,7 +144,7 @@ const peopleRow2 = [
     imageAlt: 'Portrett av Olaf Jensen',
   },
   {
-    image: '/images/menneskene/bt-12-05-2024-olav-espevoll.jpg',
+    image: '/images/menneskene/bt-12-05-2024-olav-espevoll.png',
     imageAlt: 'Portrett av Olav Espevoll',
   },
   {
@@ -195,7 +195,7 @@ export const PeopleMarquee = () => (
           <MarqueeItem className="size-44 aspect-square" key={index}>
             <Image
               alt={person.imageAlt}
-              className="overflow-hidden object-top object-cover rounded-full size-44"
+              className="overflow-hidden object-cover rounded-full size-44"
               src={person.image}
               width={192}
               height={192}
@@ -212,7 +212,7 @@ export const PeopleMarquee = () => (
           <MarqueeItem className="size-44 aspect-square" key={index}>
             <Image
               alt={person.imageAlt}
-              className="overflow-hidden object-top object-cover rounded-full size-44"
+              className="overflow-hidden object-cover rounded-full size-44"
               src={person.image}
               width={192}
               height={192}
