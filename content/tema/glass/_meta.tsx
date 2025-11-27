@@ -29,6 +29,7 @@ const meta = {
   'statsminister-michelsens-doedsbo': {
     title: 'Statsminister Michelsens dødsbo',
     type: 'doc',
+    display: 'hidden',
   },
 }
 
