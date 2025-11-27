@@ -9,11 +9,11 @@ export function Footer() {
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-14 mx-auto">
         <div className="col-span-1">
           <h3 className="text-lg">200 år med vidunderlig vitenskap</h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Den digitale portalen «200 år med Vidunderlig Vitenskap» er et samarbeidsprosjekt mellom Universitetsmuseet og Universitetsbiblioteket i Bergen, i anledning museets 200års-jubileum.
         </div>
         <div className="col-span-1">
           <h3 className="text-lg">Hvem, hva og hvor?</h3>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          «200 år med Vidunderlig Vitenskap» er laget av seniorrådgiver Anita Haugen Lie, Universitetsmuseet i Bergen; rådgiver og digitalarkivar Marianne Paasche og universitetsbibliotekar Ola Søndenå, Universitetsbiblioteket i Bergen. Stor takk til hovedbibliotekar Tarje Sælen Lavik ved Universitetsbiblioteket i Bergen for digital støtte, og til Åsta Lindemann og Rannveig Lohne i Haltenbanken!
         </div>
         <div className="col-span-1 md:col-span-2">
           <h3 className="text-lg">Tema</h3>
