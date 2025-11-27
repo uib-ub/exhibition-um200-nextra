@@ -139,12 +139,20 @@ const meta = {
       },
     }
   },
+  'menneskene': {
+    title: 'Menneskene',
+    type: 'page',
+    theme: {
+      layout: 'full',
+      toc: false,
+    }
+  },
   'ressurser': {
     title: 'Ressurser',
     type: 'page',
   },
-  'menneskene': {
-    title: 'Menneskene',
+  'samlingene-og-tilvekst': {
+    title: 'Samlingene og tilvekst',
     type: 'page',
     display: 'hidden',
     theme: {
@@ -152,8 +160,8 @@ const meta = {
       toc: false,
     }
   },
-  'samlingene-og-tilvekst': {
-    title: 'Samlingene og tilvekst',
+  'samlinger-pa-flyttefot': {
+    title: 'Samlinger på flyttefot',
     type: 'page',
     display: 'hidden',
     theme: {
