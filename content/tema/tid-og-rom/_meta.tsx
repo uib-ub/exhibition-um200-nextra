@@ -16,16 +16,16 @@ const meta = {
   'mellom-sol-og-maane': {
     type: 'doc',
   },
-  'kortere-aar': {
+  'aaret-som-ble-kortere': {
     type: 'doc',
   },
-  'almanakk': {
+  'almanakken': {
     type: 'doc',
   },
   'scholeusstikket': {
     type: 'doc',
   },
-  'bergen-1740': {
+  'kart-over-bergen-i-1740': {
     type: 'doc',
   },
 }
