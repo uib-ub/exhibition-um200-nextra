@@ -10,7 +10,7 @@ const meta = {
     ),
     href: '/tema/helse',
   },
-  'utbrettbar': {
+  'et-menneske-i-klaffer': {
     type: 'doc',
   },
   'epidemipaviljong': {
