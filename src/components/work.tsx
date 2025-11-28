@@ -19,7 +19,7 @@ interface WorkProps extends VariantProps<typeof workVariants> {
 
 // Modern variant system with better organization
 const workVariants = cva(
-  'w-full border bg-card text-card-foreground shadow-sm',
+  'w-full relative  border bg-card text-card-foreground shadow-sm',
   {
     variants: {
       size: {
@@ -66,7 +66,7 @@ const contentVariants = cva(
 );
 
 const linkVariants = cva(
-  'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 self-end w-fit shrink-0',
+  'inline-flex items-center gap-2 rounded-full px-4 pb-2 pt-1 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 self-end w-fit shrink-0',
   {
     variants: {
       variant: {
@@ -81,12 +81,12 @@ const linkVariants = cva(
 );
 
 const descriptionVariants = cva(
-  'prose prose-sm dark:prose-invert max-w-none flex-1',
+  'prose dark:prose-invert max-w-none flex-1',
   {
     variants: {
       density: {
         default: '',
-        minimal: 'text-sm leading-relaxed',
+        minimal: 'leading-relaxed',
       },
     },
     defaultVariants: {
@@ -209,7 +209,7 @@ function WorkLink({
       {...props}
     >
       {children || 'Se mer...'}
-      <ExternalLink className="h-4 w-4" />
+      <ExternalLink className="size-4" />
     </a>
   );
 }
