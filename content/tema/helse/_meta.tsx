@@ -13,13 +13,13 @@ const meta = {
   'et-menneske-i-klaffer': {
     type: 'doc',
   },
-  'epidemipaviljong': {
+  'epidemipaviljonger-og-sundheds-certificat': {
     type: 'doc',
   },
-  'armauer-hansen': {
+  'gerhard-armauer-hansen-og-lepraforskningen': {
     type: 'doc',
   },
-  'reiseapotek': {
+  'christies-reiseapotek': {
     type: 'doc',
   },
 }
