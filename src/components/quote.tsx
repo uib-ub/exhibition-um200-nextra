@@ -16,7 +16,7 @@ function QuoteSource({ children, className }: QuoteSourceProps) {
     <div
       className={cn(
         "inline-block text-right",
-        "text-sm font-normal text-gray-600 not-italic dark:text-gray-400",
+        "text-md font-normal text-gray-600 not-italic dark:text-gray-400",
         "font-serif",
         className,
       )}
@@ -30,7 +30,7 @@ function Quote({ children, className }: QuoteProps) {
   return (
     <blockquote
       className={cn(
-        "grid my-8 w-3/4 mx-auto italic text-gray-800",
+        "grid text-lg my-8 w-5/6 mx-auto italic text-gray-800",
         "dark:text-gray-200",
         "font-serif",
         className,
