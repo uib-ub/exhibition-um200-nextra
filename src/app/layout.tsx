@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | 200 år med vidunderlig vitenskap",
   },
   keywords: ["Universitetsmuseet i Bergen", "200 år", "nettutstilling", "vitenskap"],
-  description: "Kommer snart",
+  description: "Jubileumsutstilling med arkivmateriale fra 200 år med vidunderlig vitenskap ved Bergens Museum og Universitetet i Bergen",
 };
 
 const banner = <Banner storageKey="some-key2"><a href="https://www.uib.no/ub/spesialsamlingene/179489/200-%C3%A5r-med-vidunderlig-vitenskap" target="_blank" rel="noopener noreferrer" className="text-white">Lansering i dag</a>, 28. november 2025 🎉. Popup-utstilling er åpen til 15. desember 2025.</Banner>
