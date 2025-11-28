@@ -10,7 +10,7 @@ const meta = {
     ),
     href: '/tema/stein',
   },
-  'visuell-geologi': {
+  'geologisk-forskning-i-bilder': {
     type: 'doc',
   },
   'geologi-og-folkeliv-i-hardanger': {

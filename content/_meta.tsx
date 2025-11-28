@@ -160,7 +160,7 @@ const meta = {
       toc: false,
     }
   },
-  'samlinger-pa-flyttefot': {
+  'samlinger-paa-flyttefot': {
     title: 'Samlinger på flyttefot',
     type: 'page',
     display: 'hidden',

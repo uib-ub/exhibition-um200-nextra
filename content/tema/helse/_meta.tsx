@@ -10,6 +10,18 @@ const meta = {
     ),
     href: '/tema/helse',
   },
+  'et-menneske-i-klaffer': {
+    type: 'doc',
+  },
+  'epidemipaviljonger-og-sundheds-certificat': {
+    type: 'doc',
+  },
+  'gerhard-armauer-hansen-og-lepraforskningen': {
+    type: 'doc',
+  },
+  'christies-reiseapotek': {
+    type: 'doc',
+  },
 }
 
 export default meta;

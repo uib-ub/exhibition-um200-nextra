@@ -16,7 +16,7 @@ const meta = {
   'skillingsviser': {
     type: 'doc',
   },
-  'farging-av-toey': {
+  'gult': {
     type: 'doc',
   },
   'klesvask': {

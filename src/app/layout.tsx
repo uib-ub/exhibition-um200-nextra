@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: "Kommer snart",
 };
 
-const banner = <Banner storageKey="some-key">Lansering snart 🎉</Banner>
+const banner = <Banner storageKey="some-key2"><a href="https://www.uib.no/ub/spesialsamlingene/179489/200-%C3%A5r-med-vidunderlig-vitenskap" target="_blank" rel="noopener noreferrer" className="text-white">Lansering i dag</a>, 28. november 2025 🎉. Popup-utstilling er åpen til 15. desember 2025.</Banner>
 
 const navbar = (
   <Navbar

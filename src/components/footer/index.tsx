@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import SvgUibCenteredNo from "../icons/uib-centered-no"
-import { IconClock, IconBuildingChurch, IconCloudRain, IconPencil, IconPlant, IconMountain, IconCalendar, IconHeart, IconFish, IconWorld, IconTower, IconGlass, IconHorse } from '@tabler/icons-react'
+import { IconClock, IconBuildingChurch, IconCloudRain, IconPencil, IconPlant, IconMountain, IconCalendar, IconHeart, IconFish, IconWorld, IconTower, IconGlass, IconHorse, IconBook, IconUsers } from '@tabler/icons-react'
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
           «200 år med Vidunderlig Vitenskap» er laget av seniorrådgiver Anita Haugen Lie, Universitetsmuseet i Bergen; rådgiver og digitalarkivar Marianne Paasche og universitetsbibliotekar Ola Søndenå, Universitetsbiblioteket i Bergen. Stor takk til hovedbibliotekar Tarje Sælen Lavik ved Universitetsbiblioteket i Bergen for digital støtte, og til Åsta Lindemann og Rannveig Lohne i Haltenbanken!
         </div>
         <div className="col-span-1 md:col-span-2">
-          <h3 className="text-lg">Tema</h3>
+          {/* <h3 className="text-lg">Tema</h3> */}
           <ul className="md:columns-2">
             <li className="flex flex-row items-center gap-2"><IconTower className="w-5 h-5 inline-block" /> <Link href="/tema/arkeologi">Arkeologi</Link> </li>
             <li className="flex flex-row items-center gap-2"><IconPencil className="w-5 h-5 inline-block" /> <Link href="/tema/bokstaver-og-tegn">Bokstaver og tegn</Link> </li>
@@ -32,7 +32,10 @@ export function Footer() {
             <li className="flex flex-row items-center gap-2"><IconPlant className="w-5 h-5 inline-block" /> <Link href="/tema/vekster">Vekster</Link> </li>
           </ul>
           <div className="mt-4">
-            <Link href="/documentation">Dokumentasjon</Link>
+            <ul>
+              <li className="flex flex-row items-center gap-2"><IconUsers className="w-5 h-5 inline-block" /> <Link href="/menneskene">Menneskene</Link> </li>
+              <li className="flex flex-row items-center gap-2"><IconBook className="w-5 h-5 inline-block" /> <Link href="/ressurser">Ressurser</Link> </li>
+            </ul>
           </div>
         </div>
       </div>
