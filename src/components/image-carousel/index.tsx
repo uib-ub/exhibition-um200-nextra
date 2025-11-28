@@ -31,7 +31,7 @@ function ImageCarouselItem({ image, imageAlt, children }: { image: string, image
   return (
     <CarouselItem className='basis-full @md:basis-1/2 @6xl:basis-1/3'>
       <Zoom>
-        <Image src={image} alt={imageAlt} width={600} height={600} className="object-contain bg-accent aspect-square" />
+        <Image src={image} alt={imageAlt} width={1600} height={1600} className="object-contain bg-accent aspect-square" />
       </Zoom>
       {children}
     </CarouselItem>
