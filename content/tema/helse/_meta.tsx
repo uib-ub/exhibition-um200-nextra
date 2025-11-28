@@ -10,6 +10,18 @@ const meta = {
     ),
     href: '/tema/helse',
   },
+  'utbrettbar': {
+    type: 'doc',
+  },
+  'epidemipaviljong': {
+    type: 'doc',
+  },
+  'armauer-hansen': {
+    type: 'doc',
+  },
+  'reiseapotek': {
+    type: 'doc',
+  },
 }
 
 export default meta;
