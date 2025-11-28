@@ -10,6 +10,19 @@ const meta = {
     ),
     href: '/tema/hverdag',
   },
+  'annerledeshverdag': {
+    type: 'doc',
+  },
+  'skillingsviser': {
+    type: 'doc',
+  },
+  'farging-av-toey': {
+    type: 'doc',
+  },
+  'klesvask': {
+    type: 'doc',
+    href: 'https://marcus.uib.no/search/?q=klesvask&filter=type.exact%23Fotografi&filter=subject.exact%23Klesvask&size=20',
+  },
 }
 
 export default meta;
