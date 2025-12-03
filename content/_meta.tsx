@@ -1,4 +1,18 @@
-import { IconFish, IconTower, IconBuildingChurch, IconGlass, IconHeart, IconHorse, IconCalendar, IconWorld, IconClock, IconCloudRain, IconPlant, IconMountain, IconPencil } from '@tabler/icons-react';
+import { 
+    IconFish, 
+    IconTower, 
+    IconBuildingChurch, 
+    IconGlass, 
+    IconHeart, 
+    IconHorse, 
+    IconCalendar, 
+    IconWorld, 
+    IconClock, 
+    IconCloudRain, 
+    IconPlant, 
+    IconMountain, 
+    IconPencil 
+} from '@tabler/icons-react';
 
 const meta = {
   '*': {
@@ -37,15 +51,6 @@ const meta = {
           </div>
         ),
         href: '/tema/bokstaver-og-tegn'
-      },
-      'det-store-utland': {
-        title: (
-          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
-            <IconWorld className="w-5 h-5 inline-block" />
-            <div>Det store utland</div>
-          </div>
-        ),
-        href: '/tema/det-store-utland'
       },
       'dyr': {
         title: (
@@ -137,20 +142,29 @@ const meta = {
         ),
         href: '/tema/vekster'
       },
+      'verden-i-bergen': {
+        title: (
+          <div className="flex flex-row items-center gap-1 bg-um-utland-tint px-2 py-1 rounded-md justify-self-stretch">
+            <IconWorld className="w-5 h-5 inline-block" />
+            <div>Verden i Bergen</div>
+          </div>
+        ),
+        href: '/tema/verden-i-bergen'
+      },
+    }
+  },
+  /*
+  'menneskene': {
+    title: 'Menneskene',
+    type: 'page',
+    theme: {
+      layout: 'full',
+      toc: false,
     }
   },
   'ressurser': {
     title: 'Ressurser',
     type: 'page',
-  },
-  'menneskene': {
-    title: 'Menneskene',
-    type: 'page',
-    display: 'hidden',
-    theme: {
-      layout: 'full',
-      toc: false,
-    }
   },
   'samlingene-og-tilvekst': {
     title: 'Samlingene og tilvekst',
@@ -161,13 +175,24 @@ const meta = {
       toc: false,
     }
   },
-  'documentation': {
-    title: 'Doc [To be deleted]',
+  'samlinger-paa-flyttefot': {
+    title: 'Samlinger på flyttefot',
     type: 'page',
+    display: 'hidden',
+    theme: {
+      layout: 'full',
+      toc: false,
+    }
+  },
+  'documentation': {
+    title: 'Dokumentasjon',
+    type: 'page',
+    display: 'hidden',
     theme: {
       toc: false
     }
   }
+  */
 }
 
 export default meta;

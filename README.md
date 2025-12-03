@@ -1,66 +1,36 @@
-# Bylova - The Norwegian Town Law - 750th anniversary
-
-This is a project for the exhibition celebrating the 750th anniversary of the Norwegian Town Law (Bylova) of 1276.
-
-## Tech Stack
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). [Nextra](https://nextra.site) is used for markdown-based pages.
-
-- [Next.js](https://nextjs.org)
-- [Tailwind CSS v4](https://tailwindcss.com)
-- [TypeScript](https://www.typescriptlang.org)
-- [Shadcn UI](https://ui.shadcn.com)
-- [Nextra](https://nextra.site)
-- [Vercel](https://vercel.com)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
 ## Learn More
 
+To learn more about Next.js, take a look at the following resources:
+
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Nextra](https://nextra.site/) - documentation for Nextra.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## TODO
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- [x] Add `robots.txt` to the project.
-- [x] Init shadcn in the project.
-- [x] Add `Icon` component from `@tabler/icons-react` to the project.
-- [x] Port `Work` component from `exhibition-landsloven-nextra` to this project.
-- [ ] When `clover-iiif` is updated to a version that is compatible with the latest version of `next.js`, use the prefetch strategy for the `Work` component.
-- [ ] Add content to the project.
-- [ ] Add other necessary components from `exhibition-landsloven-nextra` to this project.
-- [ ] Add design from Haltenbanken
-- [x] Add `sitemap.xml` to the project.
-- [ ] Explore [Canopy-IIIF](https://github.com/canopy-iiif/canopy-iiif), that can add automatic views on IIIF collections and manifests. The `canopy-experiment` branch is a starting point.
+## Deploy on Vercel
 
-## Clover-IIIF workaround
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-NB! `clover-iiif` is pegged to `2.12.0` as later versions are not compatible with the latest version of `next.js`. it is also necessary  to override the version of `react` and `react-dom` to `19.0.0` in the `package.json` file. As well as `openseadragon` to `5.0.1`. See [this issue](https://github.com/samvera-labs/clover-iiif/issues/291) for more information.
-
-```json
-"overrides": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "openseadragon": "^5.0.1"
-  }
-```
-
-## Sitemap
-
-The sitemap is generated using the `sitemap.ts` file and serves a `/sitemap.xml` route. It does not work in dev useing Turbopack. In production it works, `npm run build && npm run start`, and using `npm run dev:webpack` works. See [this issue](https://github.com/shuding/nextra/issues/4274) for Nextra implementation details.
-
-Checking the sitemaps in the browser:
-
-```bash
-npm run dev:webpack
-curl -s http://localhost:3000/sitemap.xml | xmllint --format -
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
