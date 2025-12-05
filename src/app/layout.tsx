@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
-import { Footer } from "@/components/footer";
+//import { Footer } from "@/components/footer";
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro, IM_Fell_Great_Primer } from "next/font/google";
 import "./globals.css";
@@ -19,18 +19,19 @@ const imFellGreatPrimer = IM_Fell_Great_Primer({
 
 export const metadata: Metadata = {
   title: {
-    default: "200 år med vidunderlig vitenskap",
-    template: "%s | 200 år med vidunderlig vitenskap",
+    default: "Byloven i 750 år",
+    template: "%s | Byloven i 750 år",
   },
-  keywords: ["Universitetsmuseet i Bergen", "200 år", "nettutstilling", "vitenskap"],
-  description: "Kommer snart",
+  keywords: ["Universitetet i Bergen", "Magnus Lagabøte", "Byloven", "750 år", "nettutstilling"],
+  description: "Nettutstilling rundt 750-årsdagen for Magnus Lagabøtes Bylov 2026",
 };
 
-const banner = <Banner storageKey="some-key">Lansering snart 🎉</Banner>
+const banner = (
+  <Banner storageKey="some-key2">🛠️ Første utkast 🛠️</Banner>);
 
 const navbar = (
   <Navbar
-    logo={<div className='font-medium uppercase'>200 år med vidunderlig vitenskap</div>}
+    logo={<div className='font-medium uppercase'>Magnus Lagabøtes Bylov i 750 år</div>}
   // ... Your additional navbar options
   />
 )
@@ -75,10 +76,10 @@ export default async function RootLayout({
           nextThemes={{
             forcedTheme: "light",
           }}
-          search={<Search placeholder="Søk" emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
+          search={<Search placeholder="Søk ..." emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
         >
           {children}
-          <Footer />
+          {/*<Footer />*/}
         </Layout>
       </body>
     </html>

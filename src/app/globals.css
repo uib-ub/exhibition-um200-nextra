@@ -2,7 +2,7 @@
 
 /* Optional: import Nextra theme styles */
 @import 'nextra-theme-docs/style.css';
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
 @import "../components/styles/content-grid.css";
 
 @custom-variant dark (&:is(.dark *)); /* or nextra-theme-blog/style.css */
@@ -13,7 +13,7 @@
   --font-sans: var(--font-crimson-pro);
   --font-serif: var(--font-crimson-pro);
   --font-mono: var(--font-crimson-pro);
-  --font-marcus: var(--font-marcus)
+  --font-marcus: var(--font-marcus);
   --color-um-dyr-solid: #a6ffb3;
   --color-um-dyr-tint: #dcf2e0;
   --color-um-arkeologi-solid: #ff9595;
@@ -23,7 +23,7 @@
   --color-um-hverdag-solid: #5acaae;
   --color-um-hverdag-tint: #e4f2ee;
   --color-um-tegn-solid: #f5f8c3;
-  --color-um-tegn-tint: #feffea;
+  --color-um-tegn-tint: #FEFEF9;
   --color-um-vaer-solid: #97cbff;
   --color-um-vaer-tint: #e3f1ff;
   --color-um-kirkekunst-solid: #dbb3a4;
@@ -166,5 +166,16 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-wider font-medium;
+  }
+  h2 {
+    @apply border-none;
+  }
+  a {
+    @apply text-primary underline-offset-4 underline;
+  }
+  header a,
+  button a,
+  a[data-slot="button"] {
+    @apply text-inherit no-underline;
   }
 }
