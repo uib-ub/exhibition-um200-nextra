@@ -30,6 +30,7 @@ const meta = {
       toc: false
     }
   },
+  /*
   'tema': {
     title: 'Tema',
     type: 'menu',
@@ -153,7 +154,6 @@ const meta = {
       },
     }
   },
-  /*
   'menneskene': {
     title: 'Menneskene',
     type: 'page',

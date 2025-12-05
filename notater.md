@@ -1,11 +1,33 @@
 # Bylov
 
-## Bakgrunn
+## Møte
 
+### Møte med Stefan Andreas Drechsler (2025-11-)
 - 13 håndskrift med bylov for Bergen
 - ingen mss etter 1370
 - "Hér hefr upp Bjarkeyjarrétt og bǿjarmannalǫg, ok segir þat er eigi greinir í landsbókinni" 
 - kan vi ha et slags "spill"?
+- AM 323 fol. (fullstendig bylovhåndskrift)
+
+### Møte med Alf Tore Hommedal (2025-12-04)
+- Lova, kongen, byen
+- Brannene!
+    - viktige for å forstå arkeologi i byen
+- Kongemakten veldig synlig i byen
+- Soundscape i byen - preget av kirkene
+- Hvor loven ble til
+- Magnus Lagabøte og fransiskanerne
+
+### Møte med Helen (2025-12-04)
+- Interessante håndskrifter og oversettelser (post-medieval)
+- Bibliografi
+- GKS 3262 4to, 1576 (fullstendig!)
+- NB Ms. 507, ON + Register
+- Holm perg 32 4to  
+- m.fl.
+
+## Mine spørsmål
+- Bylov-redaksjoner for de andre byene?
 
 ## Litteratur
 - Magnus Håkonsson Lagabøtes bylov og farmannslov. Utgåve ved Jóhanna Katrín Friðriksdóttir, Marit Aamodt Nielsen og Magnus Rindal. Oslo 2023.

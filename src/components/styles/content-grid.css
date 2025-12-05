@@ -1,0 +1,128 @@
+@layer components {
+  .content-grid {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(60ch, 100% - var(--gap) * 2);
+    --popout: minmax(6rem, 6.5rem);
+    --feature: minmax(2rem, 16rem);
+
+    display: grid;
+    container-name: content-grid;
+    container-type: inline-size;
+    row-gap: 0;
+    width: 100%;
+    max-width: 96rem;
+    margin-inline: auto;
+    grid-template-columns:
+      [full-start] var(--full)
+      [feature-start] 
+      [popout-start] 0
+      [content-start] min(45ch, 100% - var(--gap)) [content-end]
+      0 [popout-end] 
+      0 [feature-end]
+      var(--full) [full-end];
+    
+    @media (min-width: 40rem) {
+      grid-template-columns:
+        [full-start] 0
+        [feature-start] var(--feature)
+        [popout-start] minmax(2rem, 2.5rem)
+        [content-start] min(50ch, 100% - var(--gap) * 2)  [content-end]
+        minmax(2rem, 2.5rem) [popout-end] 
+        var(--feature) [feature-end]
+        0 [full-end];
+    }
+
+    @media (min-width: 74rem) {
+      grid-template-columns:
+        [full-start] var(--full)
+        [feature-start] var(--feature)
+        [popout-start] var(--popout)
+        [content-start] var(--content) [content-end]
+        var(--popout) [popout-end]
+        var(--feature) [feature-end]
+        var(--full) [full-end];
+    }
+
+    > * {
+      grid-column: content;
+      margin-block: 0.75rem !important;
+    }
+    > p {
+      font-size: var(--text-lg);
+      line-height: var(--text-lg--line-height);
+
+      @media (min-width: 48rem) {
+        font-size: var(--text-xl);
+        line-height: var(--text-xl--line-height);
+      }
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-block: 0.75rem !important;
+    }
+
+    > aside {
+      grid-column: 6/7;
+      font-size: var(--text-sm);
+
+      p {
+        line-height: var(--leading-normal) !important;
+      }
+
+      @container (width < 58rem) {
+        @apply border rounded-md border-neutral-200;
+        grid-column: content;
+        width: fit-content;
+        padding: 0.5rem;
+        margin-block: 0.5rem !important;
+      }
+    }
+
+    /* figure {
+      margin-block: 3.5rem;
+      
+      @container (width < 64rem) {
+        display: flex;
+        flex-direction: column;
+        grid-column: feature;
+      }
+      
+      @container (width >= 64rem) {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-column: feature;
+        grid-template-columns: subgrid;
+      }
+
+      img, picture, .iiif-image-wrapper, .content {
+        display: grid;
+        grid-column: feature-start / content-end;
+        grid-template-columns: subgrid;
+      }
+      
+      figcaption {
+        grid-column: 5/6;
+        overflow-y: auto;
+        margin-top: 0 !important;
+        font-size: var(--text-sm);
+        line-height: var(--leading-snug);
+
+        @container (width < 64rem) {
+          margin-top: 0.5rem !important;
+        }
+      }
+    } */
+    .feature {
+      grid-column: feature;
+      grid-template-columns: subgrid;
+    }
+    .full {
+      grid-column: full;
+      grid-template-columns: subgrid;
+    }
+    .popout {
+      grid-column: popout;
+      grid-template-columns: subgrid;
+    }
+  }
+}
