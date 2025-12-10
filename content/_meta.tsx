@@ -30,6 +30,26 @@ const meta = {
       toc: false
     }
   },
+  'fra-landslov-til-bylov': {
+    title: 'Fra Landslov til Bylov',
+    type: 'page',
+  },
+  'bergens-bylov': {
+    title: 'Bergens Bylov',
+    type: 'page'
+  },
+  'byloven-og-andre-lover': {
+    title: 'Byloven og andre lover',
+    type: 'page'
+  },
+  'bylovens-etterliv': {
+    title: 'Bylovens etterliv',
+    type: 'page'
+  },
+  'kreditering': {
+    title: 'Kreditering',
+    type: 'page'
+  }
   /*
   'tema': {
     title: 'Tema',
@@ -154,6 +174,8 @@ const meta = {
       },
     }
   },
+  */
+  /*
   'menneskene': {
     title: 'Menneskene',
     type: 'page',
