@@ -10,7 +10,15 @@ const meta = {
     title: 'Menneskene',
     href: '/menneskene',
   },
-  'aagaat-daae': {
+  '*': {
+    type: 'page',
+    theme: {
+      layout: 'full',
+      toc: false,
+      breadcrumb: true,
+    }
+  },
+  /* 'aagaat-daae': {
     type: 'page',
     theme: {
       layout: 'full',
@@ -250,6 +258,14 @@ const meta = {
       breadcrumb: true,
     }
   },
+  'christie-gullpokal': {
+    type: 'page',
+    theme: {
+      layout: 'full',
+      toc: false,
+      breadcrumb: true,
+    }
+  }, */
 }
 
 export default meta;
