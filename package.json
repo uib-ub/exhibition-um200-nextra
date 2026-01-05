@@ -16,6 +16,7 @@
     "@radix-ui/react-separator": "1.1.8",
     "@radix-ui/react-slot": "1.2.4",
     "@samvera/clover-iiif": "3.0.3",
+    "@socialgouv/matomo-next": "1.11.0",
     "@tabler/icons-react": "3.35.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
