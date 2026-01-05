@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { Footer } from "@/components/footer";
+import { MatomoAnalytics } from "@/components/tracker";
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro, IM_Fell_Great_Primer } from "next/font/google";
 import "./globals.css";
+import { Suspense } from 'react';
 
 const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
@@ -79,6 +81,9 @@ export default async function RootLayout({
         >
           {children}
           <Footer />
+          <Suspense fallback={null}>
+            <MatomoAnalytics />
+          </Suspense>
         </Layout>
       </body>
     </html>
