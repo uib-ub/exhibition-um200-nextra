@@ -1,4 +1,4 @@
-import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs' // nextra-theme-blog or your custom theme
+import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'; // nextra-theme-blog or your custom theme
 //import { Figure } from '@/components/figure'
 //import { Work } from '@/components/work'
 //import { Video } from '@/components/video'
@@ -7,7 +7,8 @@ import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs' // ne
 //import { IIIFManifest } from '@/components/ui/chc/iiif-manifest'
 //import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 //import { ImageCarousel } from '@/components/image-carousel'
-import Link from 'next/link'
+import Link from 'next/link';
+import Lorem from './components/lorem-ipsum.tsx';
 
 // Get the default MDX components
 const themeComponents = getThemeComponents()
@@ -17,6 +18,7 @@ export function useMDXComponents(components) {
   return {
     ...themeComponents,
     Link,
+    Lorem,
     //Figure,
     //Work,
     //Video,

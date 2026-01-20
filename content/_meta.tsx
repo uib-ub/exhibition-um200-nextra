@@ -22,7 +22,7 @@ const meta = {
     }
   },
   'index': {
-    title: '200 år med vidunderlig vitenskap',
+    title: 'Bergens bylov i 750 år',
     type: 'page',
     display: 'hidden',
     theme: {
