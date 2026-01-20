@@ -26,6 +26,9 @@
 - Holm perg 32 4to  
 - m.fl.
 
+### Møte Peder, Alexandros (2026-01-16)
+- domene: bylovsjubileet.uib.no => kan bestilles
+
 ## Mine spørsmål
 - Bylov-redaksjoner for de andre byene?
 
@@ -53,7 +56,7 @@
     - Farmannslov
     - Hirdskrå
 - Bylovens etterliv
-    - Oversettelser
+    - Danske Oversettelser
     - Kommuneforvaltning
     - Nyere Forskning
 - (Kreditering)
@@ -63,7 +66,7 @@
     - React-components
         - Inngangsmenyen
         - Overskrifter
-        - Kart?
+        - Kart? ->> Pauls arbeid med Norsk Ordbok
         - Tidslinje?
     - Logo
     - Fonter

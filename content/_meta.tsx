@@ -38,8 +38,8 @@ const meta = {
     title: 'Bergens Bylov',
     type: 'page'
   },
-  'byloven-og-andre-lover': {
-    title: 'Byloven og andre lover',
+  'byloven-og-andre-tekster': {
+    title: 'Byloven og andre tekster',
     type: 'page'
   },
   'bylovens-etterliv': {
