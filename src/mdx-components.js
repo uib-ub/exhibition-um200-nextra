@@ -10,7 +10,6 @@ import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'; // n
 import { Card } from './components/ui/card';
 import Link from 'next/link';
 import Lorem from '@/components/lorem-ipsum';
-import Map from '@/components/map';
 
 // Get the default MDX components
 const themeComponents = getThemeComponents()
@@ -22,7 +21,6 @@ export function useMDXComponents(components) {
     Card,
     Link,
     Lorem,
-    Map,
     //Figure,
     //Work,
     //Video,
