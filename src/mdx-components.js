@@ -8,7 +8,7 @@ import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'; // n
 //import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 //import { ImageCarousel } from '@/components/image-carousel'
 import Link from 'next/link';
-import Lorem from './components/lorem-ipsum.tsx';
+import Lorem from '@/components/lorem-ipsum.tsx';
 
 // Get the default MDX components
 const themeComponents = getThemeComponents()

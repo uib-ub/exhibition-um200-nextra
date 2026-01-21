@@ -1,11 +1,11 @@
 const meta = {
     '*': {
-        //type: 'page',
         theme: {
-            layout: 'full',
-            toc: true,
             breadcrumb: true
         }
+    },
+    'index': {
+        type: 'page'
     }
 }
 
