@@ -1,7 +1,7 @@
 const meta = {
     'root_link': {
-        title: <b>FRA LANDSLOV TIL BYLOV</b>,
-        href: '/fra-landslov-til-bylov'
+        title: <b>BYLOVEN OG SKRIFTKULTUR</b>,
+        href: '/byloven-og-skriftkultur'
     },
     '*': {
         theme: {
@@ -16,6 +16,6 @@ const meta = {
             pagination: false
         }
     }
-}
+};
 
 export default meta;

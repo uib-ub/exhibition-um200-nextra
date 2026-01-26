@@ -38,8 +38,8 @@ const meta = {
     title: 'Bergens Bylov',
     type: 'page'
   },
-  'byloven-og-andre-tekster': {
-    title: 'Byloven og andre tekster',
+  'byloven-og-skriftkultur': {
+    title: 'Byloven og skriftkultur',
     type: 'page'
   },
   'bylovens-etterliv': {
@@ -48,7 +48,10 @@ const meta = {
   },
   'kreditering': {
     title: 'Kreditering',
-    type: 'page'
+    type: 'page',
+    theme: {
+      toc: false
+    }
   }
   /*
   'tema': {
