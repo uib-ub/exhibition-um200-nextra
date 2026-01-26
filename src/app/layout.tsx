@@ -5,6 +5,7 @@ import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro, IM_Fell_Great_Primer } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
@@ -31,7 +32,7 @@ const banner = (
 
 const navbar = (
   <Navbar
-    logo={<div className='font-medium uppercase'>Magnus Lagabøtes Bylov i 750 år</div>}
+    logo={<Image src='UiB_Bylovjubileet_2026_Initial_Linje.svg' alt='' height={50} width={140} className="ml-5 mb-3"/>}
   // ... Your additional navbar options
   />
 )

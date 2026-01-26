@@ -7,8 +7,8 @@ import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'; // n
 //import { IIIFManifest } from '@/components/ui/chc/iiif-manifest'
 //import { ContentGrid } from '@/components/ui/chc/content-grid/content-grid'
 //import { ImageCarousel } from '@/components/image-carousel'
-import { Card } from './components/ui/card';
 import Link from 'next/link';
+import Card, { Cards } from '@/components/card';
 import Lorem from '@/components/lorem-ipsum';
 
 // Get the default MDX components
@@ -19,6 +19,7 @@ export function useMDXComponents(components) {
   return {
     ...themeComponents,
     Card,
+    Cards,
     Link,
     Lorem,
     //Figure,
