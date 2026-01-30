@@ -37,6 +37,11 @@ export function Footer() {
               <li className="flex flex-row items-center gap-2"><IconBook className="w-5 h-5 inline-block" /> <Link href="/ressurser">Ressurser</Link> </li>
             </ul>
           </div>
+          <div className="mt-4">
+            <ul>
+              <li className="flex flex-row items-center gap-2"><IconUsers className="w-5 h-5 inline-block" /> <Link href="https://uustatus.no/nb/erklaringer/publisert/0dbc2be2-ee80-40c2-b894-0f60ded78ea0">Tilgjengelighetserklæring for <i>200 år med vidunderlig vitenskap</i></Link> </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">

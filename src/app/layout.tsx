@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head, Search } from 'nextra/components'
+import { Head, Search } from 'nextra/components'
 import { Footer } from "@/components/footer";
 import { MatomoAnalytics } from "@/components/tracker";
 import { getPageMap } from 'nextra/page-map'
@@ -28,8 +28,6 @@ export const metadata: Metadata = {
   description: "Jubileumsutstilling med arkivmateriale fra 200 år med vidunderlig vitenskap ved Bergens Museum og Universitetet i Bergen",
 };
 
-const banner = <Banner storageKey="some-key2">Popup-utstilling på Universitetsmuseet i Bergen er åpen til 15. desember 2025.</Banner>
-
 const navbar = (
   <Navbar
     logo={<div className='font-medium uppercase'>200 år med vidunderlig vitenskap</div>}
@@ -56,11 +54,9 @@ export default async function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
-        <meta name="google" content="notranslate" />
       </Head>
       <body>
         <Layout
-          banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/uib-ub/exhibition-um200-nextra"
