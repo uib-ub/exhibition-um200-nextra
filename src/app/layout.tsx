@@ -57,6 +57,7 @@ export default async function RootLayout({
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
         <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <body>
         <Layout
