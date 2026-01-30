@@ -4,6 +4,7 @@ import {
     CardTitle, 
     Card as ShadcnCard 
 } from '@/components/ui/card';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Card({image, href, alt, title, children}: {
@@ -15,10 +16,12 @@ export default function Card({image, href, alt, title, children}: {
     return (
         <ShadcnCard className='relative mx-auto w-full max-w-xs pt-5'>
             <Link href={href}>
-                <img 
-                    src={image || 'middelalderforum_2026_header_0.jpg'} 
-                    alt={alt || 'An image.'} 
-                    className='relative z-20 aspect-video w-full min-w-60 object-cover brightness-100 dark:brightness-40'
+                <Image
+                    src={image || '/middelalderforum_2026_header_0.jpg'} 
+                    alt={alt || 'An image.'}
+                    width={200}
+                    height={200}
+                    className='relative z-20 w-full object-cover brightness-100 dark:brightness-40'
                 />
             </Link>
             <CardHeader>
@@ -31,10 +34,10 @@ export default function Card({image, href, alt, title, children}: {
     );
 }
 
-export function Cards({cols, children}: {cols?: number, children: React.ReactNode}) {
+export function Cards({children}: {children: React.ReactNode}) {
     return (
         <div className='flex justify-center'>
-            <div className={`shrink mt-15 grid grid-cols-${cols || 3} gap-8`}>{children}</div>
+            <div className={`shrink mt-15 grid md:grid-cols-3 gap-8`}>{children}</div>
         </div>
     );
 }
