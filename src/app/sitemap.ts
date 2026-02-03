@@ -83,7 +83,7 @@ const parsePageMapItems = (items: PageMapItem[]): SitemapEntry[] => {
 };
 
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
-  const baseUrl = "https://example.com";
+  const baseUrl = "https://vidunderlig-vitenskap.uib.no";
   const pageMap = await getPageMap();
 
   return parsePageMapItems(pageMap).map((entry) => ({
