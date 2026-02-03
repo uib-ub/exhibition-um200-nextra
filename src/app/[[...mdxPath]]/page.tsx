@@ -6,7 +6,10 @@ export const generateStaticParams = generateStaticParamsFor('mdxPath')
 export async function generateMetadata(props: { params: Promise<{ mdxPath: string[] }> }) {
   const params = await props.params
   const { metadata } = await importPage(params.mdxPath)
-  return metadata
+  return {
+    ...metadata,
+    title: metadata.title ? `${metadata.title} | 200 år med vidunderlig vitenskap` : "200 år med vidunderlig vitenskap"
+  }
 }
 
 const Wrapper = getMDXComponents().wrapper

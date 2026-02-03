@@ -20,10 +20,6 @@ const imFellGreatPrimer = IM_Fell_Great_Primer({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "200 år med vidunderlig vitenskap",
-    template: "%s | 200 år med vidunderlig vitenskap",
-  },
   keywords: ["Universitetsmuseet i Bergen", "200 år", "nettutstilling", "vitenskap"],
   description: "Jubileumsutstilling med arkivmateriale fra 200 år med vidunderlig vitenskap ved Bergens Museum og Universitetet i Bergen",
 };
@@ -51,6 +47,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <Head>
+        <title>200 år med vidunderlig vitenskap</title>
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
