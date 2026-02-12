@@ -3,7 +3,7 @@
         "html": "html",
         "javascript": "javascript",
         "typescript": "html",
-        "typescriptreact": "html"
+        "typescriptreact": "html",
     },
     "editor.quickSuggestions": {
         "strings": true
