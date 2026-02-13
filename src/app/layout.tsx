@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head, Search } from 'nextra/components'
-//import { Footer } from "@/components/footer";
+import { LastUpdated, Layout, Navbar } from 'nextra-theme-docs';
+import { Banner, Head, Search } from 'nextra/components';
+import Footer from "@/components/footer";
 import { getPageMap } from 'nextra/page-map'
 import { Crimson_Pro, IM_Fell_Great_Primer } from "next/font/google";
 import "./globals.css";
@@ -81,7 +81,7 @@ export default async function RootLayout({
           search={<Search placeholder="Søk ..." emptyResult="Ingen resultater" loading="Søker..." errorText="Feil ved søk" />}
         >
           {children}
-          {/*<Footer />*/}
+          <Footer/>
         </Layout>
       </body>
     </html>
