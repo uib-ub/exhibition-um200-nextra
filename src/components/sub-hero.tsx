@@ -7,11 +7,13 @@ export default function SubHero({ title }: {
     <div
       className={`
         bg-bylov-white
-        h-100
         mb-10
-        pl-10
+        md:pl-10
         pb-10
-        flex
+        grid
+        place-items-center
+        md:flex
+        md:h-100
       `}
     >
       <Image 
@@ -19,9 +21,16 @@ export default function SubHero({ title }: {
         alt='Logo Bylovsjubileet' 
         height={350} 
         width={350}/>
-      <div className='grid content-center ml-10'>
+      <div className='md:grid md:content-center mx-10'>
         <div className='mt-5'>
-          <div className='text-5xl text-bylov-red'>{title}</div>
+          <div className={`
+            text-center 
+            text-4xl 
+            md:text-left 
+            md:text-5xl 
+            font-semibold 
+            text-bylov-red
+          `}>{title}</div>
         </div>
       </div>
     </div>
